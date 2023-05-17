@@ -1,0 +1,38 @@
+.about-parking {
+  padding-top: 28px;
+  margin-bottom: 134px;
+  border-top: 1px solid $brd-grey;
+
+  &__text {
+    font-size: 32px;
+  }
+
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: $gap-pc;
+  }
+
+  @include tab {
+    padding-top: 20px;
+    margin-bottom: 64px;
+  
+    &__text {
+      margin-bottom: 24px;
+    }
+
+  }
+
+  @include mob {
+    padding-top: 16px;
+
+    &__text {
+      font-size: 24px;
+    }
+
+    &__list {
+      grid-template-columns: repeat(1, 1fr);
+    }
+
+  }
+}

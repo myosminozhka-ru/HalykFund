@@ -1,0 +1,16 @@
+.contact-us {
+  padding-top: 24px;
+  margin-bottom: 120px;
+  border-top: 1px solid $brd-grey;
+  &__top {
+    margin-bottom: 32px;
+  }
+
+  @include tab {
+    padding-top: 16px;
+    margin-bottom: 64px;
+    &__top {
+      margin-bottom: 0;
+    }
+  }
+}

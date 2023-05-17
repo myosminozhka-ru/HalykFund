@@ -1,0 +1,245 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+html {
+  font-family: $main-font;
+  background-color: $white;
+  font-size: 16px;
+  color: $black;
+  line-height: 1.3;
+}
+body {
+  font-size: 16px;
+  padding-top: 92px;
+
+  &.lock {
+    overflow: hidden;
+  }
+
+  @include tab {
+    padding-top: 100px;
+  }
+}
+h1, h2, h3, h4, h5, h6, ul, p {
+    margin: 0;
+    padding: 0;
+    font: inherit;
+}
+
+ul {
+  list-style: none;
+}
+
+
+input,
+textarea {
+  -webkit-animation: bugfix infinite 1s;
+  line-height: inherit;
+  margin: 0;
+  padding: 0;
+  background-color: transparent;
+  border: none;
+  color: inherit;
+}
+a {
+  color: unset;
+}
+a,
+a:hover {
+  text-decoration: none;
+}
+
+button,
+input,
+a,
+textarea {
+  outline: none;
+  cursor: pointer;
+  font: inherit;
+  &:focus {
+    outline: none;
+  }
+  &:active {
+    outline: none;
+  }
+}
+
+button {
+  display: inline-block;
+  background-color: inherit;
+  border: none;
+  padding: 0;
+  margin: 0;
+}
+
+
+img, svg {
+  display: block;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: auto;
+}
+
+picture {
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  color: inherit;
+  font: inherit;
+  text-decoration: none;
+}
+
+.osmi-container {
+  width: 100%;
+  max-width: $container-width;
+  padding: 0 30px;
+  margin: 0 auto;
+  @include mob {
+    padding: 0 20px;
+  }
+}
+
+
+.h1 {
+  font-size: 64px;
+  font-family: $title-font;
+  @include mob {
+    font-size: 48px;
+  }
+}
+
+.h2 {
+  font-size: 48px;
+  font-family: $title-font;
+  @include mob {
+    font-size: 40px;
+  }
+}
+
+.h3 {
+  font-size: 24px;
+  @include mob {
+    font-size: 20px;
+  }
+}
+
+.h4 {
+  font-size: 18px;
+  @include mob {
+    font-size: 16px;
+  }
+}
+
+.link, 
+.link-2,
+.link-3 {
+  transition: color 300ms;
+  &:hover {
+    color: $accent;
+  }
+}
+
+.link-2 {
+  font-size: 18px;
+  line-height: 140%;
+  letter-spacing: -0.02em;
+  text-decoration-line: underline;
+  @include mob {
+    font-size: 16px;
+  }
+}
+
+.link-3 {
+  font-size: 18px;
+  line-height: 140%;
+  @include mob {
+    font-size: 16px;
+  }
+}
+
+.text-2 {
+  font-size: 32px;
+  @include mob {
+    font-size: 24px;
+  }
+}
+
+.text-3 {
+  font-size: 18px;
+  @include mob {
+    font-size: 16px;
+  }
+}
+
+.text-4 {
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.o-grid {
+  @include o-grid;
+
+  @include tab {
+    grid-template-columns: 1fr;
+    grid-gap: $gap-tab;
+  }
+
+  @include mob {
+    grid-gap: $gap-mob;
+  }
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+  white-space: nowrap;
+  -webkit-clip-path: inset(100%);
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.btn {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  padding: 12px 24px;
+  color: $white;
+  background-color: $accent;
+  border: 1px solid $accent;
+  border-radius: 4px;
+  transition-duration: 300ms;
+  transition-property: color, background, border;
+  img {
+    flex-shrink: 0;
+    height: 15px;
+    width: auto;
+  }
+  &:hover {
+    background-color: $white;
+    color: $accent;
+    border-color: $accent;
+  }
+  &:disabled {
+    opacity: 0.5;
+    cursor: default;
+  }
+  @include tab {
+    width: 100%;
+    max-width: 344px;
+  }
+}
+
+.only-pc {
+  @include tab {
+    display: none;
+  }
+}

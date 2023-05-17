@@ -1,0 +1,31 @@
+.directions {
+  padding-top: 24px;
+  margin-bottom: 120px;
+  border-top: 1px solid $brd-grey;
+  overflow: hidden;
+  &__top {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 24px;
+  }
+
+  &__slider {
+    overflow: visible;
+  }
+
+  &__slide {
+    width: auto;
+    margin-right: $gap-pc;
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  @include tab {
+    padding-top: 16px;
+    margin-bottom: 64px;
+    &__c-btns {
+      display: none;
+    }
+  }
+}
