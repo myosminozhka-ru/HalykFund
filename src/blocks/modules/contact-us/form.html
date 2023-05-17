@@ -1,0 +1,27 @@
+<form class="form" method="POST" action="https://dummyjson.com/products/1">
+  <div class="form__inner">
+    <div class="form__item form__item--100">
+      <input type="text" name="name" class="form__input" placeholder="Имя" required>
+      <!-- <div class="form__input-error">Текст ошибки</div> -->
+    </div>
+    <div class="form__item form__item--50">
+      <input type="tel" name="tel" class="form__input" placeholder="Телефон" required>
+    </div>
+    <div class="form__item form__item--50">
+      <input type="email" name="email" class="form__input" placeholder="E-mail" required>
+    </div>
+    <div class="form__item form__item--100">
+      <textarea name="comment" class="form__textarea form__textarea--big" placeholder="Введите сообщение*" required maxlength="500"></textarea>
+    </div>
+  </div>
+  <div class="form__actions">
+    <div class="form__conf">
+      <label class="form__conf-label">
+        <input type="checkbox" class="visually-hidden" required>
+        <span></span>
+      </label>
+      <div class="form__conf-text">Согласие с политикой <a href="#">конфиденциальностии <br class="only-pc"> и обработкой персональных данных.</a></div>
+    </div>
+    <button class="btn form__send" type="submit">Отправить</button>
+  </div>
+</form>

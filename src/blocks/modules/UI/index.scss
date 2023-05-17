@@ -1,0 +1,41 @@
+.slider-btns {
+  display: inline-flex;
+  align-items: center;
+  &__prev, &__next {
+    width: 32px;
+    height: 32px;
+    svg {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+    rect {
+      fill: $white;
+      transition: fill 300ms;
+    }
+    path {
+      stroke: $accent;
+      transition: stroke 300ms;
+    }
+    &:hover {
+      rect {
+        fill: $accent;
+      }
+      path {
+        stroke: $white;
+      }
+    }
+    &.disabled {
+      rect {
+        fill: $white;
+        stroke: $grey;
+      }
+      path {
+        stroke: $grey;
+      }
+    }
+  }
+  &__prev {
+    margin-right: 8px;
+  }
+}

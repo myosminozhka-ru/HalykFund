@@ -1,0 +1,246 @@
+.header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  width: 100%;
+  background-color: $white;
+
+  &__inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 92px;
+    position: relative;
+    &::after {
+      content: '';
+      display: block;
+      width: 100%;
+      height: 1px;
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      z-index: 2;
+      background-color: $brd-grey;
+    }
+  }
+
+  &__logo {
+    display: inline-block;
+    width: 120px;
+    height: 35px;
+
+    svg {
+      height: 100%;
+      object-fit: contain;
+    }
+  }
+
+  &__langs {
+    display: flex;
+    align-items: center;
+    margin-right: 150px;
+  }
+
+  &__lang {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    color: $accent;
+    border: 1px solid $brd-accent;
+    border-radius: $brz;
+    margin-right: 8px;
+    transition-duration: 300ms;
+    transition-property: color, background-color;
+
+    &.active,
+    &:hover {
+      background-color: $accent;
+      color: $white;
+    }
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  &__nav {
+    display: flex;
+    align-items: center;
+  }
+
+  &__nav-list {
+    display: flex;
+    align-items: center;
+  }
+
+  &__nav-item {
+    margin-right: 24px;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  &__nav-title {
+
+    &:hover a {
+      text-decoration: underline;
+    }
+  }
+
+  &__note {
+    display: flex;
+    align-items: center;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 130%;
+    border: 1px solid $brd-accent;
+    border-radius: $brz;
+    padding: 11px 24px;
+    background-color: $green-light;
+    margin-left: 200px;
+
+    svg {
+      width: 20px;
+      height: 20px;
+      margin-right: 10px;
+    }
+  }
+
+  &__burger {
+    display: none;
+    width: 24px;
+    &:before,
+    &:after,
+    & div {
+      background: $accent;
+      content: "";
+      display: block;
+      height: 2px;
+      border-radius: 2px;
+      margin: 4px 0;
+      transition: 0.5s;
+    }
+    &.active:before {
+      transform: translateY(6px) rotate(135deg);
+    }
+    &.active:after {
+      transform: translateY(-6px) rotate(-135deg);
+    }
+    &.active div {
+      transform: scale(0);
+    }
+  }
+
+  @include tab {
+  
+    &__inner {
+      align-items: flex-start;
+      padding: 24px 0 16px;
+      justify-content: stretch;
+      min-height: 100px;
+      &::before {
+        content: '';
+        display: block;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        left: 0;
+        top: 0;
+        z-index: 1;
+        background-color: $white;
+      }
+    }
+  
+    &__logo {
+      margin-right: auto;
+      position: relative;
+      z-index: 2;
+    }
+  
+    &__langs {
+      align-items: flex-start;
+      margin-right: 0;
+    }
+  
+    &__lang {
+      display: inline-flex;
+    }
+  
+    &__nav {
+      position: fixed;
+      left: 0;
+      top: 0;
+      width: 100vw;
+      height: 100vh;
+      padding: 30px;
+      flex-direction: row-reverse;
+      align-items: stretch;
+      background-color: $white;
+      transform: translateY(-120%);
+      transition: transform 300ms;
+
+      &.active {
+        transform: translateY(0);
+      }
+    }
+  
+    &__nav-list {
+      display: block;
+      flex-grow: 1;
+      overflow: auto;
+    }
+  
+    &__nav-item {
+      margin-right: 0;
+      margin-bottom: 10px;
+  
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  
+    &__note {
+      display: flex;
+      position: relative;
+      z-index: 2;
+    }
+  
+    &__burger {
+      display: inline-block;
+      margin-left: 20px;
+      position: relative;
+      z-index: 2;
+    }
+    
+  }
+
+
+  @include mob {
+  
+    &__inner {
+      align-items: center;
+      padding: 16px 0;
+      justify-content: space-between;
+      min-height: auto;
+      flex-wrap: wrap;
+    }
+  
+    &__logo {
+      width: 80px;
+      height: 23px;
+    }
+  
+    &__note {
+      order: 1;
+      width: 100%;
+      margin: 0;
+      margin-top: 16px;
+      font-size: 12px;
+    }
+    
+  }
+}

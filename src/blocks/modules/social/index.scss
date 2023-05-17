@@ -1,0 +1,34 @@
+.social {
+  display: inline-flex;
+  align-items: center;
+
+  li {
+    width: 32px;
+    height: 32px;
+    margin-right: 8px;
+
+    &:last-child {
+      margin-right: 0;
+    }
+
+    svg use {
+      fill: $white;
+      color: $accent;
+      transition-duration: 300ms;
+      transition-property: fill, color;
+    }
+
+    &:hover {
+      svg use {
+        fill: $accent;
+        color: $white;
+      }
+    }
+  }
+
+  a, svg {
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+  }
+}

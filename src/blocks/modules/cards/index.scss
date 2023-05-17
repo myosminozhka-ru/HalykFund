@@ -1,0 +1,72 @@
+.card1 {
+  display: inline-block;
+
+  &:hover .card1__pic::after {
+    opacity: 1;
+  }
+
+  &__pic {
+    height: 460px;
+    border-radius: $brz;
+    overflow: hidden;
+    margin-bottom: 16px;
+    position: relative;
+
+    img {
+      height: 100%;
+      width: auto;
+    }
+
+    &::after {
+      content: '';
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 1;
+      background-color: $trt-accent;
+      opacity: 0;
+      transition: opacity 300ms;
+      transition-timing-function: ease-out;
+    }
+  }
+
+  &__content {
+    max-width: 424px;
+  }
+
+  &__title {
+    font-size: 24px;
+    margin-bottom: 8px;
+  }
+  
+  &__text {
+    color: $grey;
+  }
+
+  @include mob {
+    &__pic {
+      height: 326px;
+      width: 285px;
+      img {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+      }
+    }
+
+    &__content {
+      max-width: 285px;
+    }
+  
+    &__title {
+      font-size: 20px;
+    }
+    
+    &__text {
+      font-size: 14px;
+    }
+  }
+}

@@ -1,0 +1,61 @@
+.banner-parking {
+  margin-top: 64px;
+  margin-bottom: 120px;
+
+  &__top {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: $gap-pc;
+    margin-bottom: 32px;
+  }
+
+  &__cap {
+    font-size: 61px;
+    margin-top: -3px;
+    text-transform: uppercase;
+  }
+
+  &__social {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-end;
+  }
+
+  @include tab {
+    margin-top: 40px;
+    margin-bottom: 64px;
+  
+    &__top {
+      grid-template-columns: repeat(2, 1fr);
+      grid-gap: $gap-tab;
+      margin-bottom: 40px;
+    }
+  
+    &__cap {
+      margin-top: -10px;
+    }
+  
+    &__social {
+      grid-column: 2/3;
+      justify-content: flex-start;
+    }
+
+  }
+
+  @include mob {
+    &__top {
+      grid-template-columns: repeat(1, 1fr);
+      grid-gap: $gap-mob;
+      margin-bottom: 24px;
+    }
+  
+    &__cap {
+      margin-top: 0;
+    }
+  
+    &__social {
+      grid-column: unset;
+    }
+
+  }
+}

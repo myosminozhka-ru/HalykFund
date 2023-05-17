@@ -1,0 +1,110 @@
+.form {
+  &__inner {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -8px;
+  }
+  &__item {
+    padding: 8px;
+    font-size: 14px;
+    font-weight: 400;
+    width: 100%;
+    &--50 {
+      width: 50%;
+    }
+    &--33 {
+      width: 33.3333%;
+    }
+  }
+  &__input {
+    width: 100%;
+    height: 56px;
+    padding: 18px 16px;
+    background-color: $green-light;
+    border: none;
+    border-radius: $brz;
+    &::placeholder {
+      color: $grey;
+    }
+  }
+  &__textarea {
+    width: 100%;
+    height: 56px;
+    padding: 18px 16px;
+    padding-top: 21px;
+    background-color: $green-light;
+    border: none;
+    border-radius: $brz;
+    &::placeholder {
+      color: $grey;
+    }
+    &--big {
+      height: 137px;
+    }
+  }
+  &__input, &__textarea {
+    &.error {
+      border: 1px solid $error;
+    }
+  }
+  &__input-error {
+    color: $error;
+    font-size: 12px;
+    padding-top: 2px;
+  }
+  &__select {
+    width: 100%;
+    height: 8rem;
+    padding: 1rem 3rem;
+    background-color: #FFFFFF;
+    border: 1px solid #E1E1E1;
+    box-shadow: 2rem 3rem 6rem rgba(15, 7, 62, 0.05);
+    border-radius: 1rem;
+    color: #848794;
+    font: inherit;
+  }
+  &__actions {
+    // margin-top: 24px;
+  }
+  &__conf {
+    display: flex;
+    margin-bottom: 24px;
+    &-label {
+      display: inline-block;
+      span {
+        display: inline-block;
+        width: 20px;
+        height: 20px;
+        border-radius: 2px;
+        border: 1px solid $grey;
+        margin-right: 8px;
+      }
+      input:checked + span {
+        background-image: url(../img/accepted.svg);
+        background-repeat: no-repeat;
+        background-size: 72%;
+        background-position: center;
+        border-color: $accent;
+      }
+      input:focus + span {
+        border-color: $black;
+      }
+    }
+    &-text {
+      font-size: 14px;
+      color: $grey;
+    }
+  }
+
+  @include tab {
+    &__item {
+      &--50 {
+        width: 100%;
+      }
+      &--33 {
+        width: 100%;
+      }
+    }
+
+  }
+}
