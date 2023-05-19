@@ -53,3 +53,64 @@
   @include mob {
   }
 }
+.brc {
+  display: block;
+  margin-top: gutter(10);
+  margin-bottom: gutter(12);
+  color: $grey;
+  li {
+    display: inline-block;
+    padding-right: 22px;
+    margin-right: 8px;
+    background-image: url(../img/brc.svg);
+    background-repeat: no-repeat;
+    background-size: 14px;
+    background-position: center right;
+    &:last-child {
+      background-image: none;
+      padding-right: 0;
+      margin-right: 0;
+    }
+  }
+  a {
+    color: $grey;
+    font-size: 14px;
+  }
+  @include tab {
+    margin-top: gutter(6);
+    margin-bottom: gutter(8);
+  }
+}
+.pag {
+  display: flex;
+  flex-wrap: wrap;
+  &__link {
+    min-width: 32px;
+    height: 32px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 4px;
+    border-radius: 5px;
+    color: $grey;
+    background-color: $white;
+    &.current {
+      color: $white;
+      background-color: $accent;
+      pointer-events: none;
+    }
+    &:hover {
+      background-color: $green-light;
+    }
+  }
+  @include tab {
+    display: flex;
+    flex-wrap: wrap;
+    &__link {
+      min-width: 32px;
+      height: 32px;
+      padding: 4px;
+      border-radius: 5px;
+    }
+  }
+}

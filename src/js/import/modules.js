@@ -8,6 +8,7 @@ import SliderPartnersMain from "%modules%/partners-main/index";
 import SliderGrid from "%modules%/slider-grid/index";
 import SvgAnime from "%modules%/anime-card/index";
 import BannerParking from "%modules%/banner-parking/index";
+import Search from "%modules%/search/index";
 
 
 window.app = {
@@ -19,5 +20,6 @@ window.app = {
   sliderPartnersMain: new SliderPartnersMain(),
   sliderGrid: new SliderGrid(),
   svgAnime: new SvgAnime(),
-  bannerParking: new BannerParking()
+  bannerParking: new BannerParking(),
+  search: new Search(),
 }
