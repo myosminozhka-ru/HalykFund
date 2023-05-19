@@ -111,6 +111,7 @@ a {
 .h1 {
   font-size: 64px;
   font-family: $title-font;
+  line-height: 1.1;
   @include mob {
     font-size: 48px;
   }
