@@ -1,0 +1,67 @@
+.history-main {
+  overflow: hidden;
+  &__inner {
+    display: grid;
+    grid-template-columns: 4fr 6fr 2fr;
+    grid-gap: gutter(6);
+  }
+  &__all {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-start;
+  }
+  &__swiper {
+    grid-column: 2/4;
+  }
+  &__slider {
+    overflow: visible;
+  }
+  &__slide {
+    width: auto;
+    height: auto;
+    margin-right: gutter(6);
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+  &__pag {
+    margin-top: gutter(6);
+    margin-bottom: gutter(4);
+  }
+  &__c-btns {
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  @include tab {
+    &__inner {
+      grid-template-columns: 2fr 2fr;
+      grid-gap: gutter(5);
+    }
+    &__all {
+      display: flex;
+    }
+    &__title {
+      grid-row: 2/3;
+      grid-column: 1/3;
+    }
+    &__swiper {
+      grid-column: 1/3;
+    }
+    &__slide {
+      margin-right: gutter(5);
+    }
+    &__pag {
+      display: none;
+    }
+    &__c-btns {
+      display: none;
+    }
+  }
+  @include mob {
+    &__all {
+      grid-column: 1/3;
+      grid-row: 4/5;
+    }
+  }
+}

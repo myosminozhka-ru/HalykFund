@@ -1,9 +1,9 @@
 .anime-card {
   background-color: $green-light;
   border-radius: $brz;
-  padding: 40px 24px;
+  padding: gutter(10) gutter(6);
 
-  &--target {
+  &--target2 {
     circle {
       opacity: 0;
       animation-duration: 3000ms;
@@ -28,7 +28,7 @@
 
   }
 
-  &--principles {
+  &--principles2 {
     .anime-card__bg {
       display: block;
       width: 100%;
@@ -54,7 +54,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-bottom: 24px;
+    margin-bottom: gutter(6);
   }
   &__icon {
     position: relative;
@@ -78,7 +78,7 @@
   }
 
   @include tab {
-    padding: 24px 12px;
+    padding: gutter(6) gutter(3);
 
     &__icon {
       width: 160px;
@@ -86,7 +86,7 @@
     }
   
     &__title {
-      font-size: 20px;
+      font-size: gutter(5);
       margin-bottom: 10px;
     }
   

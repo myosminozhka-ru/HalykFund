@@ -13,11 +13,5 @@
 @mixin o-grid {
   display: grid;
   grid-template-columns: 1fr 2fr;
-  grid-gap: $gap-pc;
-}
-
-@mixin o-grid-3 {
-  display: grid;
-  grid-template-columns: 4fr 6fr 2fr;
-  grid-gap: $gap-pc;
+  grid-gap: gutter(6) - 12;
 }

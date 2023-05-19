@@ -1,12 +1,19 @@
-<section class="about-parking">
+<section class="section about-parking">
   <div class="osmi-container">
-    <div class="o-grid about-parking__inner">
-      <h2 class="h2 about-parking__cap">О нас</h2>
+    @@include("../UI/line.html")
+    <div class="about-parking__inner">
+      <h2 class="h2 about-parking__cap wow slow fadeIn">О нас</h2>
       <div>
-        <p class="about-parking__text">Фонд "Халык" существует с 2016 года для реализации благотворительных проектов в областях социальной защиты и здравоохранения, спорта, культуры и образования.</p>
-        <div class="about-parking__list">
-          @@include("../anime-card/target.html")
-          @@include("../anime-card/principles.html")
+        <p class="about-parking__text wow slow fadeIn">Фонд "Халык" существует с 2016 года для реализации благотворительных проектов в областях социальной защиты и здравоохранения, спорта, культуры и образования.</p>
+        <div class="about-parking__list wow slow fadeIn" data-wow-delay="0.2s">
+          @@include("../anime-card/target.html", {
+            "title": "Миссия",
+            "text": "Создание системы общественных благ для всех казахстанцев включая инфраструктуру, человеческий капитал и институциональное наследие, а также помощь социально-уязвимым слоям населения.",
+          })
+          @@include("../anime-card/principles.html", {
+            "title": "Принципы",
+            "text": "Фонд 'Халык' действует открыто и прозрачно, работая по всей республике, и стремится к достижению ощутимых социальных результатов для наибольшего количества людей по всей стране.",
+          })
         </div>
       </div>
     </div>

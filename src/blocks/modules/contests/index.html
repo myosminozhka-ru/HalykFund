@@ -1,0 +1,40 @@
+<section class="section contests">
+  <div class="osmi-container">
+    @@include("../UI/line.html")
+    <div class="contests__inner">
+      <div class="contests__top wow slow fadeIn">
+        <p>Конкурсы</p>
+        <a href="#" class="btn only-pc">Все конкурсы</a>
+      </div>
+      <div class="swiper contests__slider wow slow fadeIn">
+        <div class="swiper-wrapper contests__sw-wrapper">
+          <div class="swiper-slide contests__slide">
+            @@include("../cards/card4.html", {
+              "title": "Конкурс “Голос ребенка”",
+              "text": "Конкурсы проводятся среди социально активных граждан, волонтеров, всех тех, кто хочет помогать совершать добрые дела. <br><br> Участие в социальных конкурсах от Благотворительного Фонда «Халык» позволит Вам заявить о своей инициативе, найти ресурсы и партнеров.",
+              "date": "27 апреля - 30 мая",
+              "img": "img/card4-1.jpg",
+            })
+          </div>
+          <div class="swiper-slide contests__slide">
+            @@include("../cards/card4.html", {
+              "title": "Конкурс “Волшебство творчества”",
+              "text": "Цель конкурса - развитие художественного вкуса и творческих способностей детей, а также поддержка родителей в создании костюмов для своих детей. <br><br> Участниками конкурса могут быть дети от 3 до 12 лет, одетые в костюмы, созданные вручную с использованием различных материалов (ткани, бумаги, картона, пластилина и т.д.).",
+              "date": "5 мая - 2 июня",
+              "img": "img/card4-3.jpg",
+            })
+          </div>
+        </div>
+      </div>
+      <div class="contests__pag">
+        <div class="slider-pag slider-pag--progressbar"></div>
+      </div>
+      <div class="contests__c-btns">
+        @@include('../UI/slider-btns.html')
+      </div>
+      <div class="contests__footer wow slow fadeIn">
+        <a href="#" class="btn btn--mob-full">Все конкурсы</a>
+      </div>
+    </div>
+  </div>
+</section>

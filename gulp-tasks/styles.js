@@ -20,6 +20,8 @@ const argv = yargs.argv,
     production = !!argv.production;
 
 gulp.task("styles", () => {
+
+    gulp.src(paths.styles.srcLibs).pipe(gulp.dest(paths.styles.distLibs))
     return gulp.src(paths.styles.src)
         .pipe(gulpif(!production, sourcemaps.init()))
         .pipe(plumber())

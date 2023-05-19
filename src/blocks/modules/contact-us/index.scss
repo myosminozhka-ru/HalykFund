@@ -1,16 +1,30 @@
 .contact-us {
-  padding-top: 24px;
-  margin-bottom: 120px;
-  border-top: 1px solid $brd-grey;
   &__top {
-    margin-bottom: 32px;
+    margin-bottom: gutter(8);
+    @include o-grid;
+  }
+
+  &__content {
+    @include o-grid;
   }
 
   @include tab {
-    padding-top: 16px;
-    margin-bottom: 64px;
     &__top {
+      grid-template-columns: 1fr;
+      grid-gap: gutter(5);
       margin-bottom: 0;
+    }
+    &__content {
+      grid-template-columns: 1fr;
+      grid-gap: gutter(5);
+    }
+  }
+  @include mob {
+    &__top {
+      grid-gap: gutter(4);
+    }
+    &__content {
+      grid-gap: gutter(4);
     }
   }
 }

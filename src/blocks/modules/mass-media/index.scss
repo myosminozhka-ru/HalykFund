@@ -1,10 +1,8 @@
 .mass-media {
-  padding-top: 24px;
-  margin-bottom: 120px;
-  border-top: 1px solid $brd-grey;
 
   &__top {
-    margin-bottom: 40px;
+    margin-bottom: gutter(10);
+    @include o-grid;
   }
 
   &__text {
@@ -13,13 +11,15 @@
 
   &__list {
     border-top: 1px solid $brd-grey;
-    margin-bottom: 40px;
+    margin-bottom: gutter(10);
   }
 
   &__item {
-    @include o-grid-3;
+    display: grid;
+    grid-template-columns: 4fr 6fr 2fr;
+    grid-gap: gutter(6);
     align-items: center;
-    padding: 32px 0;
+    padding: gutter(8) 0;
     border-bottom: 1px solid $brd-grey;
     transition: 300ms;
     transition-property: color, border;
@@ -51,44 +51,45 @@
   }
 
   @include tab {
-    padding-top: 16px;
-    margin-bottom: 64px;
   
     &__top {
-      margin-bottom: 32px;
+      grid-template-columns: 1fr;
+      grid-gap: gutter(5);
+      margin-bottom: gutter(8);
     }
   
     &__list {
-      margin-bottom: 32px;
+      margin-bottom: gutter(8);
     }
   
     &__item {
       align-items: start;
       grid-template-columns: 1fr 2fr 1fr;
-      grid-gap: $gap-tab;
-      padding: 24px 0;
+      grid-gap: gutter(5);
+      padding: gutter(6) 0;
     }
   }
 
   @include mob {
   
     &__top {
-      margin-bottom: 24px;
+      grid-gap: gutter(4);
+      margin-bottom: gutter(6);
     }
 
     &__text {
-      font-size: 24px;
+      font-size: gutter(6);
     }
   
     &__list {
-      margin-bottom: 24px;
+      margin-bottom: gutter(6);
     }
   
     &__item {
       align-items: start;
       grid-template-columns: 1fr 1fr;
-      grid-gap: $gap-mob;
-      padding: 17px 0;
+      grid-gap: gutter(4);
+      padding: gutter(4) 0;
     }
 
     &__site {
