@@ -9,6 +9,7 @@ import SliderGrid from "%modules%/slider-grid/index";
 import SvgAnime from "%modules%/anime-card/index";
 import BannerParking from "%modules%/banner-parking/index";
 import Search from "%modules%/search/index";
+import select from "%modules%/select/index";
 
 
 window.app = {
@@ -22,4 +23,5 @@ window.app = {
   svgAnime: new SvgAnime(),
   bannerParking: new BannerParking(),
   search: new Search(),
+  select: select(),
 }

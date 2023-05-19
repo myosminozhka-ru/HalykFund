@@ -1,10 +1,7 @@
 <section class="section search">
   <div class="osmi-container">
     <div class="search__inner">
-      @@include('../UI/brc.html', {
-        text: ['Главная', 'Поиск']
-      })
-      <div class="search__top">
+      <div class="search__top wow slow fadeIn">
         <input type="text" class="search__input" value="Запрос пользователя" placeholder="Поиск" data-page="/search?q=">
         <button class="search__start">
           <svg>
@@ -19,60 +16,51 @@
       </div>
       @@include("../UI/line.html")
       <div class="search__content">
-        <div class="search__count">Найдено 58 результатов</div>
+        <div class="search__count wow slow fadeIn">Найдено 58 результатов</div>
         <div class="search__list">
-          <a href="#" class="search__item">
+          <a href="#" class="search__item wow slow fadeIn">
             <h4 class="h4 search__title">Заголовок, где упомянут запрос пользователя </h4>
             <div class="search__text">Текст, где встречается <span>запрос пользователя</span> .Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsumLorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsumLorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsumLorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsumLorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem</div>
           </a>
-          <a href="#" class="search__item">
+          <a href="#" class="search__item wow slow fadeIn">
             <h4 class="h4 search__title">Просто заголовок</h4>
             <div class="search__text">Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum <span>запрос пользователя</span>. Текст, где встречается<span>запрос пользователя</span>. Текст, где встречается запрос пользователя. Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsumLorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum </div>
           </a>
-          <a href="#" class="search__item">
+          <a href="#" class="search__item wow slow fadeIn">
             <h4 class="h4 search__title">Заголовок, где упомянут запрос пользователя </h4>
             <div class="search__text">Текст, где встречается <span>запрос пользователя</span> .Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsumLorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsumLorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsumLorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsumLorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem</div>
           </a>
-          <a href="#" class="search__item">
+          <a href="#" class="search__item wow slow fadeIn">
             <h4 class="h4 search__title">Просто заголовок</h4>
             <div class="search__text">Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum <span>запрос пользователя</span>. Текст, где встречается<span>запрос пользователя</span>. Текст, где встречается запрос пользователя. Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsumLorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum </div>
           </a>
-          <a href="#" class="search__item">
+          <a href="#" class="search__item wow slow fadeIn">
             <h4 class="h4 search__title">Заголовок, где упомянут запрос пользователя </h4>
             <div class="search__text">Текст, где встречается <span>запрос пользователя</span> .Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsumLorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsumLorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsumLorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsumLorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem</div>
           </a>
-          <a href="#" class="search__item">
+          <a href="#" class="search__item wow slow fadeIn">
             <h4 class="h4 search__title">Просто заголовок</h4>
             <div class="search__text">Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum <span>запрос пользователя</span>. Текст, где встречается<span>запрос пользователя</span>. Текст, где встречается запрос пользователя. Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsumLorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum </div>
           </a>
-          <a href="#" class="search__item">
+          <a href="#" class="search__item wow slow fadeIn">
             <h4 class="h4 search__title">Заголовок, где упомянут запрос пользователя </h4>
             <div class="search__text">Текст, где встречается <span>запрос пользователя</span> .Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsumLorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsumLorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsumLorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsumLorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem</div>
           </a>
-          <a href="#" class="search__item">
+          <a href="#" class="search__item wow slow fadeIn">
             <h4 class="h4 search__title">Просто заголовок</h4>
             <div class="search__text">Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum <span>запрос пользователя</span>. Текст, где встречается<span>запрос пользователя</span>. Текст, где встречается запрос пользователя. Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsumLorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum </div>
           </a>
-          <a href="#" class="search__item">
+          <a href="#" class="search__item wow slow fadeIn">
             <h4 class="h4 search__title">Заголовок, где упомянут запрос пользователя </h4>
             <div class="search__text">Текст, где встречается <span>запрос пользователя</span> .Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsumLorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsumLorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsumLorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsumLorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem</div>
           </a>
-          <a href="#" class="search__item">
+          <a href="#" class="search__item wow slow fadeIn">
             <h4 class="h4 search__title">Просто заголовок</h4>
             <div class="search__text">Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum <span>запрос пользователя</span>. Текст, где встречается<span>запрос пользователя</span>. Текст, где встречается запрос пользователя. Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsumLorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum </div>
           </a>
         </div>
       </div>
-      <div class="search__footer">
-        <div class="search__pag">
-          @@include('../UI/pag.html', {
-            numbers: [2, 3, "4..."]
-          })
-        </div>
-        <div class="search__more">
-          <a href="#" class="link-2">Посмотреть больше</a>
-        </div>
-      </div>
+      @@include('../UI/list-footer.html')
     </div>
   </div>
 </section>

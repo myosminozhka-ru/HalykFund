@@ -54,10 +54,12 @@
   }
 }
 .brc {
-  display: block;
   margin-top: gutter(10);
   margin-bottom: gutter(12);
   color: $grey;
+  &__inner {
+    display: block;
+  }
   li {
     display: inline-block;
     padding-right: 22px;
@@ -111,6 +113,33 @@
       height: 32px;
       padding: 4px;
       border-radius: 5px;
+    }
+  }
+}
+
+.tab {
+  display: flex;
+  flex-wrap: wrap;
+  gap: gutter(4);
+}
+
+.list-footer {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  margin-top: gutter(16);
+  &__more {
+    display: flex;
+    justify-content: center;
+  }
+  @include tab {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    margin-top: gutter(8);
+    &__more {
+      margin-bottom: gutter(10);
+      display: flex;
+      justify-content: center;
     }
   }
 }

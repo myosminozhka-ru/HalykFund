@@ -30,7 +30,6 @@
   &__content {
     display: grid;
     grid-template-columns: 10fr 2fr;
-    margin-bottom: gutter(14);
   }
   &__count {
     grid-column: 2/3;
@@ -54,14 +53,6 @@
       color: $black;
     }
   }
-  &__footer {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-  }
-  &__more {
-    display: flex;
-    justify-content: center;
-  }
   @include tab {
     &__top {
       margin-bottom: 24px;
@@ -74,7 +65,6 @@
       grid-template-columns: 1fr;
       grid-gap: gutter(8);
       margin-top: gutter(8);
-      margin-bottom: gutter(8);
     }
     &__count {
       grid-row: 1/2;
@@ -88,16 +78,6 @@
     }
     &__title {
       margin-bottom: 10px;
-    }
-    &__footer {
-      display: flex;
-      flex-direction: column-reverse;
-      align-items: center;
-    }
-    &__more {
-      margin-bottom: gutter(10);
-      display: flex;
-      justify-content: center;
     }
   }
 }

@@ -1,0 +1,83 @@
+.docs {
+  .line {
+    margin-bottom: 0;
+  }
+  &__cap {
+    margin-bottom: gutter(8);
+  }
+  &__tabs {
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+    gap: gutter(14);
+    margin-bottom: gutter(8);
+    &::after {
+      content: '';
+      display: block;
+      width: 100%;
+      height: 1px;
+      background-color: $grey;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+    }
+  }
+  &__tab {
+    display: inline-block;
+    font-size: 18px;
+    color: $grey;
+    padding: 17px 0;
+    position: relative;
+    z-index: 2;
+    &.active, &:hover {
+      color: $accent;
+      &::after {
+        content: '';
+        display: block;
+        width: 100%;
+        height: 1px;
+        background-color: $accent;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+      }
+    }
+  }
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: gutter(6);
+  }
+  &__item {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 230px;
+    padding: gutter(6);
+    background-color: $green-light;
+  }
+  &__footer {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+  }
+  @include tab {
+    &__list {
+      grid-template-columns: repeat(2, 1fr);
+      grid-gap: gutter(5);
+    }
+  }
+  @include mob {
+    &__tabs {
+      gap: gutter(10);
+    }
+    &__tab {
+      font-size: 16px;
+      padding: 15px 0;
+    }
+    &__list {
+      grid-template-columns: repeat(1, 1fr);
+      grid-gap: gutter(6);
+    }
+  }
+}
