@@ -1,11 +1,12 @@
 .form {
+  color: $black;
   &__inner {
     display: flex;
     flex-wrap: wrap;
     margin: 0 -8px;
   }
   &__item {
-    padding: 8px;
+    padding: gutter(2);
     font-size: 14px;
     font-weight: 400;
     width: 100%;
@@ -68,16 +69,17 @@
   }
   &__conf {
     display: flex;
-    margin-bottom: 24px;
+    margin-bottom: gutter(6);
     &-label {
       display: inline-block;
+      cursor: pointer;
       span {
         display: inline-block;
         width: 20px;
         height: 20px;
         border-radius: 2px;
         border: 1px solid $grey;
-        margin-right: 8px;
+        margin-right: gutter(2);
       }
       input:checked + span {
         background-image: url(../img/accepted.svg);
@@ -86,13 +88,40 @@
         background-position: center;
         border-color: $accent;
       }
-      input:focus + span {
-        border-color: $black;
-      }
     }
     &-text {
       font-size: 14px;
       color: $grey;
+    }
+  }
+
+  &__subs {
+    position: relative;
+    max-width: 424px;
+    input {
+      height: 65px;
+      padding-right: 175px;
+    }
+    button {
+      position: absolute;
+      right: 1px;
+      top: 1px;
+      width: 165px;
+      height: calc(100% - 2px);
+      border-radius: 10px;
+    }
+  }
+
+  &--dark {
+    .form__conf-text {
+      color: $white;
+    }
+    .form__conf-label span {
+      border-color: $white;
+    }
+    .form__conf-label input:checked + span {
+      border-color: $white;
+      background-image: url(../img/accepted2.svg);
     }
   }
 
@@ -106,5 +135,16 @@
       }
     }
 
+    &__subs {
+      max-width: none;
+    }
+
+  }
+  @include mob {
+    &__conf {
+      &-text {
+        font-size: 12px;
+      }
+    }
   }
 }

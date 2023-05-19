@@ -1,0 +1,45 @@
+<section class="section directions--main">
+  <div class="osmi-container">
+    @@include("../UI/line.html")
+    <div class="directions__inner">
+      <div class="directions__top wow slow fadeIn">
+        <div class="directions__cap">Направления</div>
+        <div class="text-2 directions__title">Как благотворительный фонд, мы вносим свой вклад в жизнь многих людей, мы обеспечиваем движение к более справедливому сообществу.</div>
+      </div>
+      <div class="directions__slider-wrap wow slow fadeIn">
+        <div class="swiper directions__slider">
+          <div class="swiper-wrapper directions__swiper-wrap">
+            <div class="swiper-slide directions__slide">
+              @@include("../cards/card1.html", {
+                "title": "Сообщества",
+                "text": "Для продвижения принципов социальной ответственности",
+                "img": "img/card1-1.jpg",
+              })
+            </div>
+            <div class="swiper-slide directions__slide">
+              @@include("../cards/card1.html", {
+                "title": "Инфраструктура",
+                "text": "Для создания благоприятной среды развития",
+                "img": "img/card1-2.jpg",
+              })
+            </div>
+            <div class="swiper-slide directions__slide">
+              @@include("../cards/card1.html", {
+                "title": "Люди",
+                "text": "Для развития человеческого капитала",
+                "img": "img/card1-3.jpg",
+              })
+            </div>
+          </div>
+        </div>
+        <div class="directions__pag">
+          <div class="slider-pag slider-pag--progressbar"></div>
+        </div>
+        <div class="directions__c-btns">
+          @@include('../UI/slider-btns.html')
+        </div>
+      </div>
+      <button class="btn btn--mob-full directions__more">Подробнее</button>
+    </div>
+  </div>
+</section>

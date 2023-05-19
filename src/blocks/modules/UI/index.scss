@@ -1,7 +1,10 @@
-.slider-btns {
-  display: inline-flex;
-  align-items: center;
-  &__prev, &__next {
+.slider {
+  &-btns {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+  }
+  &-prev, &-next {
     width: 32px;
     height: 32px;
     svg {
@@ -35,7 +38,18 @@
       }
     }
   }
-  &__prev {
-    margin-right: 8px;
+}
+.line {
+  margin-bottom: gutter(6);
+  overflow: hidden;
+  div  {
+    background-color: $grey;
+    height: 1px;
+    width: 100%;
+  }
+  @include tab {
+    margin-bottom: gutter(4);
+  }
+  @include mob {
   }
 }

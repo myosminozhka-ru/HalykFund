@@ -23,10 +23,11 @@
         <link rel="apple-touch-icon" sizes="167x167" href="img/favicons/apple-touch-icon-167x167.png">
         <link rel="apple-touch-icon" sizes="180x180" href="img/favicons/apple-touch-icon-180x180.png">
         <link rel="apple-touch-icon" sizes="1024x1024" href="img/favicons/apple-touch-icon-1024x1024.png">
+        <link rel="stylesheet" href="styles/libs/swiper-bundle.min.css">
         <link rel="stylesheet" href="styles/main.css">
     </head>
-    <body>
-      <header class="header header--parking">
+    <body data-scroll-container>
+      <header class="header wow fadeIn">
         <div class="osmi-container">
           <div class="header__inner">
             <a href="/" class="header__logo">
@@ -34,29 +35,94 @@
                 <use xlink:href="img/sprites/sprite.svg#logo"></use>
               </svg>
             </a>
+            <div class="header__langs header__langs--pc">
+              <a href="/kz" class="header__lang">Kz</a>
+              <a href="/" class="header__lang active">Ru</a>
+              <a href="/en" class="header__lang">En</a>
+            </div>
             <nav class="header__nav">
-              <div class="header__langs">
+              <div class="header__langs header__langs--mobile">
                 <a href="/kz" class="header__lang">Kz</a>
                 <a href="/" class="header__lang active">Ru</a>
+                <a href="/en" class="header__lang">En</a>
               </div>
               <div class="header__nav-list">
-                <div class="header__nav-item">
-                  <div class="header__nav-title"><a href="#">О нас</a></div>
+                <div class="header__nav-item header__nav-item--drop">
+                  <div class="header__nav-title">
+                    <a href="#">О фонде</a>
+                    <div class="header__nav-arrow">
+                      <svg>
+                        <use xlink:href="img/sprites/sprite.svg#nav-arrow"></use>
+                      </svg>
+                    </div>
+                  </div>
+                  <div class="header__nav-drop">
+                    <ul>
+                      <li><a href="#">Лица фонда</a></li>
+                      <li><a href="#">Наши партнеры</a></li>
+                      <li><a href="#">Карта программ <br> и проектов</a></li>
+                    </ul>
+                    <ul>
+                      <li><a href="#">СМИ о нас</a></li>
+                      <li><a href="#">Документы фонда</a></li>
+                      <li><a href="#">Медиатека</a></li>
+                    </ul>
+                    <ul>
+                      <li><a href="#">FAQ</a></li>
+                      <li><a href="#">Контакты</a></li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="header__nav-item header__nav-item--drop">
+                  <div class="header__nav-title">
+                    <a href="#">Программы</a>
+                    <div class="header__nav-arrow">
+                      <svg>
+                        <use xlink:href="img/sprites/sprite.svg#nav-arrow"></use>
+                      </svg>
+                    </div>
+                  </div>
+                  <div class="header__nav-drop">
+                    <ul>
+                      <li><a href="#">Программы 1</a></li>
+                      <li><a href="#">Программы 2</a></li>
+                      <li><a href="#">Программы 3</a></li>
+                    </ul>
+                  </div>
                 </div>
                 <div class="header__nav-item">
-                  <div class="header__nav-title"><a href="#">Программы</a></div>
+                  <div class="header__nav-title"><a href="#">Конкурсы</a></div>
                 </div>
                 <div class="header__nav-item">
-                  <div class="header__nav-title"><a href="#">Контакты</a></div>
+                  <div class="header__nav-title"><a href="#">Отчетность</a></div>
+                </div>
+                <div class="header__nav-item">
+                  <div class="header__nav-title"><a href="#">Новости</a></div>
+                </div>
+                <div class="header__nav-item">
+                  <div class="header__nav-title"><a href="#">Истории в лицах</a></div>
+                </div>
+                <div class="header__nav-item">
+                  <div class="header__nav-title"><a href="#">Подать заявку</a></div>
+                </div>
+              </div>
+              <div class="header__search">
+                <div class="header__search-in">
+                  <button class="header__search-open">
+                    <svg>
+                      <use xlink:href="img/sprites/sprite.svg#search"></use>
+                    </svg>
+                  </button>
+                  <input type="text" class="header__search-input" placeholder="Поиск" data-page="/search?q=">
+                  <button class="header__search-start">Найти</button>
+                  <button class="header__search-close">
+                    <svg>
+                      <use xlink:href="img/sprites/sprite.svg#x"></use>
+                    </svg>
+                  </button>
                 </div>
               </div>
             </nav>
-            <div class="header__note">
-              <svg>
-                <use xlink:href="img/sprites/sprite.svg#info"></use>
-              </svg>
-              Сайт находится в разработке и <br> в скором времени будет обновлен
-            </div>
             <div class="header__burger">
               <div></div>
             </div>

@@ -1,0 +1,156 @@
+.work-results {
+  background-color: $green-light;
+  padding: gutter(10) 0;
+  &__inner {
+    display: grid;
+    grid-template-columns: repeat(3, 4fr);
+    grid-gap: gutter(6);
+  }
+  &__download {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-start;
+  }
+  &__texts {
+    grid-column: 2/4;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: gutter(6);
+    color: $grey;
+  }
+  &__list {
+    grid-column: 2/4;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  &__item {
+    padding: gutter(6) 0 gutter(6) 110px;
+    position: relative;
+    &::before,
+    &::after {
+      content: '';
+      display: block;
+      position: absolute;
+      background-color: $grey;
+    }
+    &::before {
+      height: 1px;
+      width: calc(100% - 24px);
+      top: 0;
+      left: 0;
+    }
+    &::after {
+      width: 1px;
+      height: calc(100% - 48px);
+      right: 0;
+      top: 24px;
+    }
+    &:nth-child(2n) {
+      &::before {
+        left: 24px;
+      }
+      &::after {
+        display: none;
+      }
+    }
+    &:nth-child(1),
+    &:nth-child(2) {
+      &::before {
+        display: none;
+      }
+    }
+  }
+  &__key {
+    font-family: 'Manrope';
+    font-weight: 300;
+    font-size: 130px;
+    letter-spacing: -0.02em;
+    line-height: 1;
+    color: $accent;
+  }
+  &__value {
+    font-size: 18px;
+  }
+
+  @include tab {
+    padding: gutter(8) 0;
+    &__inner {
+      grid-template-columns: repeat(2, 1fr);
+      grid-gap: gutter(5);
+    }
+    &__title {
+      grid-column: 1/3;
+      grid-row: 2/3;
+    }
+    &__texts {
+      grid-column: 1/3;
+      grid-gap: 22px;
+    }
+    &__list {
+      grid-column: 1/3;
+    }
+    &__item {
+      padding: gutter(4) 0 gutter(4) 0;
+      &::before {
+        width: calc(100% - 20px);
+        left: 0;
+      }
+      &::after {
+        height: calc(100% - 40px);
+        right: 0;
+        top: 20px;
+      }
+      &:nth-child(2n) {
+        padding-left: gutter(5);
+        &::before {
+          left: 20px;
+        }
+      }
+    }
+  }
+
+  @include mob {
+    &__inner {
+      grid-template-columns: repeat(1, 1fr);
+      grid-gap: gutter(4);
+    }
+    &__title {
+      grid-column: 1/2;
+      grid-row: 2/3;
+    }
+    &__download {
+      grid-row: 4/5;
+    }
+    &__texts {
+      grid-template-columns: repeat(1, 1fr);
+      grid-column: 1/2;
+      grid-gap: gutter(4);
+    }
+    &__list {
+      grid-column: 1/2;
+    }
+    &__item {
+      &::before {
+        width: calc(100% - 18px);
+        left: 0;
+      }
+      &::after {
+        height: calc(100% - 34px);
+        right: 0;
+        top: 18px;
+      }
+      &:nth-child(2n) {
+        padding-left: gutter(4);
+        &::before {
+          left: 18px;
+        }
+      }
+    }
+    &__key {
+      font-size: 64px;
+    }
+    &__value {
+      font-size: 16px;
+    }
+  }
+}

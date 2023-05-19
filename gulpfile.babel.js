@@ -18,6 +18,8 @@ const requireDir = require("require-dir"),
         styles: {
             src: "./src/styles/main.{scss,sass}",
             dist: "./dist/styles/",
+            srcLibs: "./src/styles/libs/*.css",
+            distLibs: "./dist/styles/libs",
             watch: [
                 "./src/blocks/**/*.{scss,sass}",
                 "./src/styles/**/*.{scss,sass}"
@@ -26,6 +28,8 @@ const requireDir = require("require-dir"),
         scripts: {
             src: "./src/js/index.js",
             dist: "./dist/js/",
+            srcLibs: "./src/js/libs/*.js",
+            distLibs: "./dist/js/libs",
             watch: [
                 "./src/blocks/**/*.js",
                 "./src/js/**/*.js"

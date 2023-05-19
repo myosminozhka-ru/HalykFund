@@ -1,0 +1,79 @@
+.about {
+  &__inner {
+    position: relative;
+    @include o-grid;
+  }
+  &__title {
+    margin-bottom: gutter(6);
+  }
+  &__texts {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: gutter(6);
+    margin-bottom: gutter(10);
+  }
+  &__text {
+    color: $grey;
+  }
+  &__pic {
+    border-radius: $brz;
+    overflow: hidden;
+  }
+  &__more {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  &--found {
+    .about__title {
+      padding-right: 216px;
+    }
+  }
+  @include tab {
+    &__inner {
+      grid-template-columns: 1fr;
+      grid-gap: gutter(5);
+    }
+    &__cap {
+      padding-bottom: gutter(5);
+    }
+    &--found {
+      .about__title {
+        padding-right: 0;
+      }
+    }
+  }
+  @include mob {
+    &__inner {
+      grid-gap: gutter(4);
+    }
+    &__cap {
+      padding-bottom: 0;
+    }
+    &__title {
+      margin-bottom: gutter(4);
+    }
+    &__texts {
+      grid-template-columns: repeat(1, 1fr);
+      grid-gap: gutter(4);
+      margin-bottom: gutter(6);
+    }
+    &__pic {
+      width: 100%;
+      min-height: 260px;
+      position: relative;
+      img {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+    &__more {
+      position: static;
+      margin-bottom: gutter(8);
+    }
+  }
+}

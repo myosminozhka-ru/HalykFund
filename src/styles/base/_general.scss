@@ -7,6 +7,7 @@ html {
   font-size: 16px;
   color: $black;
   line-height: 1.3;
+  scroll-behavior: smooth;
 }
 body {
   font-size: 16px;
@@ -18,6 +19,9 @@ body {
 
   @include tab {
     padding-top: 100px;
+  }  
+  @include mob {
+    font-size: 14px;
   }
 }
 h1, h2, h3, h4, h5, h6, ul, p {
@@ -180,19 +184,6 @@ a {
   font-size: 14px;
 }
 
-.o-grid {
-  @include o-grid;
-
-  @include tab {
-    grid-template-columns: 1fr;
-    grid-gap: $gap-tab;
-  }
-
-  @include mob {
-    grid-gap: $gap-mob;
-  }
-}
-
 .visually-hidden {
   position: absolute;
   width: 1px;
@@ -211,7 +202,7 @@ a {
   display: inline-flex;
   justify-content: center;
   align-items: center;
-  padding: 12px 24px;
+  padding: 10px 24px;
   color: $white;
   background-color: $accent;
   border: 1px solid $accent;
@@ -232,14 +223,70 @@ a {
     opacity: 0.5;
     cursor: default;
   }
+  &--white {
+    background-color: $white;
+    color: $accent;
+    border-color: $white;
+    &:hover {
+      background-color: rgba($color: #000000, $alpha: 0);
+      color: $white;
+      border-color: $white;
+    }
+  }
   @include tab {
-    width: 100%;
-    max-width: 344px;
+    &--tab-full {
+      width: 100%;
+      max-width: 344px;
+    }
+  }
+  @include mob {
+    &--mob-full {
+      width: 100%;
+      max-width: 344px;
+    }
   }
 }
 
 .only-pc {
   @include tab {
     display: none;
+  }
+}
+
+.slider-pag {
+  &--bullets {
+    width: auto !important;
+    display: flex;
+    align-items: center;
+    span {
+      width: 10px;
+      height: 10px;
+      display: inline-block;
+      margin-right: gutter(3);
+      background-color: $grey;
+      &.active {
+        background-color: $accent;
+        opacity: 1;
+      }
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+  &--progressbar {
+    position: relative;
+    height: 1px !important;
+    .swiper-pagination-progressbar-fill {
+      background-color: $accent;
+    }
+  }
+}
+
+.section {
+  margin-bottom: 120px;
+  @include tab {
+    margin-bottom: 64px;
+  }
+  @include mob {
   }
 }

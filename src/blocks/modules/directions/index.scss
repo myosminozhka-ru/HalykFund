@@ -1,12 +1,13 @@
 .directions {
-  padding-top: 24px;
-  margin-bottom: 120px;
-  border-top: 1px solid $brd-grey;
   overflow: hidden;
+  &__inner {
+    position: relative;
+  }
+
   &__top {
     display: flex;
     justify-content: space-between;
-    margin-bottom: 24px;
+    margin-bottom: gutter(6);
   }
 
   &__slider {
@@ -15,17 +16,72 @@
 
   &__slide {
     width: auto;
-    margin-right: $gap-pc;
+    margin-right: gutter(6);
     &:last-child {
       margin-right: 0;
+    }
+    .card1__pic {
+      img {
+        width: auto;
+        object-fit: unset;
+      }
+    }
+  }
+
+  &__more {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+
+  &__pag {
+    margin-top: gutter(6);
+    margin-bottom: gutter(4);
+  }
+
+  &--main {
+    .directions__top {
+      @include o-grid;
+    }
+    .directions__title {
+      padding-right: 216px;
+    }
+    .directions__c-btns {
+      display: flex;
+      justify-content: flex-end;
     }
   }
 
   @include tab {
-    padding-top: 16px;
-    margin-bottom: 64px;
     &__c-btns {
       display: none;
+    }
+    &--main {
+      .directions__top {
+        display: block;
+      }
+      .directions__title {
+        padding-right: 0;
+        margin-top: 43px;
+      }
+      .directions__c-btns, 
+      .directions__pag {
+        display: none;
+      }
+    }
+  }
+  @include mob {
+    &__slide {
+      .card1__pic {
+        img {
+          width: 100%;
+          object-fit: cover;
+        }
+      }
+    }
+    &__more {
+      position: static;
+      margin-top: gutter(6);
     }
   }
 }

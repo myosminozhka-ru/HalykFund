@@ -1,0 +1,28 @@
+.our-values {
+  &__inner {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: gutter(6);
+  }
+
+  @include tab {
+    &__inner {
+      grid-template-columns: repeat(2, 1fr);
+      grid-gap: gutter(5);
+    }
+    &__cap {
+      grid-column: 1/3;
+    }
+  }
+
+  @include tab {
+    &__inner {
+      grid-template-columns: repeat(1, 1fr);
+      grid-gap: gutter(4);
+    }
+    &__cap {
+      grid-column: 1/2;
+      margin-bottom: 10px;
+    }
+  }
+}

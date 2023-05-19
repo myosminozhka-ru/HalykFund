@@ -1,0 +1,71 @@
+.slider-grid {
+  overflow: visible;
+  height: 424px;
+  width: 100%;
+  &__slide {
+    width: auto;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    gap: gutter(6);
+    margin-right: gutter(6);
+    &:last-child {
+      margin-right: 0;
+    }
+    &:nth-child(6n + 1) {
+      img {
+        height: 200px;
+      }
+    }
+    &:nth-child(6n + 3) {
+      img {
+        width: 200px;
+        height: 200px;
+      }
+    }
+
+    img {
+      width: 424px;
+      height: 424px;
+      object-fit: cover;
+      border-radius: $brz;
+      overflow: hidden;
+    }
+  }
+  @include tab {
+    &__slide {
+      gap: gutter(5);
+      margin-right: gutter(5);
+  
+      img {
+        width: 344px;
+      }
+    }
+
+  }
+
+  @include mob {
+    height: 350px;
+    &__slide {
+      gap: gutter(4);
+      margin-right: gutter(4);
+      &:nth-child(6n + 1) {
+        img {
+          height: 167px;
+          width: 285px;
+        }
+      }
+      &:nth-child(6n + 3) {
+        img {
+          width: 235px;
+          height: 167px;
+        }
+      }
+  
+      img {
+        width: 344px;
+        height: 350px;
+      }
+    }
+  }
+}
