@@ -988,6 +988,7 @@ var Select = /*#__PURE__*/function () {
       if (this.el.classList.contains('active')) {
         this.close();
       } else {
+        Select.closeAll();
         this.open();
       }
     }
@@ -1001,16 +1002,21 @@ var Select = /*#__PURE__*/function () {
         });
       });
     }
+  }], [{
+    key: "closeAll",
+    value: function closeAll() {
+      for (var value in selects) {
+        selects[value].forEach(function (i) {
+          i.close();
+        });
+      }
+    }
   }]);
   return Select;
 }();
 document.addEventListener('click', function (e) {
   if (!e.target.closest('[data-select-id]')) {
-    for (var value in selects) {
-      selects[value].forEach(function (i) {
-        i.close();
-      });
-    }
+    Select.closeAll();
   }
 });
 /* harmony default export */ function __WEBPACK_DEFAULT_EXPORT__() {

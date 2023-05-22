@@ -1426,6 +1426,32 @@ a {
   gap: 16px;
 }
 
+.link-checkbox {
+  display: inline-flex;
+  align-items: center;
+}
+
+.link-checkbox__check {
+  width: 24px;
+  height: 24px;
+  flex-shrink: 0;
+  border-radius: 4px;
+  border: 1px solid #398166;
+  background-color: #F9FDFC;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 16px;
+}
+
+.link-checkbox__check.active {
+  background-color: #398166;
+  background-image: url(../img/check.svg);
+}
+
+.link-checkbox__text {
+  margin-left: 10px;
+}
+
 .card1 {
   display: block;
 }
@@ -3095,12 +3121,9 @@ a {
   overflow: hidden;
 }
 
-.gallery-slider {
-  overflow: visible;
-}
-
 .gallery-slider__slider {
   margin-bottom: 16px;
+  overflow: visible;
 }
 
 .gallery-slider__slide {
@@ -3188,6 +3211,41 @@ a {
   grid-template-columns: repeat(2, 1fr);
   grid-gap: 24px;
   color: #8A8A8A;
+}
+
+.news__cap {
+  margin-bottom: 32px;
+}
+
+.news__select {
+  display: none;
+}
+
+.news__filter {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 32px;
+}
+
+.news__checkboxes {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.news__list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 24px;
+}
+
+.news__list .card2:nth-child(1) {
+  grid-column: 1/3;
+}
+
+.news__list .card2:nth-child(7) {
+  grid-column: 2/4;
 }
 
 @media (max-width: 1380px) {
@@ -4018,6 +4076,38 @@ a {
   .request__form .form__item--50 {
     width: 50%;
   }
+
+  .news__filter {
+    display: block;
+    margin-bottom: 24px;
+  }
+
+  .news__tab,
+  .news__checkboxes {
+    display: none;
+  }
+
+  .news__select {
+    display: block;
+    margin-bottom: 8px;
+  }
+
+  .news__list {
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 20px;
+  }
+
+  .news__list .card2:nth-child(1) {
+    grid-column: 1/3;
+  }
+
+  .news__list .card2:nth-child(6) {
+    grid-column: 1/3;
+  }
+
+  .news__list .card2:nth-child(7) {
+    grid-column: 1/2;
+  }
 }
 
 @media (max-width: 360px) {
@@ -4638,6 +4728,31 @@ a {
 
   .request__form .form__item--50 {
     width: 100%;
+  }
+
+  .news__cap {
+    margin-bottom: 16px;
+  }
+
+  .news__filter {
+    margin-bottom: 40px;
+  }
+
+  .news__list {
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 32px;
+  }
+
+  .news__list .card2:nth-child(1) {
+    grid-column: 1/2;
+  }
+
+  .news__list .card2:nth-child(6) {
+    grid-column: 1/2;
+  }
+
+  .news__list .card2:nth-child(7) {
+    grid-column: 1/2;
   }
 }
 /*# sourceMappingURL=maps/main.css.map */
