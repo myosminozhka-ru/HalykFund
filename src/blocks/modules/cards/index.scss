@@ -126,6 +126,9 @@
   &__text {
     color: $grey;
     margin-bottom: gutter(4);
+    &:empty {
+      display: none;
+    }
   }
 
   &__footer {

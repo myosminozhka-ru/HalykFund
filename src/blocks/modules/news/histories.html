@@ -1,21 +1,23 @@
-<section class="section histories">
+<section class="section news">
   <div class="osmi-container">
-    <div class="histories__inner">
-      <h1 class="h1 histories__cap wow slow fadeIn">Истории в лицах</h1>
+    <div class="news__inner">
+      <h1 class="h1 news__cap wow slow fadeIn">Истории в лицах</h1>
       @@include("../UI/line.html")
-      <div class="histories__tab">
-        @@include('../UI/tab.html', {
-          current: 'Все',
-          text: ['Сообщества', 'Инфраструктуры', 'Люди']
-        })
+      <div class="news__filter">
+        <div class="news__tab">
+          @@include('../UI/tab.html', {
+            current: 'Все',
+            text: ['Сообщества', 'Инфраструктуры', 'Люди']
+          })
+        </div>
+        <div class="news__select">
+          @@include('../select/select-link.html', {
+            current: 'Все',
+            values: ['Сообщества', 'Инфраструктуры', 'Люди']
+          })
+        </div>
       </div>
-      <div class="histories__select">
-        @@include('../select/select-link.html', {
-          current: 'Все',
-          values: ['Сообщества', 'Инфраструктуры', 'Люди']
-        })
-      </div>
-      <div class="histories__list">
+      <div class="news__list">
         @@include("../cards/card2.html", {
           "title": "История многодетной матери, которая воплотила свою мечту",
           "text": "Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum",
