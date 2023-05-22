@@ -1,0 +1,34 @@
+.news-another {
+  &__top {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: gutter(6);
+  }
+  &__slide {
+    border-radius: $brz;
+    overflow: hidden;
+    margin-right: gutter(6);
+    height: auto;
+    width: 424px;
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+  @include tab {
+    overflow: hidden;
+    &__slider {
+      overflow: visible;
+    }
+    &__c-btns {
+      display: none;
+    }
+  }
+  @include mob {
+    &__slide {
+      width: 285px;
+      .card2__pic {
+        height: 250px;
+      }
+    }
+  }
+}

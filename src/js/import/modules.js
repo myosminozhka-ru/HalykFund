@@ -10,6 +10,8 @@ import SvgAnime from "%modules%/anime-card/index";
 import BannerParking from "%modules%/banner-parking/index";
 import Search from "%modules%/search/index";
 import select from "%modules%/select/index";
+import SliderGallery from "%modules%/gallery-slider/index";
+import SliderNewsAnother from "%modules%/news-another/index";
 
 
 window.app = {
@@ -24,4 +26,6 @@ window.app = {
   bannerParking: new BannerParking(),
   search: new Search(),
   select: select(),
+  sliderGallery: new SliderGallery(),
+  sliderNewsAnother: new SliderNewsAnother(),
 }
