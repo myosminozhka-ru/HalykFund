@@ -144,6 +144,10 @@
   </div>
 </div>
 <section class="article">
+  <div class="article__fb-share">
+    <div id="fb-root"></div>
+    <script async defer crossorigin="anonymous" src="https://connect.facebook.net/ru_RU/sdk.js#xfbml=1&version=v16.0" nonce="KbhJtiL2"></script>
+  </div>
   <div class="osmi-container">
     <div class="article__inner">
       <div class="article__grid article__cap">
@@ -173,6 +177,34 @@
         <div class="share">
           <div class="share">
   <div class="share__title">Поделиться:</div>
+  <div class="share__list">
+    <div class="share__item">
+      <div class="share__icon">
+        <svg>
+          <use xlink:href="img/sprites/sprite.svg#copy"></use>
+        </svg>
+      </div>
+      <div class="share__btn share__btn--copy" data-copy-trigger>
+
+      </div>
+    </div>
+    <div class="share__item">
+      <div class="share__icon">
+        <svg>
+          <use xlink:href="img/sprites/sprite.svg#facebook"></use>
+        </svg>
+      </div>
+      <div class="share__btn">
+        <div class="fb-share-button" data-href="https://developers.facebook.com/docs/plugins/" data-layout="button"
+          data-size="small">
+          <a target="_blank"
+            href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fdevelopers.facebook.com%2Fdocs%2Fplugins%2F&amp;src=sdkpreparse"
+            class="fb-xfbml-parse-ignore">
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
         </div>
       </div>
@@ -260,6 +292,34 @@
         <div class="share">
           <div class="share">
   <div class="share__title">Поделиться:</div>
+  <div class="share__list">
+    <div class="share__item">
+      <div class="share__icon">
+        <svg>
+          <use xlink:href="img/sprites/sprite.svg#copy"></use>
+        </svg>
+      </div>
+      <div class="share__btn share__btn--copy" data-copy-trigger>
+
+      </div>
+    </div>
+    <div class="share__item">
+      <div class="share__icon">
+        <svg>
+          <use xlink:href="img/sprites/sprite.svg#facebook"></use>
+        </svg>
+      </div>
+      <div class="share__btn">
+        <div class="fb-share-button" data-href="https://developers.facebook.com/docs/plugins/" data-layout="button"
+          data-size="small">
+          <a target="_blank"
+            href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fdevelopers.facebook.com%2Fdocs%2Fplugins%2F&amp;src=sdkpreparse"
+            class="fb-xfbml-parse-ignore">
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
         </div>
       </div>
@@ -566,6 +626,9 @@
             </div>
           </div>
         </footer>
+        <div class="visually-hidden">
+          <textarea id="urlCopy" rows="1" cols="30"></textarea>
+        </div>
         <script src="js/libs/gsap.min.js"></script>
         <script src="js/libs/parallax.min.js"></script>
         <script src="js/vendor.js"></script>
