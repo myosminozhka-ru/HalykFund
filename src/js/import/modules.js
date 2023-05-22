@@ -12,6 +12,7 @@ import Search from "%modules%/search/index";
 import select from "%modules%/select/index";
 import SliderGallery from "%modules%/gallery-slider/index";
 import SliderNewsAnother from "%modules%/news-another/index";
+import Social from "%modules%/social/index";
 
 
 window.app = {
@@ -28,4 +29,5 @@ window.app = {
   select: select(),
   sliderGallery: new SliderGallery(),
   sliderNewsAnother: new SliderNewsAnother(),
+  social: new Social(),
 }

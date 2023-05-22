@@ -149,11 +149,3 @@
   flex-wrap: wrap;
   gap: gutter(4);
 }
-
-.share {
-  display: inline-flex;
-  align-items: center;
-  &__title {
-    color: $grey;
-  }
-}
