@@ -1,0 +1,55 @@
+.gallery-slider {
+  overflow: visible;
+  &__slider {
+    margin-bottom: gutter(4);
+  }
+  &__slide {
+    border-radius: $brz;
+    overflow: hidden;
+    margin-right: gutter(6);
+    height: 395px;
+    width: auto;
+    img {
+      width: auto;
+      height: 100%;
+    }
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+  &__pag {
+    margin-bottom: 6px;
+  }
+  &__c-btns {
+    display: flex;
+    justify-content: flex-end;
+  }
+  @include tab {
+    &__slider {
+      margin-bottom: 0;
+    }
+    &__slide {
+      width: 424px;
+      height: 396px;
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+    &__ctrl {
+      display: none;
+      padding-right: 30px;
+    }
+  }
+  @include mob {
+    &__slide {
+      width: 285px;
+      height: 265px;
+      margin-right: gutter(4);
+    }
+    &__ctrl {
+      padding-right: 20px;
+    }
+  }
+}

@@ -1,0 +1,19 @@
+<div class="gallery-slider">
+  <div class="swiper gallery-slider__slider">
+    <div class="swiper-wrapper gallery-slider__wrapper">
+      @@for (var i = 0; i < gallery.length; i++) {
+        <div class="swiper-slide gallery-slider__slide">
+          <img src="`+gallery[i]+`" alt="">
+        </div>
+      }
+    </div>
+  </div>
+  <div class="gallery-slider__ctrl">
+    <div class="gallery-slider__pag">
+      <div class="slider-pag slider-pag--progressbar"></div>
+    </div>
+    <div class="gallery-slider__c-btns wow slow fadeIn">
+      @@include('../UI/slider-btns.html')
+    </div>
+  </div>
+</div>
