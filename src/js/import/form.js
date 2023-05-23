@@ -21,10 +21,9 @@ export default function () {
       button.textContent = 'Загрузка...'
       ApiForm(action, formData).then((res) => {
         console.log('contact success')
-        if (res.status === 400) {
+        if (res.status === 200) {
           // window.app.modalApplicatioAccepted.open()
           button.textContent = 'Доставлено!'
-          alert('Доставлено!')
         } else {
           throw res
         }
