@@ -4,6 +4,8 @@ export default class BannerParking {
   
     if (image.length === 0) return
 
-    var rellax = new Rellax('.rellax');
+    var rellax = new Rellax('.rellax', {
+      breakpoints: [576, 768, 1024]
+    });
   }
 }
