@@ -60,7 +60,7 @@
     justify-content: space-between;
     font-size: 14px;
     color: $grey;
-    padding-bottom: 30px;
+    padding-bottom: gutter(6);
   }
 
   &__bot-links {
@@ -75,6 +75,16 @@
     margin-right: gutter(8);
     &:last-child {
       margin-right: 0;
+    }
+  }
+  &__octo {
+    display: flex;
+    justify-content: flex-end;
+    padding-bottom: gutter(4);
+    svg {
+      width: 121px;
+      height: 31px;
+      overflow: contain;
     }
   }
 
@@ -171,6 +181,9 @@
   
     &__bot-item {
       margin-right: 0;
+    }
+    &__octo {
+      justify-content: flex-start;
     }
     &--parking {
       .footer {

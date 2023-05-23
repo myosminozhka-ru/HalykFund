@@ -255,6 +255,13 @@
     }
   }
 
+  &--parking {
+    .header__nav {
+      display: flex;
+      justify-content: center;
+    }
+  }
+
   @include tab {
     &--parking {
       .header {
