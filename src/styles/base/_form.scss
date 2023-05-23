@@ -69,17 +69,21 @@
   }
   &__conf {
     display: flex;
+    align-items: center;
     margin-bottom: gutter(6);
     &-label {
-      display: inline-block;
+      display: inline-flex;
+      align-items: center;
       cursor: pointer;
+      width: auto;
+      height: auto;
+      margin-right: gutter(2);
       span {
         display: inline-block;
         width: 20px;
         height: 20px;
         border-radius: 2px;
         border: 1px solid $grey;
-        margin-right: gutter(2);
       }
       input:checked + span {
         background-image: url(../img/accepted.svg);
@@ -92,6 +96,9 @@
     &-text {
       font-size: 14px;
       color: $grey;
+      a {
+        text-decoration: underline;
+      }
     }
   }
 

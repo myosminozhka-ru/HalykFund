@@ -168,7 +168,7 @@
     }
   
     &__bot {
-      flex-direction: column;
+      flex-direction: column-reverse;
       justify-content: flex-start;
       font-size: 12px;
       padding-bottom: gutter(6);
