@@ -11,8 +11,19 @@ export default function () {
 
   forms.forEach(form => {
     const button = form.querySelector('button[type="submit"]')
+    const name = form.getAttribute('id')
+    const validation = window.app[name]
+    button.setAttribute('disabled', true)
+    validation.onValidate(evt => {
+      if (evt.isValid) {
+        button.removeAttribute('disabled')
+      }
+    })
     form.addEventListener('submit', (e) => {
       e.preventDefault()
+      console.log(validation)
+      const isValid = validation.isValid
+      if (!isValid) return
       const formData = new FormData(form)
       const action = form.getAttribute('action')
 
@@ -22,13 +33,13 @@ export default function () {
       ApiForm(action, formData).then((res) => {
         console.log('contact success')
         if (res.status === 200) {
-          // window.app.modalApplicatioAccepted.open()
-          button.textContent = 'Доставлено!'
+          window.osmiAlert.render('Отправлено!', true)
+          button.textContent = 'Отправлено!'
         } else {
           throw res
         }
       }).catch(() => {
-        alert('contact error')
+        window.osmiAlert.render('Попробуйте позже!', false)
       }).finally(() => {
         button.textContent = btnText
         button.removeAttribute('disabled')

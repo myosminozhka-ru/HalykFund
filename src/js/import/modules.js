@@ -14,6 +14,10 @@ import SliderGallery from "%modules%/gallery-slider/index";
 import SliderNewsAnother from "%modules%/news-another/index";
 import Social from "%modules%/social/index";
 import Accordion from "%modules%/accordion/index";
+import contactUsForm from "%modules%/contact-us/index";
+import subscribeForm from "%modules%/news-subs/index";
+import requestForm from "%modules%/request/index";
+import contestForm from "%modules%/info-block/index";
 
 
 window.app = {
@@ -32,4 +36,8 @@ window.app = {
   sliderNewsAnother: new SliderNewsAnother(),
   social: new Social(),
   accordion: Accordion(),
+  contact_us: contactUsForm(),
+  subscribe: subscribeForm(),
+  request: requestForm(),
+  contest: contestForm(),
 }

@@ -25,6 +25,8 @@
         <link rel="apple-touch-icon" sizes="1024x1024" href="img/favicons/apple-touch-icon-1024x1024.png">
         <link rel="stylesheet" href="styles/libs/swiper-bundle.min.css">
         <link rel="stylesheet" href="styles/main.css">
+        <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+        <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script> -->
     </head>
     <body data-scroll-container>
       <header class="header wow fadeIn">
@@ -202,11 +204,10 @@
           </div>
         </div>
         <div class="request__form wow slow fadeIn" data-wow-delay="0.2s">
-          <form class="form" method="POST" action="https://dummyjson.com/products/1">
+          <form class="form" id="request" method="POST" action="https://dummyjson.com/products/1">
   <div class="form__inner">
     <div class="form__item form__item--50">
       <input type="text" name="name" class="form__input" placeholder="Имя" required>
-      <!-- <div class="form__input-error">Текст ошибки</div> -->
     </div>
     <div class="form__item form__item--50">
       <input type="tel" name="tel" class="form__input" placeholder="Телефон" required>
@@ -230,7 +231,7 @@
   <div class="form__actions">
     <div class="form__conf">
       <label class="form__conf-label">
-        <input type="checkbox" class="visually-hidden" required>
+        <input type="checkbox" name="privacy" class="visually-hidden" required>
         <span></span>
       </label>
       <div class="form__conf-text">Согласие с политикой <a href="#">конфиденциальностии <br class="only-pc"> и обработкой персональных данных.</a></div>
@@ -253,12 +254,11 @@
         <p>Подписка на новости</p>
         <h4 class="text-2">Подпишитесь на нашу рассылку, чтобы следить за актуальными новостями и проектами.</h4>
         <div class="news-subs__form">
-          <form class="form form--dark" method="POST" action="https://dummyjson.com/products/1">
+          <form class="form form--dark" id="subscribe" method="POST" action="https://dummyjson.com/products/1">
   <div class="form__inner">
     <div class="form__item form__item--subs">
       <div class="form__subs">
         <input type="email" name="email" class="form__input" placeholder="E-mail" required>
-        <!-- <div class="form__input-error">Текст ошибки</div> -->
         <button class="btn btn--tab-full form__send" type="submit">Отправить</button>
       </div>
     </div>
@@ -266,7 +266,7 @@
   <div class="form__actions">
     <div class="form__conf">
       <label class="form__conf-label">
-        <input type="checkbox" class="visually-hidden" required>
+        <input type="checkbox" name="privacy" class="visually-hidden" required>
         <span></span>
       </label>
       <div class="form__conf-text">Согласие с политикой <a href="#">конфиденциальностии <br> и обработкой персональных данных.</a></div>
