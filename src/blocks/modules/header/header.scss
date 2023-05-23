@@ -5,6 +5,14 @@
   z-index: 100;
   width: 100%;
   background-color: $white;
+  transition: transform 200ms;
+
+  &.scroll {
+    transform: translateY(-100%);
+  }
+  &.down {
+    transform: translateY(0%);
+  }
 
   &__inner {
     display: flex;

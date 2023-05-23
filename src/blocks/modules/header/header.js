@@ -1,5 +1,6 @@
 export default class Header {
   constructor() {
+    this.htmlNode = document.querySelector(`html`)
     this.header = document.querySelector('.header');
     this.burger = document.querySelector('.header__burger');
     this.nav = document.querySelector('.header__nav');
@@ -22,6 +23,7 @@ export default class Header {
     this.searchCloseHandler()
     this.searchInputHandler()
     this.dropHandler()
+    this.scrollHendler()
 
     document.body.style.paddingTop = this.header.clientHeight + 'px'
   }
@@ -130,5 +132,25 @@ export default class Header {
     const page = this.inputSearchNode.dataset.page
     const newHref = window.location.origin + page + this.inputSearchNode.value
     window.location.href = newHref
+  }
+  scrollHendler() {
+    let lastScroll = 0;
+    window.addEventListener('scroll', () => {
+
+      if (lastScroll < this.htmlNode.scrollTop) { // down
+        this.header ? this.header.classList.add('scroll') : null;
+        this.close()
+        this.header ? this.header.classList.remove('down') : null;
+      } else if (this.htmlNode.scrollTop === 0) {
+        this.header ? this.header.classList.remove('down') : null;
+      } else { // up
+        this.header ? this.header.classList.add('down') : null;
+      }
+      if (this.htmlNode.scrollTop < this.header.clientHeight - (this.header.clientHeight * 60 / 100)) {
+        this.header ? this.header.classList.remove('scroll') : null;
+      }
+      lastScroll = this.htmlNode.scrollTop
+
+    })
   }
 }
