@@ -1,0 +1,71 @@
+.contest-article {
+  overflow: hidden;
+  margin-bottom: 145px;
+  &__inner {
+    display: grid;
+    grid-template-columns: 4fr 6fr 2fr;
+    grid-gap: gutter(8);
+  }
+  &__grid {
+    grid-column: 2/4;
+  }
+  &__row {
+    grid-column: 1/4;
+  }
+  &__cap {
+    margin-bottom: gutter(6);
+  }
+  &__text {
+    color: $grey;
+    margin-bottom: gutter(2);
+    max-width: 424px;
+  }
+  &__info {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+  &__reqv {
+    margin-bottom: gutter(4);
+    span {
+      color: $grey;
+    }
+    li {
+      margin-bottom: gutter(2);
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+  @include tab {
+    &__inner {
+      display: flex;
+      flex-direction: column;
+      gap: gutter(6);
+    }
+    &__grid {
+      grid-column: 1/2;
+    }
+    &__row {
+      grid-column: 1/2;
+    }
+    &__img {
+      border-radius: $brz;
+      overflow: hidden;
+    }
+  }
+  @include mob {
+    &__inner {
+      gap: gutter(6);
+    }
+    &__info {
+      flex-direction: column;
+      align-items: stretch;
+      gap: gutter(6);
+      margin-bottom: 12px;
+    }
+    &__cap {
+      font-size: 20px;
+    }
+  }
+}

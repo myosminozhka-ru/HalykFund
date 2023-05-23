@@ -23,6 +23,6 @@ export default class Social {
     })
   }
   alert() {
-    alert('Скопировано!')
+    alert('Ссылка скопирована!')
   }
 }

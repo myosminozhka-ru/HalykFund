@@ -687,6 +687,16 @@ a {
   font-size: 14px;
 }
 
+.text-5 {
+  color: grey;
+}
+
+.texts {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 24px;
+}
+
 .visually-hidden {
   position: absolute;
   width: 1px;
@@ -3022,24 +3032,6 @@ a {
   justify-content: space-between;
 }
 
-.histories__cap {
-  margin-bottom: 32px;
-}
-
-.histories__tab {
-  margin-bottom: 32px;
-}
-
-.histories__select {
-  display: none;
-}
-
-.histories__list {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-gap: 24px;
-}
-
 .article {
   overflow: hidden;
   margin-bottom: 145px;
@@ -3074,6 +3066,14 @@ a {
 
 .article__reqv span {
   color: #8A8A8A;
+}
+
+.article__reqv li {
+  margin-bottom: 8px;
+}
+
+.article__reqv li:last-child {
+  margin-bottom: 0;
 }
 
 .article__img {
@@ -3252,6 +3252,89 @@ a {
   grid-column: 2/4;
 }
 
+.contest-article {
+  overflow: hidden;
+  margin-bottom: 145px;
+}
+
+.contest-article__inner {
+  display: grid;
+  grid-template-columns: 4fr 6fr 2fr;
+  grid-gap: 32px;
+}
+
+.contest-article__grid {
+  grid-column: 2/4;
+}
+
+.contest-article__row {
+  grid-column: 1/4;
+}
+
+.contest-article__cap {
+  margin-bottom: 24px;
+}
+
+.contest-article__text {
+  color: #8A8A8A;
+  margin-bottom: 8px;
+  max-width: 424px;
+}
+
+.contest-article__info {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.contest-article__reqv {
+  margin-bottom: 16px;
+}
+
+.contest-article__reqv span {
+  color: #8A8A8A;
+}
+
+.contest-article__reqv li {
+  margin-bottom: 8px;
+}
+
+.contest-article__reqv li:last-child {
+  margin-bottom: 0;
+}
+
+.contest-about {
+  background-color: #EAF1EF;
+  padding: 40px 0;
+}
+
+.contest-about__grid {
+  display: grid;
+  grid-template-columns: 4fr 8fr;
+  grid-gap: 32px;
+  margin-bottom: 56px;
+}
+
+.contest-about__grid:last-child {
+  margin-bottom: 0;
+}
+
+.contest-about__title {
+  margin-bottom: 24px;
+}
+
+.contest-about__item {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 24px;
+  border-top: 1px solid #D9D9D9;
+  padding: 24px 0;
+}
+
+.contest-about__item:last-child {
+  border-bottom: 1px solid #D9D9D9;
+}
+
 @media (max-width: 1380px) {
   .banner-parking__pic {
     height: auto;
@@ -3277,6 +3360,10 @@ a {
 @media (max-width: 768px) {
   body {
     padding-top: 100px;
+  }
+
+  .texts {
+    grid-gap: 20px;
   }
 
   .btn--tab-full {
@@ -3934,20 +4021,6 @@ a {
     grid-gap: 20px;
   }
 
-  .histories__list {
-    grid-template-columns: repeat(2, 1fr);
-    grid-gap: 20px;
-  }
-
-  .histories__tab {
-    display: none;
-  }
-
-  .histories__select {
-    display: block;
-    margin-bottom: 40px;
-  }
-
   .article__inner {
     display: flex;
     flex-direction: column;
@@ -4112,6 +4185,25 @@ a {
   .news__list--index .card2:nth-child(7) {
     grid-column: 1/2;
   }
+
+  .contest-article__inner {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  .contest-article__grid {
+    grid-column: 1/2;
+  }
+
+  .contest-article__row {
+    grid-column: 1/2;
+  }
+
+  .contest-article__img {
+    border-radius: 10px;
+    overflow: hidden;
+  }
 }
 
 @media (max-width: 360px) {
@@ -4153,6 +4245,11 @@ a {
 
   .text-3 {
     font-size: 16px;
+  }
+
+  .texts {
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 16px;
   }
 
   .btn--mob-full {
@@ -4656,24 +4753,12 @@ a {
     grid-gap: 24px;
   }
 
-  .histories__cap {
-    margin-bottom: 16px;
-  }
-
-  .histories__select {
-    margin-bottom: 40px;
-  }
-
-  .histories__list {
-    grid-template-columns: repeat(1, 1fr);
-    grid-gap: 32px;
-  }
-
   .article__inner {
     gap: 24px;
   }
 
   .article__info {
+    flex-direction: column;
     gap: 24px;
     margin-bottom: 12px;
   }
@@ -4757,6 +4842,21 @@ a {
 
   .news__list--index .card2:nth-child(7) {
     grid-column: 1/2;
+  }
+
+  .contest-article__inner {
+    gap: 24px;
+  }
+
+  .contest-article__info {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 24px;
+    margin-bottom: 12px;
+  }
+
+  .contest-article__cap {
+    font-size: 20px;
   }
 }
 /*# sourceMappingURL=maps/main.css.map */

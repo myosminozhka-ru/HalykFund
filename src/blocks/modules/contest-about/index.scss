@@ -1,0 +1,30 @@
+.contest-about {
+  background-color: $green-light;
+  padding: gutter(10) 0;
+  &__grid {
+    display: grid;
+    grid-template-columns: 4fr 8fr;
+    grid-gap: gutter(8);
+    margin-bottom: gutter(14);
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+  &__title {
+    margin-bottom: gutter(6);
+  }
+  &__item {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: gutter(6);
+    border-top: 1px solid $brd-grey;
+    padding: gutter(6) 0;
+    &:last-child {
+      border-bottom: 1px solid $brd-grey;
+    }
+  }
+  @include tab {
+  }
+  @include mob {
+  }
+}

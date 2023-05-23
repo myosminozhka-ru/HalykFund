@@ -1133,7 +1133,7 @@ var Social = /*#__PURE__*/function () {
       };
       return alert;
     }(function () {
-      alert('Скопировано!');
+      alert('Ссылка скопирована!');
     })
   }]);
   return Social;
