@@ -1,6 +1,6 @@
 export default class Header {
   constructor() {
-    this.htmlNode = document.querySelector(`html`)
+    this.htmlNode = document.querySelector(`body`)
     this.header = document.querySelector('.header');
     this.burger = document.querySelector('.header__burger');
     this.nav = document.querySelector('.header__nav');
@@ -136,7 +136,6 @@ export default class Header {
   scrollHendler() {
     let lastScroll = 0;
     window.addEventListener('scroll', () => {
-
       if (lastScroll < this.htmlNode.scrollTop) { // down
         this.header ? this.header.classList.add('scroll') : null;
         this.close()
