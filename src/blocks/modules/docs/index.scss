@@ -43,11 +43,6 @@
       }
     }
   }
-  &__list {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-gap: gutter(6);
-  }
   &__item {
     display: flex;
     flex-direction: column;
@@ -60,12 +55,6 @@
     display: flex;
     align-items: flex-end;
     justify-content: space-between;
-  }
-  @include tab {
-    &__list {
-      grid-template-columns: repeat(2, 1fr);
-      grid-gap: gutter(5);
-    }
   }
   @include mob {
     &__tabs {

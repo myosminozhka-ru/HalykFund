@@ -185,6 +185,23 @@ a {
   font-size: 14px;
 }
 
+.text-5 {
+  color: grey;
+}
+
+.texts {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: gutter(6);
+  @include tab {
+    grid-gap: gutter(5);
+  }
+  @include mob {
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: gutter(4);
+  }
+}
+
 .visually-hidden {
   position: absolute;
   width: 1px;
@@ -251,9 +268,12 @@ a {
     }
   }
   @include mob {
+    &--tab-full {
+      max-width: none;
+    }
     &--mob-full {
       width: 100%;
-      max-width: 344px;
+      max-width: none;
     }
   }
 }

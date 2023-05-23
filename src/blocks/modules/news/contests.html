@@ -1,0 +1,127 @@
+<section class="section news">
+  <div class="osmi-container">
+    <div class="news__inner">
+      <h1 class="h1 news__cap wow slow fadeIn">Конкурсы</h1>
+      @@include("../UI/line.html")
+      <div class="news__filter">
+        <div class="news__tab">
+          @@include('../UI/tab.html', {
+            current: 'Все',
+            text: ['Сообщества', 'Инфраструктуры', 'Люди']
+          })
+        </div>
+        <div class="news__select">
+          @@include('../select/select-link.html', {
+            current: 'Все',
+            values: ['Сообщества', 'Инфраструктуры', 'Люди']
+          })
+        </div>
+        <div class="news__checkboxes">
+          @@include("../UI/link-checkbox.html", {
+            'text': 'Все',
+            'class': 'active'
+          })
+          @@include("../UI/link-checkbox.html", {
+            'text': 'Текущие',
+          })
+          @@include("../UI/link-checkbox.html", {
+            'text': 'Архив',
+          })
+        </div>
+        <div class="news__select">
+          @@include('../select/select-link.html', {
+            current: 'Все',
+            values: ['Сначала новые', 'Сначала старые']
+          })
+        </div>
+      </div>
+      <div class="news__list">
+        @@include("../cards/card2.html", {
+          "title": "Конкурс “Голос ребенка”",
+          "text": '',
+          "img": "img/contest-l1.jpg",
+          "date": "1 Апреля - 28 апреля 2023",
+          "tag": "Сообщества",
+        })
+        @@include("../cards/card2.html", {
+          "title": "Конкурс “Волшебство творчества”",
+          "text": '',
+          "img": "img/contest-l2.jpg",
+          "date": "1 Апреля - 28 апреля 2023",
+          "tag": "Сообщества",
+        })
+        @@include("../cards/card2.html", {
+          "title": "Конкурс “Прямо в цель”",
+          "text": '',
+          "img": "img/contest-l3.jpg",
+          "date": "1 Апреля - 28 апреля 2023",
+          "tag": "Сообщества",
+        })
+        @@include("../cards/card2.html", {
+          "title": "Конкурс “Мамин помощник”",
+          "text": '',
+          "img": "img/contest-l4.jpg",
+          "date": "1 Апреля - 28 апреля 2023",
+          "tag": "Сообщества",
+        })
+        @@include("../cards/card2.html", {
+          "title": "Конкурс “Акулы письма”",
+          "text": '',
+          "img": "img/contest-l5.jpg",
+          "date": "1 Апреля - 28 апреля 2023",
+          "tag": "Сообщества",
+        })
+        @@include("../cards/card2.html", {
+          "title": "Конкурс “Маленький художник”",
+          "text": '',
+          "img": "img/contest-l6.jpg",
+          "date": "1 Апреля - 28 апреля 2023",
+          "tag": "Сообщества",
+        })
+        @@include("../cards/card2.html", {
+          "title": "Конкурс “Золотой мяч”",
+          "text": '',
+          "img": "img/contest-l7.jpg",
+          "date": "1 Апреля - 28 апреля 2023",
+          "tag": "Сообщества",
+        })
+        @@include("../cards/card2.html", {
+          "title": "Конкурс “Досуг семьи”",
+          "text": '',
+          "img": "img/contest-l8.jpg",
+          "date": "1 Апреля - 28 апреля 2023",
+          "tag": "Сообщества",
+        })
+        @@include("../cards/card2.html", {
+          "title": "Конкурс “Позаботься о своем районе”",
+          "text": '',
+          "img": "img/contest-l9.jpg",
+          "date": "1 Апреля - 28 апреля 2023",
+          "tag": "Сообщества",
+        })
+        @@include("../cards/card2.html", {
+          "title": "Конкурс “Спортивные выходные”",
+          "text": '',
+          "img": "img/contest-l10.jpg",
+          "date": "1 Апреля - 28 апреля 2023",
+          "tag": "Сообщества",
+        })
+        @@include("../cards/card2.html", {
+          "title": "Конкурс “Помощь ближнему”",
+          "text": '',
+          "img": "img/contest-l11.jpg",
+          "date": "1 Апреля - 28 апреля 2023",
+          "tag": "Сообщества",
+        })
+        @@include("../cards/card2.html", {
+          "title": "Конкурс “Зеленые выходные”",
+          "text": '',
+          "img": "img/contest-l12.jpg",
+          "date": "1 Апреля - 28 апреля 2023",
+          "tag": "Сообщества",
+        })
+      </div>
+      @@include('../UI/list-footer.html')
+    </div>
+  </div>
+</section>

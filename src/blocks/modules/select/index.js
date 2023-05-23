@@ -25,6 +25,7 @@ class Select {
     if (this.el.classList.contains('active')) {
       this.close()
     } else {
+      Select.closeAll()
       this.open()
     }
   }
@@ -35,15 +36,18 @@ class Select {
       })
     });
   }
-}
-
-document.addEventListener('click', function (e) {
-  if (!e.target.closest('[data-select-id]')) {
+  static closeAll() {
     for (let value in selects) {
       selects[value].forEach(i => {
         i.close()
       })
     }
+  }
+}
+
+document.addEventListener('click', function (e) {
+  if (!e.target.closest('[data-select-id]')) {
+    Select.closeAll()
   }
 });
 

@@ -1,0 +1,666 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>halyk</title>
+        <meta name="theme-color" content="#fff">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+        <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+        <link rel="shortcut icon" href="img/favicons/favicon.ico" type="image/x-icon">
+        <link rel="icon" sizes="16x16" href="img/favicons/favicon-16x16.png" type="image/png">
+        <link rel="icon" sizes="32x32" href="img/favicons/favicon-32x32.png" type="image/png">
+        <link rel="apple-touch-icon-precomposed" href="img/favicons/apple-touch-icon-precomposed.png">
+        <link rel="apple-touch-icon" href="img/favicons/apple-touch-icon.png">
+        <link rel="apple-touch-icon" sizes="57x57" href="img/favicons/apple-touch-icon-57x57.png">
+        <link rel="apple-touch-icon" sizes="60x60" href="img/favicons/apple-touch-icon-60x60.png">
+        <link rel="apple-touch-icon" sizes="72x72" href="img/favicons/apple-touch-icon-72x72.png">
+        <link rel="apple-touch-icon" sizes="76x76" href="img/favicons/apple-touch-icon-76x76.png">
+        <link rel="apple-touch-icon" sizes="114x114" href="img/favicons/apple-touch-icon-114x114.png">
+        <link rel="apple-touch-icon" sizes="120x120" href="img/favicons/apple-touch-icon-120x120.png">
+        <link rel="apple-touch-icon" sizes="144x144" href="img/favicons/apple-touch-icon-144x144.png">
+        <link rel="apple-touch-icon" sizes="152x152" href="img/favicons/apple-touch-icon-152x152.png">
+        <link rel="apple-touch-icon" sizes="167x167" href="img/favicons/apple-touch-icon-167x167.png">
+        <link rel="apple-touch-icon" sizes="180x180" href="img/favicons/apple-touch-icon-180x180.png">
+        <link rel="apple-touch-icon" sizes="1024x1024" href="img/favicons/apple-touch-icon-1024x1024.png">
+        <link rel="stylesheet" href="styles/libs/swiper-bundle.min.css">
+        <link rel="stylesheet" href="styles/main.css">
+    </head>
+    <body data-scroll-container>
+      <header class="header wow fadeIn">
+        <div class="osmi-container">
+          <div class="header__inner">
+            <a href="/" class="header__logo">
+              <svg>
+                <use xlink:href="img/sprites/sprite.svg#logo"></use>
+              </svg>
+            </a>
+            <div class="header__langs header__langs--pc">
+              <a href="/kz" class="header__lang">Kz</a>
+              <a href="/" class="header__lang active">Ru</a>
+              <a href="/en" class="header__lang">En</a>
+            </div>
+            <nav class="header__nav">
+              <div class="header__langs header__langs--mobile">
+                <a href="/kz" class="header__lang">Kz</a>
+                <a href="/" class="header__lang active">Ru</a>
+                <a href="/en" class="header__lang">En</a>
+              </div>
+              <div class="header__nav-list">
+                <div class="header__nav-item header__nav-item--drop">
+                  <div class="header__nav-title">
+                    <a href="#">О фонде</a>
+                    <div class="header__nav-arrow">
+                      <svg>
+                        <use xlink:href="img/sprites/sprite.svg#nav-arrow"></use>
+                      </svg>
+                    </div>
+                  </div>
+                  <div class="header__nav-drop">
+                    <ul>
+                      <li><a href="#">Лица фонда</a></li>
+                      <li><a href="#">Наши партнеры</a></li>
+                      <li><a href="#">Карта программ <br> и проектов</a></li>
+                    </ul>
+                    <ul>
+                      <li><a href="#">СМИ о нас</a></li>
+                      <li><a href="#">Документы фонда</a></li>
+                      <li><a href="#">Медиатека</a></li>
+                    </ul>
+                    <ul>
+                      <li><a href="#">FAQ</a></li>
+                      <li><a href="#">Контакты</a></li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="header__nav-item header__nav-item--drop">
+                  <div class="header__nav-title">
+                    <a href="#">Программы</a>
+                    <div class="header__nav-arrow">
+                      <svg>
+                        <use xlink:href="img/sprites/sprite.svg#nav-arrow"></use>
+                      </svg>
+                    </div>
+                  </div>
+                  <div class="header__nav-drop">
+                    <ul>
+                      <li><a href="#">Программы 1</a></li>
+                      <li><a href="#">Программы 2</a></li>
+                      <li><a href="#">Программы 3</a></li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="header__nav-item">
+                  <div class="header__nav-title"><a href="#">Конкурсы</a></div>
+                </div>
+                <div class="header__nav-item">
+                  <div class="header__nav-title"><a href="#">Отчетность</a></div>
+                </div>
+                <div class="header__nav-item">
+                  <div class="header__nav-title"><a href="#">Новости</a></div>
+                </div>
+                <div class="header__nav-item">
+                  <div class="header__nav-title"><a href="#">Истории в лицах</a></div>
+                </div>
+                <div class="header__nav-item">
+                  <div class="header__nav-title"><a href="#">Подать заявку</a></div>
+                </div>
+              </div>
+              <div class="header__search">
+                <div class="header__search-in">
+                  <button class="header__search-open">
+                    <svg>
+                      <use xlink:href="img/sprites/sprite.svg#search"></use>
+                    </svg>
+                  </button>
+                  <input type="text" class="header__search-input" placeholder="Поиск" data-page="/search?q=">
+                  <button class="header__search-start">Найти</button>
+                  <button class="header__search-close">
+                    <svg>
+                      <use xlink:href="img/sprites/sprite.svg#x"></use>
+                    </svg>
+                  </button>
+                </div>
+              </div>
+            </nav>
+            <div class="header__burger">
+              <div></div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+<div class="brc wow slow fadeIn">
+  <div class="osmi-container">
+    <ul class="brc__inner">
+      
+        <li><a href="#" class="link">Главная</a></li>
+      
+        <li><a href="#" class="link">Конкурсы</a></li>
+      
+        <li><a href="#" class="link">Страница конкурса</a></li>
+      
+    </ul>
+  </div>
+</div>
+<section class="section contest-article">
+  <div class="contest-article__fb-share">
+    <div id="fb-root"></div>
+    <script async defer crossorigin="anonymous" src="https://connect.facebook.net/ru_RU/sdk.js#xfbml=1&version=v16.0" nonce="KbhJtiL2"></script>
+  </div>
+  <div class="osmi-container">
+    <div class="contest-article__inner">
+      <div class="contest-article__grid">
+        <h1 class="h1 contest-article__cap">Конкурс “Голос ребенка”</h1>
+        <p class="contest-article__text">Конкурс "Голос ребёнка" - это мероприятие, организованное благотворительным фондом Халык с целью поддержки талантливых детей и подростков из разных уголков Казахстана.</p>
+      </div>
+      <div class="contest-article__grid contest-article__info">
+        <div>
+          <ul class="contest-article__reqv">
+            <li><span>Дата:</span> <time>1 апреля 2023</time></li>
+            <li><span>Cтатус:</span> Приём заявок</li>
+          </ul>
+          <button class="btn btn--mob-full">Подать заявку</button>
+        </div>
+        <div class="share">
+          <div class="share">
+  <div class="share__title">Поделиться:</div>
+  <div class="share__list">
+    <div class="share__item">
+      <div class="share__icon">
+        <svg>
+          <use xlink:href="img/sprites/sprite.svg#copy"></use>
+        </svg>
+      </div>
+      <div class="share__btn share__btn--copy" data-copy-trigger>
+
+      </div>
+    </div>
+    <div class="share__item">
+      <div class="share__icon">
+        <svg>
+          <use xlink:href="img/sprites/sprite.svg#facebook"></use>
+        </svg>
+      </div>
+      <div class="share__btn">
+        <div class="fb-share-button" data-href="https://developers.facebook.com/docs/plugins/" data-layout="button"
+          data-size="small">
+          <a target="_blank"
+            href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fdevelopers.facebook.com%2Fdocs%2Fplugins%2F&amp;src=sdkpreparse"
+            class="fb-xfbml-parse-ignore">
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+        </div>
+      </div>
+      <div class="contest-article__row contest-article__img">
+        <img src="img/contest-d1.jpg" alt="">
+      </div>
+    </div>
+  </div>
+</section>
+<section class="section info-block info-block--green">
+  <div class="osmi-container">
+    <div class="info-block__inner">
+      <div class="info-block__grid">
+        <p class="info-block__cap">О конкурсе</p>
+        <div class="info-block__content">
+          <h2 class="text-2 info-block__title">Конкурс "Голос ребёнка" - это не только мероприятие для выступления талантливых детей и подростков, но и движение, направленное на развитие и признание потенциала молодежи в Казахстане.</h2>
+          <div class="texts">
+            <div class="text-5">Конкурс "Голос ребёнка" призван возрождать интерес и уважение к музыкальному искусству в молодом поколении, культуре своей страны и народной музыке, а также создавать прекрасную атмосферу для общения и сотрудничества между детьми и подростками со всей страны.
+            </div>
+            <div class="text-5">Кроме того, фонд Халык направляет часть выручки конкурса на благотворительные цели, помогая детям, нуждающимся в специальной поддержке, и оказывая помощь в лечении тяжелобольных больных детей.
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="info-block__grid">
+        <p class="info-block__cap">Цели конкурса</p>
+        <div class="info-block__content">
+          <div class="info-block__list">
+              <div class="accordion grid" data-accordion>
+  
+    <div class="accordion__item" data-item>
+      <div class="h3 accordion__title">Поиск и поддержка талантов 
+        <button class="accordion__btn" data-accordion-btn>
+          <div></div>
+        </button>
+      </div>
+      <p class="text-5 accordion__text" data-accordion-text>Поиск талантливых детей и подростков и дальнейшая поддержка их развития в области музыки.</p>
+    </div>
+  
+    <div class="accordion__item" data-item>
+      <div class="h3 accordion__title">Популяризация казахстанской музыки 
+        <button class="accordion__btn" data-accordion-btn>
+          <div></div>
+        </button>
+      </div>
+      <p class="text-5 accordion__text" data-accordion-text>Популяризация казахстанской музыки, развитие музыкальной культуры и формирование свободных от насилия и экстремизма взглядов и представлений о мире.</p>
+    </div>
+  
+    <div class="accordion__item" data-item>
+      <div class="h3 accordion__title">Создание благоприятных условий 
+        <button class="accordion__btn" data-accordion-btn>
+          <div></div>
+        </button>
+      </div>
+      <p class="text-5 accordion__text" data-accordion-text>Создание благоприятных условий для общения и сотрудничества детей и подростков со всей страны, в том числе с различными этническими, культурными и социальными фонами.</p>
+    </div>
+  
+</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="section info-block">
+  <div class="osmi-container">
+    <div class="line">
+  <div class="wow slideInLeft"></div>
+</div>
+    <div class="info-block__inner">
+      <div class="info-block__grid">
+        <p class="info-block__cap">Условия</p>
+        <div class="info-block__content">
+          <h2 class="text-2 info-block__title info-block__title--mb40">Кто может участвовать?</h2>
+          <div class="info-block__list">
+              <div class="list-number">
+  
+    <div class="list-number__item">
+      <div class="list-number__num">01</div>
+      <div class="h4 list-number__title">Возраст</div>
+      <p class="text-5 list-number__text">Участники конкурса - дети и подростки от 8 до 17 лет - имеют возможность проявить свой музыкальный талант на сцене и показать, на что способны.</p>
+    </div>
+  
+    <div class="list-number__item">
+      <div class="list-number__num">02</div>
+      <div class="h4 list-number__title">Формат</div>
+      <p class="text-5 list-number__text">Участникам нужно отправить заявку на участие в конкурсе с видеозаписью своего исполнения на сайт конкурса или попасть на кастинг, который проводится в специально организованных зонах.</p>
+    </div>
+  
+    <div class="list-number__item">
+      <div class="list-number__num">03</div>
+      <div class="h4 list-number__title">Язык</div>
+      <p class="text-5 list-number__text">Участникам нужно отправить заявку на участие в конкурсе с видеозаписью своего исполнения на сайт конкурса или попасть на кастинг, который проводится в специально организованных зонах.</p>
+    </div>
+  
+    <div class="list-number__item">
+      <div class="list-number__num">04</div>
+      <div class="h4 list-number__title">Обучение</div>
+      <p class="text-5 list-number__text">Перед выходом на сцену участники получают обучение вокалу и на сценической манере от профессионалов.</p>
+    </div>
+  
+    <div class="list-number__item">
+      <div class="list-number__num">05</div>
+      <div class="h4 list-number__title">Призы</div>
+      <p class="text-5 list-number__text">Перед выходом на сцену участники получают обучение вокалу и на сценической манере от профессионалов.</p>
+    </div>
+  
+    <div class="list-number__item">
+      <div class="list-number__num">06</div>
+      <div class="h4 list-number__title">Родителям</div>
+      <p class="text-5 list-number__text">Родителям или законным представителям участников конкурса необходимо подписать согласие на участие и слова участника в случае победы в конкурсе.</p>
+    </div>
+  
+</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="section info-block">
+  <div class="osmi-container">
+    <div class="line">
+  <div class="wow slideInLeft"></div>
+</div>
+    <div class="info-block__inner">
+      <div class="info-block__grid">
+        <p class="info-block__cap">График</p>
+        <div class="info-block__content">
+          <h2 class="text-2 info-block__title">Этапы конкурса</h2>
+          <div class="info-block__steps">
+              <div class="steps">
+  
+    <div class="steps__item active">
+      <span class="steps__circle"></span>
+      <div class="h3 steps__title">Прием заявок</div>
+      <p class="text-5 steps__text">До 10 апреля 2023 года</p>
+    </div>
+  
+    <div class="steps__item ">
+      <span class="steps__circle"></span>
+      <div class="h3 steps__title">Экспертиза заявок</div>
+      <p class="text-5 steps__text">11 апреля - 22 апреля 2023</p>
+    </div>
+  
+    <div class="steps__item ">
+      <span class="steps__circle"></span>
+      <div class="h3 steps__title">Объявление результатов конкурса</div>
+      <p class="text-5 steps__text">До 25 апреля 2023</p>
+    </div>
+  
+    <div class="steps__item ">
+      <span class="steps__circle"></span>
+      <div class="h3 steps__title">Заключение договоров гранта с победителями</div>
+      <p class="text-5 steps__text">До 28 апреля 2023</p>
+    </div>
+  
+</div>
+          </div>
+            <div class="info-block__a-btn">
+              <button class="btn btn--tab-full">Подать заявку</button>
+            </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="section info-block">
+  <div class="osmi-container">
+    <div class="line">
+  <div class="wow slideInLeft"></div>
+</div>
+    <div class="info-block__inner">
+      <div class="info-block__grid">
+        <p class="info-block__cap">Условия</p>
+        <div class="info-block__content">
+          <h2 class="text-2 info-block__title info-block__title--mb40">Кто может участвовать?</h2>
+          <div class="info-block__docs">
+              <div class="list-doc">
+  
+    <div class="docs__item wow slow fadeIn">
+      <p class="h3 docs__title">Принципы и правила конкурса</p>
+      <div class="docs__footer">
+        <p class="docs__info">Pdf, 20 мб</p>
+        <a href="#" class="btn docs__link">Скачать</a>
+      </div>
+    </div>
+  
+    <div class="docs__item wow slow fadeIn">
+      <p class="h3 docs__title">Форма заявки на конкурс</p>
+      <div class="docs__footer">
+        <p class="docs__info">Pdf, 20 мб</p>
+        <a href="#" class="btn docs__link">Скачать</a>
+      </div>
+    </div>
+  
+    <div class="docs__item wow slow fadeIn">
+      <p class="h3 docs__title">Программа конкурса</p>
+      <div class="docs__footer">
+        <p class="docs__info">Pdf, 20 мб</p>
+        <a href="#" class="btn docs__link">Скачать</a>
+      </div>
+    </div>
+  
+</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="section info-block">
+  <div class="osmi-container">
+    <div class="line">
+  <div class="wow slideInLeft"></div>
+</div>
+    <div class="info-block__inner">
+      <div class="info-block__grid">
+        <p class="info-block__cap">Заявка на конкурс</p>
+        <div class="info-block__content">
+          <h2 class="text-2 info-block__title info-block__title--mb40">Если вы хотите поучаствовать в конкурсе — заполните форму ниже. </h2>
+          <div class="texts">
+            <div class="text">Если вы хотите поучаствовать в конкурсе — заполните форму ниже. </div>
+          </div>
+          <div class="info-block__link-contest">
+            <a href="#" class="link-2">Правила подачи заявки</a>
+          </div>
+          <div class="info-block__form">
+            <form class="form" id="form" method="POST" action="https://dummyjson.com/products/1" autocomplete="off">
+  <div class="form__inner">
+    <div class="form__item form__item--50">
+      <input type="text" name="name" id="name" class="form__input" placeholder="Имя" required>
+      <!-- <div class="form__input-error">Текст ошибки</div> -->
+    </div>
+    <div class="form__item form__item--50">
+      <input type="tel" name="tel" id="tel" class="form__input" placeholder="Телефон" required>
+    </div>
+    <div class="form__item form__item--50">
+      <input type="email" name="email" id="email" class="form__input" placeholder="E-mail" required>
+    </div>
+    <div class="form__item form__item--50">
+      <input type="text" name="city" id="city" class="form__input" placeholder="Город проживания">
+    </div>
+    <div class="form__item form__item--100">
+      <textarea name="comment1" id="comment1" class="form__textarea form__textarea--big" placeholder="Актуальность проекта" required maxlength="500"></textarea>
+    </div>
+    <div class="form__item form__item--100">
+      <textarea name="comment2" id="comment2" class="form__textarea form__textarea--big" placeholder="Краткое описание проекта" required maxlength="500"></textarea>
+    </div>
+    <div class="form__item form__item--100">
+      <textarea name="comment3" id="comment3" class="form__textarea form__textarea--big" placeholder="Ожидаемые результаты" required maxlength="500"></textarea>
+    </div>
+  </div>
+  <div class="form__actions">
+    <div class="form__conf">
+      <label class="form__conf-label">
+        <input type="checkbox" name="privacy" id="privacy" class="visually-hidden" required>
+        <span></span>
+      </label>
+      <div class="form__conf-text">Согласие с политикой <a href="#">конфиденциальностии <br class="only-pc"> и обработкой персональных данных.</a></div>
+    </div>
+    <button class="btn btn--tab-full form__send" type="submit">Отправить</button>
+  </div>
+</form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="section news-subs wow slow fadeIn">
+  <div class="osmi-container">
+    <div class="news-subs__inner">
+      <div class="news-subs__bg">
+        <img src="img/subs-bg.jpg" alt="">
+      </div>
+      <div class="news-subs__content">
+        <p>Подписка на новости</p>
+        <h4 class="text-2">Подпишитесь на нашу рассылку, чтобы следить за актуальными новостями и проектами.</h4>
+        <div class="news-subs__form">
+          <form class="form form--dark" method="POST" action="https://dummyjson.com/products/1">
+  <div class="form__inner">
+    <div class="form__item form__item--subs">
+      <div class="form__subs">
+        <input type="email" name="email" class="form__input" placeholder="E-mail" required>
+        <!-- <div class="form__input-error">Текст ошибки</div> -->
+        <button class="btn btn--tab-full form__send" type="submit">Отправить</button>
+      </div>
+    </div>
+  </div>
+  <div class="form__actions">
+    <div class="form__conf">
+      <label class="form__conf-label">
+        <input type="checkbox" class="visually-hidden" required>
+        <span></span>
+      </label>
+      <div class="form__conf-text">Согласие с политикой <a href="#">конфиденциальностии <br> и обработкой персональных данных.</a></div>
+    </div>
+  </div>
+</form>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+        <footer class="footer">
+          <div class="osmi-container">
+            <div class="footer__inner">
+              <a href="/" class="footer__logo">
+                <svg>
+                  <use xlink:href="img/sprites/sprite.svg#logo"></use>
+                </svg>
+              </a>
+              <div class="footer__menu">
+                <div class="footer__list">
+                  <p>Навигация</p>
+                  <div class="footer__uls">
+                    <ul>
+                      <li>
+                        <a href="#">О фонде</a>
+                      </li>
+                      <li>
+                        <a href="#">Программы</a>
+                      </li>
+                      <li>
+                        <a href="#">Конкурсы</a>
+                      </li>
+                      <li>
+                        <a href="#">Отчетность</a>
+                      </li>
+                      <li>
+                        <a href="#">Новости</a>
+                      </li>
+                    </ul>
+                    <ul>
+                      <li>
+                        <a href="#">Истории в лицах</a>
+                      </li>
+                      <li>
+                        <a href="#">Медиатека</a>
+                      </li>
+                      <li>
+                        <a href="#">FAQ</a>
+                      </li>
+                      <li>
+                        <a href="#">Контакты</a>
+                      </li>
+                      <li>
+                        <a href="#">Подать заявку</a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="footer__cont-list">
+                  <div class="footer__list">
+                    <p>Телефон</p>
+                    <ul>
+                      <li>
+                        <a href="#">+ 7 727 313 2039</a>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="footer__list">
+                    <p>Почта</p>
+                    <ul>
+                      <li>
+                        <a href="#">info@halykfund.com</a>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="footer__social footer__social--tab-visible">
+                    <ul class="social">
+  <li>
+    <a href="https://www.instagram.com/halykfundkz/" target="_blank">
+      <svg>
+        <use xlink:href="img/sprites/sprite.svg#instagram"></use>
+      </svg>
+    </a>
+  </li>
+  <li>
+    <a href="https://www.facebook.com/HalykBusiness" target="_blank">
+      <svg>
+        <use xlink:href="img/sprites/sprite.svg#facebook"></use>
+      </svg>
+    </a>
+  </li>
+  <li>
+    <a href="https://www.youtube.com/@halykfund1577" target="_blank">
+      <svg>
+        <use xlink:href="img/sprites/sprite.svg#youtube"></use>
+      </svg>
+    </a>
+  </li>
+</ul>
+                  </div>
+                </div>
+              </div>
+              <div class="footer__social footer__social--tab-hide">
+                <ul class="social">
+  <li>
+    <a href="https://www.instagram.com/halykfundkz/" target="_blank">
+      <svg>
+        <use xlink:href="img/sprites/sprite.svg#instagram"></use>
+      </svg>
+    </a>
+  </li>
+  <li>
+    <a href="https://www.facebook.com/HalykBusiness" target="_blank">
+      <svg>
+        <use xlink:href="img/sprites/sprite.svg#facebook"></use>
+      </svg>
+    </a>
+  </li>
+  <li>
+    <a href="https://www.youtube.com/@halykfund1577" target="_blank">
+      <svg>
+        <use xlink:href="img/sprites/sprite.svg#youtube"></use>
+      </svg>
+    </a>
+  </li>
+</ul>
+              </div>
+            </div>
+            <div class="footer__bot">
+              <p class="footer__bot-item">© 2023 Халык. Все права защищены.</p>
+              <div class="footer__bot-links">
+                <a href="#" class="footer__bot-item">Правила использования cookie</a>
+                <a href="#" class="footer__bot-item">Политика конфиденциальности</a>
+              </div>
+            </div>
+            <div class="footer__octo">
+              <svg>
+                <use xlink:href="img/sprites/sprite.svg#octo"></use>
+              </svg>
+            </div>
+          </div>
+        </footer>
+        <div class="visually-hidden">
+          <textarea id="urlCopy" rows="1" cols="30"></textarea>
+        </div>
+        <script src="js/libs/gsap.min.js"></script>
+        <script src="js/libs/rellax.min.js"></script>
+        <script src="js/libs/just-validate.production.min.js"></script>
+        <script src="js/vendor.js"></script>
+        <script src="js/main.js"></script>
+        <!-- <link rel="stylesheet" href="styles/libs/locomotive-scroll.min">
+        <script src="js/libs/locomotive-scroll.min.js"></script>
+        <script>
+          (function () {
+              var scroll = new LocomotiveScroll({
+                el: document.querySelector('[data-scroll-container]'),
+                smooth: true,
+                lerp: 0.03,
+                multiplier: 1.4,
+                reloadOnContextChange: true,
+                touchMultiplier: 2,
+                smoothMobile: 0,
+                getDirection: true,
+                inertia: .6 
+              });
+              window.scrollLoco = scroll
+          })();
+        </script> -->
+        <link rel="stylesheet" href="styles/libs/animate.min.css">
+        <script src="js/libs/wow.min.js"></script>
+        <script>
+          new WOW().init();
+        </script>
+    </body>
+</html>

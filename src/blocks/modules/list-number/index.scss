@@ -1,0 +1,33 @@
+.list-number {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 0 gutter(6);
+  &__item {
+    padding-top: gutter(4);
+    padding-bottom: gutter(6);
+    border-bottom: 1px solid $brd-grey;
+    &:first-child, 
+    &:nth-child(2) {
+      border-top: 1px solid $brd-grey;
+    }
+  }
+  &__num {
+    color: $accent;
+    margin-bottom: gutter(2);
+  }
+  &__title {
+    margin-bottom: gutter(2);
+  }
+  @include tab {
+    grid-gap: 0 gutter(5);
+  }
+  @include mob {
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 0;
+    &__item {
+      &:nth-child(2) {
+        border-top: none;
+      }
+    }
+  }
+}

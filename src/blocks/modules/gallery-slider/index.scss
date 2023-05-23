@@ -1,7 +1,7 @@
 .gallery-slider {
-  overflow: visible;
   &__slider {
     margin-bottom: gutter(4);
+    overflow: visible;
   }
   &__slide {
     border-radius: $brz;

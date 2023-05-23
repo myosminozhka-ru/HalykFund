@@ -1,0 +1,12 @@
+<div class="accordion @@class" data-accordion>
+  @@for (var i = 0; i < text.length; i++) {
+    <div class="accordion__item" data-item>
+      <div class="h3 accordion__title">`+text[i].title+` 
+        <button class="accordion__btn" data-accordion-btn>
+          <div></div>
+        </button>
+      </div>
+      <p class="text-5 accordion__text" data-accordion-text>`+text[i].text+`</p>
+    </div>
+  }
+</div>

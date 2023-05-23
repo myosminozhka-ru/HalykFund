@@ -13,6 +13,7 @@ import select from "%modules%/select/index";
 import SliderGallery from "%modules%/gallery-slider/index";
 import SliderNewsAnother from "%modules%/news-another/index";
 import Social from "%modules%/social/index";
+import Accordion from "%modules%/accordion/index";
 
 
 window.app = {
@@ -30,4 +31,5 @@ window.app = {
   sliderGallery: new SliderGallery(),
   sliderNewsAnother: new SliderNewsAnother(),
   social: new Social(),
+  accordion: Accordion(),
 }
