@@ -13,9 +13,14 @@
   &__slider {
     overflow: visible;
   }
+  
+  &__swiper-wrap {
+    height: auto;
+  }
 
   &__slide {
     width: auto;
+    height: auto;
     margin-right: gutter(6);
     &:last-child {
       margin-right: 0;
