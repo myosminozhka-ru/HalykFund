@@ -268,9 +268,12 @@ a {
     }
   }
   @include mob {
+    &--tab-full {
+      max-width: none;
+    }
     &--mob-full {
       width: 100%;
-      max-width: 344px;
+      max-width: none;
     }
   }
 }

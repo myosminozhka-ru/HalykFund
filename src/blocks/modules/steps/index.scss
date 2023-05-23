@@ -1,0 +1,73 @@
+.steps {
+  background-color: $green-light;
+  padding: gutter(8) gutter(6);
+  border-radius: $brz;
+  &__item {
+    padding-bottom: gutter(10);
+    padding-left: 33px;
+    position: relative;
+    &::before {
+      content: '';
+      display: inline-block;
+      position: absolute;
+      left: 8px;
+      top: 12px;
+      width: 1px;
+      height: 100%;
+      background-color: $grey;
+    }
+    &::after {
+      content: '';
+      display: inline-block;
+      position: absolute;
+      left: 4px;
+      top: 8px;
+      width: 9px;
+      height: 9px;
+      border-radius: 100%;
+      background-color: $grey;
+    }
+    &:last-child {
+      &::before {
+        display: none;
+      }
+    }
+    &.active {
+      .steps__circle {
+        display: inline-flex;
+      }
+    }
+  }
+
+  &__circle {
+    display: none;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    left: 0;
+    top: 4px;
+    width: 17px;
+    height: 17px;
+    border-radius: 100%;
+    background-color: $green-light;
+    border: 1px solid $accent;
+    z-index: 3;
+    &::after {
+      content: '';
+      display: inline-block;
+      width: 9px;
+      height: 9px;
+      border-radius: 100%;
+      background-color: $accent;
+    }
+  }
+  @include tab {
+    padding: gutter(8) gutter(9);
+    &__item {
+      padding-bottom: gutter(8);
+    }
+  }
+  @include mob {
+    padding: gutter(8) gutter(6);
+  }
+}
