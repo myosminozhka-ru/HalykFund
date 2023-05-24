@@ -1,4 +1,6 @@
 import FlatpickrConfig from "./flatpickrConfig";
+import ModalPlayer from "./modalPlayer";
+import Modal from "./Modal";
 import Header from "%modules%/header/header";
 import "%modules%/footer/footer";
 import SliderDirections from "%modules%/directions/index";
@@ -19,6 +21,7 @@ import contactUsForm from "%modules%/contact-us/index";
 import subscribeForm from "%modules%/news-subs/index";
 import requestForm from "%modules%/request/index";
 import contestForm from "%modules%/info-block/index";
+import SliderMedia from "%modules%/media-slider/index";
 
 FlatpickrConfig.setLang()
 
@@ -30,6 +33,7 @@ window.app = {
   sliderHistoryMain: new SliderHistoryMain(),
   sliderPartnersMain: new SliderPartnersMain(),
   sliderGrid: new SliderGrid(),
+  sliderMedia: new SliderMedia(),
   svgAnime: new SvgAnime(),
   bannerParking: new BannerParking(),
   search: new Search(),
@@ -42,4 +46,6 @@ window.app = {
   subscribe: subscribeForm(),
   request: requestForm(),
   contest: contestForm(),
+  modalPlayer: new ModalPlayer(),
+  videoModal: new Modal('video'),
 }
