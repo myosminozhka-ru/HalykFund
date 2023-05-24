@@ -117,6 +117,7 @@
   }
   &__conf {
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
     margin-bottom: gutter(6);
     &-label {
