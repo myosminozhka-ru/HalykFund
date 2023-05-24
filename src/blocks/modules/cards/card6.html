@@ -1,0 +1,24 @@
+
+@@if (type === 'video') {
+  <div class="card6 wow slow fadeIn" data-video-container>
+    <div class="card6__video">
+      <video width="320" height="240" poster="@@img" data-video-play>
+        <source data-video-src="@@video" type="video/mp4">
+      </video>
+      <button class="card6__play play-video" data-video-play></button>
+    </div>
+    <div class="card6__content">
+      <div class="card6__title">@@title</div>
+    </div>
+  </div>
+}
+@@if (type !== 'video') {
+  <a href="#" class="card6 wow slow fadeIn">
+    <picture class="card6__pic">
+      <img src="@@img" alt="">
+    </picture>
+    <div class="card6__content">
+      <div class="card6__title">@@title</div>
+    </div>
+  </a>
+}
