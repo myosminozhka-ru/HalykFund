@@ -1,13 +1,22 @@
 import validationLocal from '../../../js/libs/validationLocal'
 const {keys, dictLocale} = validationLocal
+import FlatpickrConfig from '../../../js/import/flatpickrConfig'
 export default function() {
   if (!document.querySelector('#contest')) return
-  // const picker = flatpickr(document.querySelector('[name="birthday"]'), {
-  //     mode: "range",
-  //     minDate: "today",
-  //     dateFormat: "d.m.Y",
-  //     conjunction: "too"
-  // });
+  const birthday = flatpickr(document.querySelector('[name="birthday"]'), {
+      mode: "single",
+      maxDate: "today",
+      dateFormat: "d.m.Y",
+      nextArrow: FlatpickrConfig.getNextArrow(),
+      prevArrow: FlatpickrConfig.getPrevArrow(),
+  });
+  const implementation_period = flatpickr(document.querySelector('[name="implementation_period"]'), {
+      mode: "range",
+      minDate: "today",
+      dateFormat: "d.m.Y",
+      nextArrow: FlatpickrConfig.getNextArrow(),
+      prevArrow: FlatpickrConfig.getPrevArrow(),
+  });
   const validation = new JustValidate('#contest', {
     validateBeforeSubmitting: true,
   }, dictLocale);
@@ -119,6 +128,18 @@ export default function() {
         value: 50,
         errorMessage: keys.maxLength,
       },
+      {
+        rule: 'required',
+        errorMessage: keys.required,
+      },
+    ])
+    .addField('[name="birthday"]', [
+      {
+        rule: 'required',
+        errorMessage: keys.required,
+      },
+    ])
+    .addField('[name="implementation_period"]', [
       {
         rule: 'required',
         errorMessage: keys.required,

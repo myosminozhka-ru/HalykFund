@@ -35,22 +35,12 @@
     &__texts {
       grid-gap: gutter(5);
     }
-    &__form {
-      .form__item--50 {
-        width: 50%;
-      }
-    }
   }
   @include mob {
   
     &__texts {
       grid-template-columns: repeat(1, 1fr );
       grid-gap: gutter(4);
-    }
-    &__form {
-      .form__item--50 {
-        width: 100%;
-      }
     }
   }
 }

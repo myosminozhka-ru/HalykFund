@@ -3,6 +3,9 @@ const ApiForm = (url, data) => {
   return fetch(url, {
     method: 'POST',
     body: data,
+		headers: {
+			'Accept-Language': document.querySelector('html').getAttribute('lang'),
+		},
   })
 }
 

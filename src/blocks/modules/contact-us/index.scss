@@ -17,6 +17,9 @@
     &__content {
       grid-template-columns: 1fr;
       grid-gap: gutter(5);
+      .form__item--50 {
+        width: 100%;
+      }
     }
   }
   @include mob {
