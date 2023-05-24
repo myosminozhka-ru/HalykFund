@@ -1,10 +1,17 @@
 .info-block {
   padding: gutter(10) 0;
+  overflow: hidden;
   &--green {
     background-color: $green-light;
   }
+  &--programma {
+    margin-top: -40px;
+  }
   &__inner {
     position: relative;
+  }
+  &__main-title {
+    margin-bottom: gutter(6);
   }
   &__grid {
     display: grid;
@@ -14,6 +21,17 @@
     &:last-child {
       margin-bottom: 0;
     }
+  }
+  &__row {
+    margin-bottom: gutter(14);
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+  &__img {
+    display: block;
+    border-radius: $brz;
+    overflow: hidden;
   }
   &__title {
     margin-bottom: gutter(6);
@@ -64,6 +82,9 @@
     &__title {
       &--mb40 {
         margin-bottom: gutter(6);
+      }
+      &.h2 {
+        font-size: 32px;
       }
     }
     &__docs {

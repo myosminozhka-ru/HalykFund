@@ -2,11 +2,9 @@
   <div class="osmi-container">
     <div class="docs__inner">
       <h1 class="h1 docs__cap wow slow fadeIn">Документы и отчеты</h1>
-      @@include("../UI/line.html")
-      <div class="docs__tabs wow slow fadeIn">
-        <a href="#" class="docs__tab">Годовые отчеты</a>
-        <a href="#" class="docs__tab active">Документы</a>
-      </div>
+      @@include("../UI/link-tabs.html", {
+        list: [{t: 'Годовые отчеты', class: ''}, {t: 'Документы', class: 'active'}]
+      })
       <div class="docs__list">
         @@include("../list-doc/index.html", {
           text: ['Устав фонда', 'Договор оферты', 'Свидетельство о постановке на учёт в налоговом органе', 'Договор оферты', 'Договор оферты', 'Договор оферты', 'Договор оферты', 'Договор оферты']
