@@ -1,3 +1,4 @@
+import FlatpickrConfig from "./flatpickrConfig";
 import Header from "%modules%/header/header";
 import "%modules%/footer/footer";
 import SliderDirections from "%modules%/directions/index";
@@ -19,6 +20,7 @@ import subscribeForm from "%modules%/news-subs/index";
 import requestForm from "%modules%/request/index";
 import contestForm from "%modules%/info-block/index";
 
+FlatpickrConfig.setLang()
 
 window.app = {
   header: new Header(),

@@ -1,6 +1,5 @@
 export default class Header {
   constructor() {
-    this.htmlNode = document.querySelector(`body`)
     this.header = document.querySelector('.header');
     this.burger = document.querySelector('.header__burger');
     this.nav = document.querySelector('.header__nav');
@@ -136,19 +135,19 @@ export default class Header {
   scrollHendler() {
     let lastScroll = 0;
     window.addEventListener('scroll', () => {
-      if (lastScroll < this.htmlNode.scrollTop) { // down
+      if (lastScroll < pageYOffset) { // down
         this.header ? this.header.classList.add('scroll') : null;
         this.close()
         this.header ? this.header.classList.remove('down') : null;
-      } else if (this.htmlNode.scrollTop === 0) {
+      } else if (pageYOffset === 0) {
         this.header ? this.header.classList.remove('down') : null;
       } else { // up
         this.header ? this.header.classList.add('down') : null;
       }
-      if (this.htmlNode.scrollTop < this.header.clientHeight - (this.header.clientHeight * 60 / 100)) {
+      if (pageYOffset < this.header.clientHeight - (this.header.clientHeight * 60 / 100)) {
         this.header ? this.header.classList.remove('scroll') : null;
       }
-      lastScroll = this.htmlNode.scrollTop
+      lastScroll = pageYOffset
 
     })
   }
