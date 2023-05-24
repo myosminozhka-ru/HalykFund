@@ -1,32 +1,50 @@
-<form class="form" id="form" method="POST" action="https://dummyjson.com/products/1" autocomplete="off">
+<form class="form" id="contest" method="POST" action="https://dummyjson.com/products/1" autocomplete="off">
   <div class="form__inner">
     <div class="form__item form__item--50">
-      <input type="text" name="name" id="name" class="form__input" placeholder="Имя" required>
-      <!-- <div class="form__input-error">Текст ошибки</div> -->
+      <input type="text" name="fio" class="form__input" placeholder="ФИО" required>
     </div>
     <div class="form__item form__item--50">
-      <input type="tel" name="tel" id="tel" class="form__input" placeholder="Телефон" required>
+      <input type="text" name="inn" class="form__input" placeholder="ИНН" required>
     </div>
     <div class="form__item form__item--50">
-      <input type="email" name="email" id="email" class="form__input" placeholder="E-mail" required>
+      <input type="tel" name="tel" class="form__input" placeholder="Телефон" required>
     </div>
     <div class="form__item form__item--50">
-      <input type="text" name="city" id="city" class="form__input" placeholder="Город проживания">
+      <input type="email" name="email" class="form__input" placeholder="E-mail" required>
+    </div>
+    <div class="form__item form__item--50">
+      <input type="text" name="birthday" class="form__input" placeholder="Дата рождения">
+    </div>
+    <div class="form__item form__item--50">
+      <input type="text" name="city" class="form__input" placeholder="Город проживания">
+    </div>
+    <div class="form__item form__item--50">
+      <input type="text" name="place_of_work_or_sudy" class="form__input" placeholder="Место учебы/работы">
+    </div>
+    <div class="form__item form__item--50">
+      <input type="text" name="specialization" class="form__input" placeholder="Специализация">
+    </div>
+    <div class="form__item form__item--50">
+      <input type="text" name="name_of_project" class="form__input" placeholder="Название проекта">
+    </div>
+    <div class="form__item form__item--50">
+      <input type="date" name="implementation_period" class="form__input" placeholder="Срок реализации">
     </div>
     <div class="form__item form__item--100">
-      <textarea name="comment1" id="comment1" class="form__textarea form__textarea--big" placeholder="Актуальность проекта" required maxlength="500"></textarea>
-    </div>
-    <div class="form__item form__item--100">
-      <textarea name="comment2" id="comment2" class="form__textarea form__textarea--big" placeholder="Краткое описание проекта" required maxlength="500"></textarea>
-    </div>
-    <div class="form__item form__item--100">
-      <textarea name="comment3" id="comment3" class="form__textarea form__textarea--big" placeholder="Ожидаемые результаты" required maxlength="500"></textarea>
+      <textarea name="project_idea" class="form__textarea form__textarea--big" placeholder="Идея проекта" required maxlength="500"></textarea>
     </div>
   </div>
   <div class="form__actions">
     <div class="form__conf">
       <label class="form__conf-label">
-        <input type="checkbox" name="privacy" id="privacy" class="visually-hidden" required>
+        <input type="checkbox" name="competition_regulations" class="visually-hidden" required>
+        <span></span>
+      </label>
+      <div class="form__conf-text">Я прочитал и понимаю <a href="#">положение о конкурсе</a></div>
+    </div>
+    <div class="form__conf">
+      <label class="form__conf-label">
+        <input type="checkbox" name="privacy" class="visually-hidden" required>
         <span></span>
       </label>
       <div class="form__conf-text">Согласие с политикой <a href="#">конфиденциальностии <br class="only-pc"> и обработкой персональных данных.</a></div>

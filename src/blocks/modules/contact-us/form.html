@@ -1,8 +1,7 @@
-<form class="form" method="POST" action="https://dummyjson.com/products/1">
+<form class="form" id="contact_us" method="POST" action="https://dummyjson.com/products/1">
   <div class="form__inner">
     <div class="form__item form__item--100">
       <input type="text" name="name" class="form__input" placeholder="Имя" required>
-      <!-- <div class="form__input-error">Текст ошибки</div> -->
     </div>
     <div class="form__item form__item--50">
       <input type="tel" name="tel" class="form__input" placeholder="Телефон" required>
@@ -17,7 +16,7 @@
   <div class="form__actions">
     <div class="form__conf">
       <label class="form__conf-label">
-        <input type="checkbox" class="visually-hidden" required>
+        <input type="checkbox" name="privacy" class="visually-hidden" required>
         <span></span>
       </label>
       <div class="form__conf-text">Согласие с политикой <a href="#">конфиденциальностии <br class="only-pc"> и обработкой персональных данных.</a></div>
