@@ -1,0 +1,53 @@
+.about-fund {
+  &__top {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: gutter(6);
+    margin-bottom: gutter(10);
+  }
+  &__imgs {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: gutter(6);
+  }
+  &__img {
+    border-radius: $brz;
+    overflow: hidden;
+  }
+  @include tab {
+    &__top {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-gap: gutter(8) gutter(5);
+    }
+    &__cap {
+      grid-column: 1/3;
+    }
+    &__imgs {
+      grid-gap: gutter(3);
+    }
+  }
+  @include mob {
+    &__inner {
+      .osmi-container  {
+        padding: 0;
+      }
+    }
+    &__imgs {
+      padding-left: 20px;
+      overflow: auto;
+      display: flex;
+      gap: gutter(4);
+    }
+    &__img {
+      flex-shrink: 0;
+      width: 285px;
+      height: 285px;
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+  }
+}
