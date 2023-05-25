@@ -20,7 +20,7 @@ export default function() {
   const validation = new JustValidate('#contest', {
     validateBeforeSubmitting: true,
   }, dictLocale);
-  validation.setCurrentLocale('ru');
+  validation.setCurrentLocale(document.querySelector('html').getAttribute('lang'));
   validation
     .addField('[name="fio"]', [
       {

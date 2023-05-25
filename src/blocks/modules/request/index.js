@@ -5,7 +5,7 @@ export default function() {
   const validation = new JustValidate('#request', {
     validateBeforeSubmitting: true,
   }, dictLocale);
-  validation.setCurrentLocale('ru');
+  validation.setCurrentLocale(document.querySelector('html').getAttribute('lang'));
   validation
     .addField('[name="name"]', [
       {

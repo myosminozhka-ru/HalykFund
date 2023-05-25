@@ -13,47 +13,84 @@ const dictLocale = [
     key: keys.required,
     dict: {
       ru: 'Поле обязательно для заполнения',
+      kk: 'Міндетті өріс',
+      en: 'The field is required',
     },
   },
   {
     key: keys.minLength,
     dict: {
-      ru: 'Поле должно содержать минимум :value символа',
+      ru: 'Поле должно содержать минимум :value символов',
+      kk: 'Өріс кемінде :value таңбадан тұруы керек',
+      en: 'The field must contain a minimum of :value characters',
     },
   },
   {
     key: keys.maxLength,
     dict: {
-      ru: 'Поле должно содержать максимум :value символа',
+      ru: 'Поле должно содержать максимум :value символов',
+      kk: 'Өріс ең көбі :value таңбадан тұруы керек',
+      en: 'The field must contain a maximum of :value characters',
     },
   },
   {
     key: keys.emailRequired,
     dict: {
       ru: 'Электронная почта обязательна',
+      kk: 'Электрондық пошта қажет',
+      en: 'Email is required',
     },
   },
   {
     key: keys.email,
     dict: {
       ru: 'Электронная почта недействительна',
+      kk: 'Электрондық пошта жарамсыз',
+      en: 'Email has invalid format',
     },
   },
   {
     key: keys.integer,
     dict: {
       ru: 'Значение должно быть числом',
+      kk: 'Мән сан болуы керек',
+      en: 'Value should be a number',
     },
   },
   {
     key: keys.tel,
     dict: {
       ru: 'Номер телефона недействителен',
+      kk: 'Телефон нөмірі жарамсыз',
+      en: 'Phone number has invalid format',
     },
   },
 ];
 
+// function declension(value, stirng) {
+//   value = Math.abs(value) % 100;
+//   var num = value % 10;
+
+//   const foundStr = null
+//   debugger
+
+//   foundStr = stirng.match(/\[\[\[(.*)\]\]\]/);
+//   debugger
+//   const stirngArray = []
+//   if (typeof stirng === 'string') {
+//     stirng.replace(/\[|\]/, '')
+//     stirngArray = stirng.split(', ')
+//   } else {
+//     stirngArray = stirng
+//   }
+
+//   if (value > 10 && value < 20) return stirng[2];
+//   if (num > 1 && num < 5) return stirng[1];
+//   if (num == 1) return stirng[0];
+//   return stirng[2];
+// }
+
 export default {
   dictLocale,
-  keys
+  keys,
 }
