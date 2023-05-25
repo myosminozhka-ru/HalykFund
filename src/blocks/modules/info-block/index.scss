@@ -81,6 +81,9 @@
       margin-top: gutter(10);
     }
   }
+  &__contacts {
+    margin-top: gutter(10);
+  }
   @include tab {
     &__img {
       height: 450px;
