@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>halyk</title>
+        <meta name="theme-color" content="#fff">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+        <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+        <link rel="shortcut icon" href="img/favicons/favicon.ico" type="image/x-icon">
+        <link rel="icon" sizes="16x16" href="img/favicons/favicon-16x16.png" type="image/png">
+        <link rel="icon" sizes="32x32" href="img/favicons/favicon-32x32.png" type="image/png">
+        <link rel="apple-touch-icon-precomposed" href="img/favicons/apple-touch-icon-precomposed.png">
+        <link rel="apple-touch-icon" href="img/favicons/apple-touch-icon.png">
+        <link rel="apple-touch-icon" sizes="57x57" href="img/favicons/apple-touch-icon-57x57.png">
+        <link rel="apple-touch-icon" sizes="60x60" href="img/favicons/apple-touch-icon-60x60.png">
+        <link rel="apple-touch-icon" sizes="72x72" href="img/favicons/apple-touch-icon-72x72.png">
+        <link rel="apple-touch-icon" sizes="76x76" href="img/favicons/apple-touch-icon-76x76.png">
+        <link rel="apple-touch-icon" sizes="114x114" href="img/favicons/apple-touch-icon-114x114.png">
+        <link rel="apple-touch-icon" sizes="120x120" href="img/favicons/apple-touch-icon-120x120.png">
+        <link rel="apple-touch-icon" sizes="144x144" href="img/favicons/apple-touch-icon-144x144.png">
+        <link rel="apple-touch-icon" sizes="152x152" href="img/favicons/apple-touch-icon-152x152.png">
+        <link rel="apple-touch-icon" sizes="167x167" href="img/favicons/apple-touch-icon-167x167.png">
+        <link rel="apple-touch-icon" sizes="180x180" href="img/favicons/apple-touch-icon-180x180.png">
+        <link rel="apple-touch-icon" sizes="1024x1024" href="img/favicons/apple-touch-icon-1024x1024.png">
+        <link rel="stylesheet" href="styles/libs/swiper-bundle.min.css">
+        <link rel="stylesheet" href="styles/libs/flatpickr.min.css">
+        <link rel="stylesheet" href="styles/main.css">
+    </head>
+    <body data-scroll-container>
+      <header class="header wow fadeIn">
+        <div class="osmi-container">
+          <div class="header__inner">
+            <a href="/" class="header__logo">
+              <svg>
+                <use xlink:href="img/sprites/sprite.svg#logo"></use>
+              </svg>
+            </a>
+            <div class="header__langs header__langs--pc">
+              <a href="/kz" class="header__lang">Kz</a>
+              <a href="/" class="header__lang active">Ru</a>
+              <a href="/en" class="header__lang">En</a>
+            </div>
+            <nav class="header__nav">
+              <div class="header__langs header__langs--mobile">
+                <a href="/kz" class="header__lang">Kz</a>
+                <a href="/" class="header__lang active">Ru</a>
+                <a href="/en" class="header__lang">En</a>
+              </div>
+              <div class="header__nav-list">
+                <div class="header__nav-item header__nav-item--drop">
+                  <div class="header__nav-title">
+                    <a href="#">О фонде</a>
+                    <div class="header__nav-arrow">
+                      <svg>
+                        <use xlink:href="img/sprites/sprite.svg#nav-arrow"></use>
+                      </svg>
+                    </div>
+                  </div>
+                  <div class="header__nav-drop">
+                    <ul>
+                      <li><a href="#">Лица фонда</a></li>
+                      <li><a href="#">Наши партнеры</a></li>
+                      <li><a href="#">Карта программ <br> и проектов</a></li>
+                    </ul>
+                    <ul>
+                      <li><a href="#">СМИ о нас</a></li>
+                      <li><a href="#">Документы фонда</a></li>
+                      <li><a href="#">Медиатека</a></li>
+                    </ul>
+                    <ul>
+                      <li><a href="#">FAQ</a></li>
+                      <li><a href="#">Контакты</a></li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="header__nav-item header__nav-item--drop">
+                  <div class="header__nav-title">
+                    <a href="#">Программы</a>
+                    <div class="header__nav-arrow">
+                      <svg>
+                        <use xlink:href="img/sprites/sprite.svg#nav-arrow"></use>
+                      </svg>
+                    </div>
+                  </div>
+                  <div class="header__nav-drop">
+                    <ul>
+                      <li><a href="#">Программы 1</a></li>
+                      <li><a href="#">Программы 2</a></li>
+                      <li><a href="#">Программы 3</a></li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="header__nav-item">
+                  <div class="header__nav-title"><a href="#">Конкурсы</a></div>
+                </div>
+                <div class="header__nav-item">
+                  <div class="header__nav-title"><a href="#">Отчетность</a></div>
+                </div>
+                <div class="header__nav-item">
+                  <div class="header__nav-title"><a href="#">Новости</a></div>
+                </div>
+                <div class="header__nav-item">
+                  <div class="header__nav-title"><a href="#">Истории в лицах</a></div>
+                </div>
+                <div class="header__nav-item">
+                  <div class="header__nav-title"><a href="#">Подать заявку</a></div>
+                </div>
+              </div>
+              <div class="header__search">
+                <div class="header__search-in">
+                  <button class="header__search-open">
+                    <svg>
+                      <use xlink:href="img/sprites/sprite.svg#search"></use>
+                    </svg>
+                  </button>
+                  <input type="text" class="header__search-input" placeholder="Поиск" data-page="/search?q=">
+                  <button class="header__search-start">Найти</button>
+                  <button class="header__search-close">
+                    <svg>
+                      <use xlink:href="img/sprites/sprite.svg#x"></use>
+                    </svg>
+                  </button>
+                </div>
+              </div>
+            </nav>
+            <div class="header__burger">
+              <div></div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+<div class="brc wow slow fadeIn">
+  <div class="osmi-container">
+    <ul class="brc__inner">
+      
+        <li><a href="#" class="link">Главная</a></li>
+      
+        <li><a href="#" class="link">СМИ о нас</a></li>
+      
+    </ul>
+  </div>
+</div>
+<section class="section news">
+  <div class="osmi-container">
+    <div class="news__inner">
+      <h1 class="h1 news__cap wow slow fadeIn">СМИ о нас</h1>
+      <div class="line">
+  <div class="wow slideInLeft"></div>
+</div>
+      <div class="news__list news__list--mass-media">
+        <a href="#" class="card8 wow slow fadeIn">
+  <div class="card8__content">
+    <time class="card8__date" datetime="">1 Апреля 2023</time>
+    <div class="card8__title">Счастливые дети: новая акция фонда</div>
+    <div class="card8__text">Была организована благотворительная акция, направленная на помощь сиротам и детям, оставшимся без родительской опеки.</div>
+  </div>
+  <div class="card8__footer">
+    <span class="card8__more">Подробнее</span>
+  </div>
+</a>
+        <a href="#" class="card8 wow slow fadeIn">
+  <div class="card8__content">
+    <time class="card8__date" datetime="">1 Апреля 2023</time>
+    <div class="card8__title">Фонд 'Халык' проводит мероприятие 'Здоровый образ жизни'</div>
+    <div class="card8__text">Мероприятие включает в себя лекции от врачей и специалистов по здоровому образу жизни.</div>
+  </div>
+  <div class="card8__footer">
+    <span class="card8__more">Подробнее</span>
+  </div>
+</a>
+        <a href="#" class="card8 wow slow fadeIn">
+  <div class="card8__content">
+    <time class="card8__date" datetime="">1 Апреля 2023</time>
+    <div class="card8__title">В Алматы был запущен новый проект 'Танымалай'. </div>
+    <div class="card8__text">В проекте также принял участие фонд Халык</div>
+  </div>
+  <div class="card8__footer">
+    <span class="card8__more">Подробнее</span>
+  </div>
+</a>
+        <a href="#" class="card8 wow slow fadeIn">
+  <div class="card8__content">
+    <time class="card8__date" datetime="">1 Апреля 2023</time>
+    <div class="card8__title">Признание за борьбу с COVID-19.</div>
+    <div class="card8__text">Фонд 'Халык' получил заслуженное признание за проведение благотворительных акций, направленных на борьбу с COVID-19.</div>
+  </div>
+  <div class="card8__footer">
+    <span class="card8__more">Подробнее</span>
+  </div>
+</a>
+        <a href="#" class="card8 wow slow fadeIn">
+  <div class="card8__content">
+    <time class="card8__date" datetime="">1 Апреля 2023</time>
+    <div class="card8__title">Фонд 'Халык' организовал выставку детского творчества 'Дети - наше будущее'.</div>
+    <div class="card8__text">Выставка поможет продемонстрировать таланты юных дарований</div>
+  </div>
+  <div class="card8__footer">
+    <span class="card8__more">Подробнее</span>
+  </div>
+</a>
+        <a href="#" class="card8 wow slow fadeIn">
+  <div class="card8__content">
+    <time class="card8__date" datetime="">1 Апреля 2023</time>
+    <div class="card8__title">Фонд 'Халык' пожертвовал 15 млн тенге на строительство школы</div>
+    <div class="card8__text">После природного катаклизма здание школы было разрушено. Фонд Халык решил прийти на помощь. Строительство начнется летом.</div>
+  </div>
+  <div class="card8__footer">
+    <span class="card8__more">Подробнее</span>
+  </div>
+</a>
+        <a href="#" class="card8 wow slow fadeIn">
+  <div class="card8__content">
+    <time class="card8__date" datetime="">1 Апреля 2023</time>
+    <div class="card8__title">Благотворительный фонд Казахстана вместе с локальными организациями и бизнес-сообществом стартовал большую программу 'Зеленый Казахстан'</div>
+    <div class="card8__text">Реализация программы будет осуществляться совместно с государственными и общественными организациями.</div>
+  </div>
+  <div class="card8__footer">
+    <span class="card8__more">Подробнее</span>
+  </div>
+</a>
+        <a href="#" class="card8 wow slow fadeIn">
+  <div class="card8__content">
+    <time class="card8__date" datetime="">1 Апреля 2023</time>
+    <div class="card8__title">На пути к образованию вместе с Халык</div>
+    <div class="card8__text">Благотворительный фонд Казахстана запустил новую программу по поддержке и развитию талантливых молодых людей.</div>
+  </div>
+  <div class="card8__footer">
+    <span class="card8__more">Подробнее</span>
+  </div>
+</a>
+        <a href="#" class="card8 wow slow fadeIn">
+  <div class="card8__content">
+    <time class="card8__date" datetime="">1 Апреля 2023</time>
+    <div class="card8__title">Помощь каждому</div>
+    <div class="card8__text">Сотрудники благотворительного фонда Халык посетили многодетную семью с помощью в покупке продуктов</div>
+  </div>
+  <div class="card8__footer">
+    <span class="card8__more">Подробнее</span>
+  </div>
+</a>
+        <a href="#" class="card8 wow slow fadeIn">
+  <div class="card8__content">
+    <time class="card8__date" datetime="">1 Апреля 2023</time>
+    <div class="card8__title">Школы и детские сады в ваш город</div>
+    <div class="card8__text">Халык совместно с международными партнерами запустил проект по строительству детских садов и школ в отдаленных регионах страны</div>
+  </div>
+  <div class="card8__footer">
+    <span class="card8__more">Подробнее</span>
+  </div>
+</a>
+      </div>
+      <div class="list-footer">
+  <div class="list-footer__pag">
+    <ul class="pag wow slow fadeIn">
+  <li class="pag__item"><a href="#" class="pag__link current">1</a></li>
+  
+    <li class="pag__item"><a href="#" class="pag__link">2</a></li>
+  
+    <li class="pag__item"><a href="#" class="pag__link">3</a></li>
+  
+    <li class="pag__item"><a href="#" class="pag__link">4...</a></li>
+  
+</ul>
+  </div>
+  <div class="list-footer__more wow slow fadeIn">
+    <a href="#" class="link-2">Посмотреть больше</a>
+  </div>
+</div>
+    </div>
+  </div>
+</section>
+<section class="section news-subs wow slow fadeIn">
+  <div class="osmi-container">
+    <div class="news-subs__inner">
+      <div class="news-subs__bg">
+        <img src="img/subs-bg.jpg" alt="">
+      </div>
+      <div class="news-subs__content">
+        <p>Подписка на новости</p>
+        <h4 class="text-2">Подпишитесь на нашу рассылку, чтобы следить за актуальными новостями и проектами.</h4>
+        <div class="news-subs__form">
+          <form class="form form--dark" id="subscribe" method="POST" action="https://dummyjson.com/products/1">
+  <div class="form__inner">
+    <div class="form__item form__item--subs">
+      <div class="form__subs">
+        <input type="email" name="email" class="form__input" placeholder="E-mail" required>
+        <button class="btn btn--tab-full form__send" type="submit">Отправить</button>
+      </div>
+    </div>
+  </div>
+  <div class="form__actions">
+    <div class="form__conf">
+      <label class="form__conf-label">
+        <input type="checkbox" name="privacy" class="visually-hidden" required>
+        <span></span>
+      </label>
+      <div class="form__conf-text">Согласие с политикой <a href="#">конфиденциальности <br> и обработкой персональных данных.</a></div>
+    </div>
+  </div>
+</form>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+        <footer class="footer">
+          <div class="osmi-container">
+            <div class="footer__inner">
+              <a href="/" class="footer__logo">
+                <svg>
+                  <use xlink:href="img/sprites/sprite.svg#logo"></use>
+                </svg>
+              </a>
+              <div class="footer__menu">
+                <div class="footer__list">
+                  <p>Навигация</p>
+                  <div class="footer__uls">
+                    <ul>
+                      <li>
+                        <a href="#">О фонде</a>
+                      </li>
+                      <li>
+                        <a href="#">Программы</a>
+                      </li>
+                      <li>
+                        <a href="#">Конкурсы</a>
+                      </li>
+                      <li>
+                        <a href="#">Отчетность</a>
+                      </li>
+                      <li>
+                        <a href="#">Новости</a>
+                      </li>
+                    </ul>
+                    <ul>
+                      <li>
+                        <a href="#">Истории в лицах</a>
+                      </li>
+                      <li>
+                        <a href="#">Медиатека</a>
+                      </li>
+                      <li>
+                        <a href="#">FAQ</a>
+                      </li>
+                      <li>
+                        <a href="#">Контакты</a>
+                      </li>
+                      <li>
+                        <a href="#">Подать заявку</a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="footer__cont-list">
+                  <div class="footer__list">
+                    <p>Телефон</p>
+                    <ul>
+                      <li>
+                        <a href="#">+ 7 727 313 2039</a>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="footer__list">
+                    <p>Почта</p>
+                    <ul>
+                      <li>
+                        <a href="#">info@halykfund.com</a>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="footer__social footer__social--tab-visible">
+                    <ul class="social">
+  <li>
+    <a href="https://www.instagram.com/halykfundkz/" target="_blank">
+      <svg>
+        <use xlink:href="img/sprites/sprite.svg#instagram"></use>
+      </svg>
+    </a>
+  </li>
+  <li>
+    <a href="https://www.facebook.com/HalykBusiness" target="_blank">
+      <svg>
+        <use xlink:href="img/sprites/sprite.svg#facebook"></use>
+      </svg>
+    </a>
+  </li>
+  <li>
+    <a href="https://www.youtube.com/@halykfund1577" target="_blank">
+      <svg>
+        <use xlink:href="img/sprites/sprite.svg#youtube"></use>
+      </svg>
+    </a>
+  </li>
+</ul>
+                  </div>
+                </div>
+              </div>
+              <div class="footer__social footer__social--tab-hide">
+                <ul class="social">
+  <li>
+    <a href="https://www.instagram.com/halykfundkz/" target="_blank">
+      <svg>
+        <use xlink:href="img/sprites/sprite.svg#instagram"></use>
+      </svg>
+    </a>
+  </li>
+  <li>
+    <a href="https://www.facebook.com/HalykBusiness" target="_blank">
+      <svg>
+        <use xlink:href="img/sprites/sprite.svg#facebook"></use>
+      </svg>
+    </a>
+  </li>
+  <li>
+    <a href="https://www.youtube.com/@halykfund1577" target="_blank">
+      <svg>
+        <use xlink:href="img/sprites/sprite.svg#youtube"></use>
+      </svg>
+    </a>
+  </li>
+</ul>
+              </div>
+            </div>
+            <div class="footer__bot">
+              <p class="footer__bot-item">© 2023 Халык. Все права защищены.</p>
+              <div class="footer__bot-links">
+                <a href="#" class="footer__bot-item">Правила использования cookie</a>
+                <a href="#" class="footer__bot-item">Политика конфиденциальности</a>
+              </div>
+            </div>
+            <div class="footer__octo">
+              <svg>
+                <use xlink:href="img/sprites/sprite.svg#octo"></use>
+              </svg>
+            </div>
+          </div>
+        </footer>
+        <div class="modal close-x" data-modal="video">
+  <div class="modal__inner">
+    <button class="modal__close close-x" type="button">
+      <svg>
+        <use xlink:href="img/sprites/sprite.svg#close"></use>
+      </svg>
+    </button>
+    <div class="modal__content"></div>
+  </div>
+</div>
+        <div class="visually-hidden">
+          <textarea id="urlCopy" rows="1" cols="30"></textarea>
+        </div>
+        <script src="js/libs/gsap.min.js"></script>
+        <script src="js/libs/rellax.min.js"></script>
+        <script src="js/libs/just-validate.production.min.js"></script>
+        <script src="js/libs/flatpickr.min.js"></script>
+        <script src="js/libs/flatpickr.ru.js"></script>
+        <script src="js/libs/flatpickr.kk.js"></script>
+        <script src="js/vendor.js"></script>
+        <script src="js/main.js"></script>
+        <!-- <link rel="stylesheet" href="styles/libs/locomotive-scroll.min">
+        <script src="js/libs/locomotive-scroll.min.js"></script>
+        <script>
+          (function () {
+              var scroll = new LocomotiveScroll({
+                el: document.querySelector('[data-scroll-container]'),
+                smooth: true,
+                lerp: 0.03,
+                multiplier: 1.4,
+                reloadOnContextChange: true,
+                touchMultiplier: 2,
+                smoothMobile: 0,
+                getDirection: true,
+                inertia: .6 
+              });
+              window.scrollLoco = scroll
+          })();
+        </script> -->
+        <link rel="stylesheet" href="styles/libs/animate.min.css">
+        <script src="js/libs/wow.min.js"></script>
+        <script>
+          new WOW().init();
+        </script>
+    </body>
+</html>
