@@ -36,13 +36,13 @@ export default function () {
       ApiForm(action, formData).then((res) => {
         console.log('contact success')
         if (res.status === 200) {
-          window.osmiAlert.render('Отправлено!', true)
-          button.textContent = 'Отправлено!'
+          window.osmiAlert.render('Спасибо, ваше сообщение отправлено', true)
+          button.textContent = 'Сообщение отправлено'
         } else {
           throw res
         }
       }).catch(() => {
-        window.osmiAlert.render('Попробуйте позже!', false)
+        window.osmiAlert.render('Возникла ошибка отправки, попробуйте позже', false)
       }).finally(() => {
         button.textContent = btnText
         button.removeAttribute('disabled')

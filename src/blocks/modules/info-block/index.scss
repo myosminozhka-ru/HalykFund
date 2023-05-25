@@ -1,8 +1,11 @@
 .info-block {
-  padding: gutter(10) 0;
   overflow: hidden;
   &--green {
     background-color: $green-light;
+    padding: gutter(10) 0;
+  }
+  &--about-members {
+    padding-bottom: 56px;
   }
   &--programma {
     margin-top: -40px;
@@ -90,7 +93,9 @@
     }
   }
   @include mob {
-    padding: gutter(8) 0;
+    &--green {
+      padding: gutter(8) 0;
+    }
     &__img {
       height: 350px;
     }

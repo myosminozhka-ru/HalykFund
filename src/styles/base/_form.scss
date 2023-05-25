@@ -143,6 +143,7 @@
       }
     }
     &-text {
+      display: inline-block;
       font-size: 14px;
       color: $grey;
       a {
@@ -201,6 +202,11 @@
         margin-bottom: gutter(2);
       }
     }
+    &__conf {
+      &-text {
+        width: calc(100% - 30px);
+      }
+    }
 
   }
   @include mob {
@@ -234,6 +240,7 @@
   z-index: 150;
   display: flex;
   flex-direction: column-reverse;
+  max-width: 100vw;
   &__item {
     padding: gutter(3) gutter(6);
     border-radius: 4px;
@@ -265,6 +272,12 @@
       background-color: $error;
       color: $white;
       border-color: $error;
+    }
+  }
+  @include tab {
+    &__item {
+      margin-left: gutter(2);
+      margin-right: gutter(2);
     }
   }
 }

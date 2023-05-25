@@ -8,7 +8,7 @@ export default function() {
       position: 'top',
     },
   }, dictLocale);
-  validation.setCurrentLocale('ru');
+  validation.setCurrentLocale(document.querySelector('html').getAttribute('lang'));
   validation
     .addField('[name="email"]', [
       {

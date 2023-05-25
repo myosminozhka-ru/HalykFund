@@ -1,7 +1,7 @@
 (function (global, factory) {
   typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports) :
   typeof define === 'function' && define.amd ? define(['exports'], factory) :
-  (global = typeof globalThis !== 'undefined' ? globalThis : global || self, factory(global.ru = {}));
+  (global = typeof globalThis !== 'undefined' ? globalThis : global || self, factory(global.kk = {}));
 }(this, (function (exports) { 'use strict';
 
   var fp = typeof window !== "undefined" && window.flatpickr !== undefined
@@ -9,7 +9,7 @@
       : {
           l10ns: {},
       };
-  var Russian = {
+  var Kazakh = {
       weekdays: {
           shorthand: ["Вс", "Пн", "Вт", "Ср", "Чт", "Пт", "Сб"],
           longhand: [
@@ -64,11 +64,11 @@
       yearAriaLabel: "Год",
       time_24hr: true,
   };
-  fp.l10ns.ru = Russian;
-  var ru = fp.l10ns;
+  fp.l10ns.kk = Kazakh;
+  var kk = fp.l10ns;
 
-  exports.Russian = Russian;
-  exports.default = ru;
+  exports.Kazakh = Kazakh;
+  exports.default = kk;
 
   Object.defineProperty(exports, '__esModule', { value: true });
 
