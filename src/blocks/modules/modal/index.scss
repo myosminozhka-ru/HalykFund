@@ -49,6 +49,18 @@
   .play-video {
     display: none;
   }
+  &[data-modal="video"] {
+    .card1__video,
+    .card2__video,
+    .card3__video,
+    .card4__video,
+    .card5__video,
+    .card6__video,
+    .card7__video {
+      height: auto;
+      max-width: 1042px;
+    }
+  }
   @include tab {
     &__inner {
       max-width: calc(100% - 60px);
