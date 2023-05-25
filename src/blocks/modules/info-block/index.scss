@@ -76,6 +76,11 @@
     margin-top: gutter(4);
     margin-bottom: gutter(10);
   }
+  &__form {
+    &--faq {
+      margin-top: gutter(10);
+    }
+  }
   @include tab {
     &__img {
       height: 450px;

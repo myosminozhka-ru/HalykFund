@@ -1,6 +1,7 @@
 .partners-main {
   overflow: hidden;
-  &__inner {
+  &__inner,
+  &__grid {
     display: grid;
     grid-template-columns: 4fr 6fr 2fr;
     grid-gap: gutter(6);
@@ -45,9 +46,16 @@
     display: flex;
     justify-content: flex-end;
   }
-
+  &--page {
+    .partners-main {
+      &__inner {
+        margin-bottom: gutter(20);
+      }
+    }
+  }
   @include tab {
-    &__inner {
+    &__inner,
+    &__grid {
       grid-template-columns: 2fr 2fr;
       grid-gap: gutter(5);
     }
@@ -71,6 +79,13 @@
     &__c-btns {
       display: none;
     }
+    &--page {
+      .partners-main {
+        &__inner {
+          margin-bottom: gutter(14);
+        }
+      }
+    }
   }
   @include mob {
     &__cap {
@@ -91,6 +106,13 @@
       height: 137px;
       margin-right: gutter(4);
       margin-bottom: gutter(4);
+    }
+    &--page {
+      .partners-main {
+        &__inner {
+          margin-bottom: gutter(10);
+        }
+      }
     }
   }
 }
