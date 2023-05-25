@@ -164,7 +164,8 @@
     border-radius: $brz;
     padding: 11px gutter(6);
     background-color: $green-light;
-    margin-left: 200px;
+    margin-left: 10px;
+    min-width: 330px;
 
     svg {
       width: 20px;
@@ -256,9 +257,23 @@
   }
 
   &--parking {
+    .header__inner {
+      justify-content: space-between;
+    }
+    .header__logo {
+      margin-right: 0;
+    }
     .header__nav {
       display: flex;
       justify-content: center;
+    }
+  }
+
+  @media (max-width: 1170px) {
+    &--parking {
+      .header__langs {
+        margin-right: 10px;
+      }
     }
   }
 
