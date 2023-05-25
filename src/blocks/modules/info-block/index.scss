@@ -39,6 +39,12 @@
       object-fit: cover;
     }
   }
+  &__mission-img {
+    margin-top: gutter(10);
+    display: block;
+    border-radius: $brz;
+    overflow: hidden;
+  }
   &__title {
     margin-bottom: gutter(6);
     &--mb40 {

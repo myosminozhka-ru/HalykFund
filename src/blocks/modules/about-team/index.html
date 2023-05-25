@@ -1,0 +1,38 @@
+<div class="section about-team">
+  @@include("../UI/line.html")
+  <div class="osmi-container">
+    <div class="about-team__inner">
+      <h3 class="about-team__cap wow slow fadeIn">Команда</h3>
+      <h4 class="text-2 about-team__title wow slow fadeIn">Мы искренне верим в нашу миссию и знаем, что только сильная команда может достичь наших высоких целей. </h4>
+      <div class="about-team__all wow slow fadeIn">
+        <a href="#" class="btn btn--mob-full">Смотреть всех</a>
+      </div>
+      <div class="about-team__texts wow slow fadeIn">
+        <div>Наша команда является ключевым фактором успеха нашего фонда, и мы продолжаем развивать наши знания и навыки, чтобы оставаться лидерами в области благотворительности</div>
+        <div>Наша команда включает в себя специалистов со значительным опытом, а также настоящих экспертов в области нашей деятельности. </div>
+      </div>
+      <div class="about-team__list wow slow fadeIn">
+        @@include("../team-list/index.html", {
+          modf: "row",
+          list: [
+            {
+              "title": "Гульмира Исаева",
+              "text": "Должность/Регалии",
+              "img": "img/team1.jpg",
+            },
+            {
+              "title": "Али Айтмухамедов",
+              "text": "Должность/Регалии",
+              "img": "img/team2.jpg",
+            },
+            {
+              "title": "Айжан Оразалиева",
+              "text": "Должность/Регалии",
+              "img": "img/team3.jpg",
+            },
+          ]
+        })
+      </div>
+    </div>
+  </div>
+</div>

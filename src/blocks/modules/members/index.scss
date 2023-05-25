@@ -1,0 +1,50 @@
+.members {
+  overflow: hidden;
+  &__top {
+    margin-bottom: gutter(6);
+  }
+  &__slider {
+    overflow: visible;
+  }
+  &__slide {
+    width: 860px;
+    height: auto;
+    display: flex;
+    margin-right: gutter(6);
+    a {
+      flex-grow: 1;
+    }
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  &__pag {
+    margin-top: gutter(6);
+    margin-bottom: gutter(4);
+  }
+  &__c-btns {
+    display: flex;
+    justify-content: flex-end;
+  }
+  @include tab {
+    &__slide {
+      width: 430px;
+      max-width: 100%;
+      margin-right: gutter(5);
+    }
+  
+    &__pag {
+      display: none;
+    }
+    &__c-btns {
+      display: none;
+    }
+  }
+  @include mob {
+    &__slide {
+      width: 285px;
+      margin-right: gutter(4);
+    }
+  }
+}

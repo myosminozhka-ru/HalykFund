@@ -6,6 +6,7 @@ import "%modules%/footer/footer";
 import SliderDirections from "%modules%/directions/index";
 import SliderBannerMain from "%modules%/banner-main/index";
 import SliderContests from "%modules%/contests/index";
+import SliderMembers from "%modules%/members/index";
 import SliderHistoryMain from "%modules%/history-main/index";
 import SliderPartnersMain from "%modules%/partners-main/index";
 import SliderGrid from "%modules%/slider-grid/index";
@@ -30,6 +31,7 @@ window.app = {
   sliderDirections: new SliderDirections(),
   sliderBannerMain: new SliderBannerMain(),
   sliderContests: new SliderContests(),
+  sliderMembers: new SliderMembers(),
   sliderHistoryMain: new SliderHistoryMain(),
   sliderPartnersMain: new SliderPartnersMain(),
   sliderGrid: new SliderGrid(),

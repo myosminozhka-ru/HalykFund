@@ -364,7 +364,6 @@
   }
 }
 
-
 .card5 {
   display: block;
   height: 450px;
@@ -561,6 +560,79 @@
     &__play {
       width: 64px;
       height: 64px;
+    }
+  }
+}
+
+.card7 {
+  display: flex;
+  align-items: center;
+  background-color: $green-light;
+  border-radius: $brz;
+  overflow: hidden;
+
+  &__pic {
+    height: 480px;
+    width: 420px;
+    border-radius: $brz;
+    overflow: hidden;
+    position: relative;
+    flex-shrink: 0;
+
+    img {
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+    }
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    gap: gutter(6);
+    padding: gutter(6);
+  }
+
+  &__title {
+    font-size: 24px;
+  }
+
+  &__text {
+    color: $grey;
+  }
+
+  &__date {
+    display: flex;
+    align-items: center;
+    svg {
+      width: 24px;
+      height: 24px;
+      margin-right: gutter(2);
+    }
+  }
+
+  @include tab {
+    flex-direction: column;
+    &__pic {
+      height: 277px;
+      width: 100%;
+      img {
+        object-position: center 20%;
+      }
+    }
+  
+    &__content {
+      gap: gutter(4);
+      padding: gutter(4) gutter(4);
+    }
+  }
+
+  @include mob {
+    &__pic {
+      height: 178px;
+    }
+    &__title {
+      font-size: 20px;
     }
   }
 }

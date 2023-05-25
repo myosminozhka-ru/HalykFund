@@ -39,9 +39,9 @@ export default class Modal {
               this.close()
           }
       }) : null;
-      this.modal.querySelector('button.close-x').addEventListener('click', (e) => {
+      this.modal ? this.modal.querySelector('button.close-x').addEventListener('click', (e) => {
         this.close()
-      })
+      }) : null;
   }
   onClose(callback) {
     this.callbackClose = callback
