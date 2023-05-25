@@ -1,0 +1,8 @@
+<ul class="list-contact">
+  @@for (var i = 0; i < list.length; i++) {
+    <li class="list-contact__item wow slow fadeIn">
+      <p class="text-5 list-contact__k">`+list[i].k+`</p>
+      <a href="`+list[i].href+`" class="list-contact__v">`+list[i].v+`</a>
+    </li>
+  }
+</ul>
