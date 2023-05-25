@@ -678,3 +678,132 @@
     }
   }
 }
+
+
+.card8 {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: gutter(10);
+  border: 1px solid $accent;
+  min-height: 424px;
+  border-radius: $brz;
+  background-color: $white;
+  transition: all 300ms;
+  &__content {
+    margin-bottom: gutter(4);
+  }
+  &__date {
+    margin-bottom: 4px;
+    color: $grey;
+  }
+  &__title {
+    color: $grey;
+    margin-bottom: gutter(4);
+  }
+  &__text {
+    font-size: 18px;
+  }
+  &__more {
+    font-size: 18px;
+    letter-spacing: -0.02em;
+    text-decoration-line: underline;
+  }
+  &:hover {
+    background-color: $accent;
+    color: $white;
+    .card8 {
+      &__date,
+      &__title {
+        color: #D9D9D9;
+      }
+    }
+  }
+  &:nth-child(4) {
+    background-color: $accent;
+    color: $white;
+    .card8 {
+      &__date,
+      &__title {
+        color: #D9D9D9;
+      }
+    }
+    &:hover {
+      background-color: $white;
+      color: $black;
+      .card8 {
+        &__date,
+        &__title {
+          color: $black;
+        }
+      }
+    }
+  }
+  @include tab {
+    min-height: 344px;
+    &:nth-child(4) {
+      background-color: $white;
+      color: $black;
+      .card8 {
+        &__date,
+        &__title {
+          color: $black;
+        }
+      }
+      &:hover {
+        background-color: $accent;
+        color: $white;
+        .card8 {
+          &__date,
+          &__title {
+            color: #D9D9D9;
+          }
+        }
+      }
+    }
+    &:nth-child(3) {
+      background-color: $accent;
+      color: $white;
+      .card8 {
+        &__date,
+        &__title {
+          color: #D9D9D9;
+        }
+      }
+      &:hover {
+        background-color: $white;
+        color: $black;
+        .card8 {
+          &__date,
+          &__title {
+            color: $black;
+          }
+        }
+      }
+    }
+  }
+  @include mob {
+    min-height: 320px;
+    padding: gutter(6);
+    &:nth-child(3) {
+      background-color: $white;
+      color: $black;
+      .card8 {
+        &__date,
+        &__title {
+          color: $black;
+        }
+      }
+      &:hover {
+        background-color: $accent;
+        color: $white;
+        .card8 {
+          &__date,
+          &__title {
+            color: #D9D9D9;
+          }
+        }
+      }
+    }
+  }
+}
