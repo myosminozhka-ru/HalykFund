@@ -20,7 +20,7 @@ const dictLocale = [
   {
     key: keys.minLength,
     dict: {
-      ru: 'Поле должно содержать минимум :value символов',
+      ru: 'Поле должно содержать минимум :value символа',
       kk: 'Өріс кемінде :value таңбадан тұруы керек',
       en: 'The field must contain a minimum of :value characters',
     },
@@ -28,7 +28,7 @@ const dictLocale = [
   {
     key: keys.maxLength,
     dict: {
-      ru: 'Поле должно содержать максимум :value символов',
+      ru: 'Поле должно содержать максимум :value символа',
       kk: 'Өріс ең көбі :value таңбадан тұруы керек',
       en: 'The field must contain a maximum of :value characters',
     },
