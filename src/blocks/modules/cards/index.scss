@@ -118,6 +118,42 @@
       transition-timing-function: ease-out;
     }
   }
+  &__video {
+    display: block;
+    height: 419px;
+    width: 100%;
+    border-radius: $brz;
+    overflow: hidden;
+    margin-bottom: gutter(4);
+    position: relative;
+    cursor: pointer;
+
+    video {
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+      transition: grayscale 300ms;
+      transition-timing-function: ease-out;
+    }
+
+    &:hover {
+      .card6__play {
+        transform: translate(-50%, -50%) scale(1.2);
+      }
+    }
+  }
+  &__play {
+    width: 84px;
+    height: 84px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-image: url(../img/play.svg);
+    transition: transform 300ms;
+  }
 
   &__title {
     font-size: 18px;
@@ -148,13 +184,15 @@
   }
 
   @include tab {
-    &__pic {
+    &__pic,
+    &__video {
       height: 424px;
     }
   }
 
   @include mob {
-    &__pic {
+    &__pic,
+    &__video {
       height: 320px;
     }
   
@@ -164,6 +202,10 @@
     
     &__text {
       font-size: 14px;
+    }
+    &__play {
+      width: 64px;
+      height: 64px;
     }
   }
 }

@@ -1,15 +1,37 @@
-<a href="#" class="card2 wow slow fadeIn">
-  <picture class="card2__pic">
-    <img src="@@img" alt="">
-  </picture>
-  <div class="card2__content">
-    <div class="card2__title">@@title</div>
-    <div class="card2__text">@@text</div>
+@@if (type === 'video') {
+  <div class="card2 wow slow fadeIn" data-video-container>
+    <div class="card2__video">
+      <video width="320" height="240" poster="@@img" data-video-play>
+        <source data-video-src="@@video" type="video/mp4">
+      </video>
+      <button class="card2__play play-video" data-video-play></button>
+    </div>
+    <div class="card2__content">
+      <div class="card2__title">@@title</div>
+      <div class="card2__text">@@text</div>
+    </div>
+    <div class="card2__footer">
+      <time class="card2__date" datetime="">@@date</time>
+      <ul class="card2__tags">
+        <li>@@tag</li>
+      </ul>
+    </div>
   </div>
-  <div class="card2__footer">
-    <time class="card2__date" datetime="">@@date</time>
-    <ul class="card2__tags">
-      <li>@@tag</li>
-    </ul>
-  </div>
-</a>
+}
+@@if (type !== 'video') {
+  <a href="#" class="card2 wow slow fadeIn">
+    <picture class="card2__pic">
+      <img src="@@img" alt="">
+    </picture>
+    <div class="card2__content">
+      <div class="card2__title">@@title</div>
+      <div class="card2__text">@@text</div>
+    </div>
+    <div class="card2__footer">
+      <time class="card2__date" datetime="">@@date</time>
+      <ul class="card2__tags">
+        <li>@@tag</li>
+      </ul>
+    </div>
+  </a>
+}

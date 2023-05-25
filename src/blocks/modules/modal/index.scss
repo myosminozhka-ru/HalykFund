@@ -49,11 +49,28 @@
   .play-video {
     display: none;
   }
+  &[data-modal="video"] {
+    .card1__video,
+    .card2__video,
+    .card3__video,
+    .card4__video,
+    .card5__video,
+    .card6__video,
+    .card7__video {
+      height: auto;
+      max-width: 1042px;
+    }
+    *.wow {
+      visibility: visible !important;
+    }
+  }
   @include tab {
     &__inner {
       max-width: calc(100% - 60px);
       min-width: auto;
       padding: 15px;
+      padding-top: 40px;
+      padding-bottom: 25px;
     }
     &__close {
       right: 8px;
