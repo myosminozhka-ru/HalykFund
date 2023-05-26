@@ -7,6 +7,8 @@ export const ApiForm = (url, data, method = 'POST') => {
 		headers: {
 			'Accept-Language': local.current,
 		},
+  }).then(response => {
+    return response.json()
   })
 }
 
@@ -35,14 +37,10 @@ export default function () {
       button.textContent = local.loading[local.current]
       ApiForm(action, formData).then((res) => {
         console.log('contact success')
-        if (res.status === 200) {
-          window.osmiAlert.render(local.success[local.current], true)
-          button.textContent = local.sent[local.current]
-        } else {
-          throw res
-        }
+        window.osmiAlert.render(res?.mes || local.success[local.current], true)
+        button.textContent = local.sent[local.current]
       }).catch(() => {
-        window.osmiAlert.render(local.error[local.current], false)
+        window.osmiAlert.render(res?.mes || local.error[local.current], false)
       }).finally(() => {
         button.textContent = btnText
         button.removeAttribute('disabled')
