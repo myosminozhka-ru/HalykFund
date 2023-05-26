@@ -23,6 +23,7 @@ import subscribeForm from "%modules%/news-subs/index";
 import requestForm from "%modules%/request/index";
 import contestForm from "%modules%/info-block/index";
 import SliderMedia from "%modules%/media-slider/index";
+import Map from "%modules%/map/index";
 
 FlatpickrConfig.setLang()
 
@@ -50,4 +51,6 @@ window.app = {
   contest: contestForm(),
   modalPlayer: new ModalPlayer(),
   videoModal: new Modal('video'),
+  map: new Map(),
+  mapModal: new Modal('map', false),
 }

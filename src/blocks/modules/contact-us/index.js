@@ -1,11 +1,12 @@
 import validationLocal from '../../../js/libs/validationLocal'
+import local from '../../../js/import/local'
 const {keys, dictLocale} = validationLocal
 export default function() {
   if (!document.querySelector('#contact_us')) return
   const validation = new JustValidate('#contact_us', {
     validateBeforeSubmitting: true,
   }, dictLocale);
-  validation.setCurrentLocale(document.querySelector('html').getAttribute('lang'));
+  validation.setCurrentLocale(local.current);
   validation
     .addField('[name="name"]', [
       {

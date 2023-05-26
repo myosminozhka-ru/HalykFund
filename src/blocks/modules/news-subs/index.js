@@ -1,4 +1,5 @@
 import validationLocal from '../../../js/libs/validationLocal'
+import local from '../../../js/import/local'
 const {keys, dictLocale} = validationLocal
 export default function() {
   if (!document.querySelector('#subscribe')) return
@@ -8,7 +9,7 @@ export default function() {
       position: 'top',
     },
   }, dictLocale);
-  validation.setCurrentLocale(document.querySelector('html').getAttribute('lang'));
+  validation.setCurrentLocale(local.current);
   validation
     .addField('[name="email"]', [
       {
