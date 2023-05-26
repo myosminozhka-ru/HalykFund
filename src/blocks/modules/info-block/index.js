@@ -1,4 +1,5 @@
 import validationLocal from '../../../js/libs/validationLocal'
+import local from '../../../js/import/local'
 const {keys, dictLocale} = validationLocal
 import FlatpickrConfig from '../../../js/import/flatpickrConfig'
 export default function() {
@@ -20,7 +21,7 @@ export default function() {
   const validation = new JustValidate('#contest', {
     validateBeforeSubmitting: true,
   }, dictLocale);
-  validation.setCurrentLocale(document.querySelector('html').getAttribute('lang'));
+  validation.setCurrentLocale(local.current);
   validation
     .addField('[name="fio"]', [
       {

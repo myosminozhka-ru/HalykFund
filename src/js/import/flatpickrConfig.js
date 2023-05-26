@@ -1,8 +1,10 @@
+import local from './local'
+
 export default class FlatpickrConfig {
   constructor() {
   }
   static setLang() {
-    const lang = document.querySelector('html').getAttribute('lang')
+    const lang = local.current
     if (lang === 'ru') {
       flatpickr.l10ns.ru.rangeSeparator = "-"
       flatpickr.localize(flatpickr.l10ns.ru)
