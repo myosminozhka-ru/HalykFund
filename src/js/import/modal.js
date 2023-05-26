@@ -1,23 +1,29 @@
 export default class Modal {
-  constructor(name) {
+  constructor(name, scrollLock = true) {
       this.name = name;
+      this.scrollLock = scrollLock
       this.modal = document.querySelector(`[data-modal="${name}"]`)
-      this.content = this.modal.querySelector(`.modal__content`)
       this.triggers = document.querySelectorAll(`[data-class="${name}"]`)
+      this.callbackClose = null
+      this.init()
+  }
+  init() {
+    if (this.modal) {
+      this.content = this.modal.querySelector(`.modal__content`)
       this.openHendler()
       this.closeHendler()
-      this.callbackClose = null
+    }
   }
   open() {
     window.lastZIndexModal = window.lastZIndexModal ? window.lastZIndexModal + 1 : 150
     this.modal ? this.modal.style['z-index'] = window.lastZIndexModal : null;
     this.modal ? this.modal.classList.add('active') : null;
-    document.body.classList.add('lock')
+    this.scrollLock ? document.body.classList.add('lock') : null;
   }
   close() {
     this.modal ? this.modal.style['z-index'] = -150 : null;
     this.modal ? this.modal.classList.remove('active') : null;
-    document.body.classList.remove('lock')
+    this.scrollLock ? document.body.classList.remove('lock') : null;
     this.onCloseAction()
   }
   update() {

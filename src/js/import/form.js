@@ -1,7 +1,7 @@
 
-const ApiForm = (url, data) => {
+export const ApiForm = (url, data, method = 'POST') => {
   return fetch(url, {
-    method: 'POST',
+    method: method,
     body: data,
 		headers: {
 			'Accept-Language': document.querySelector('html').getAttribute('lang'),
