@@ -1,6 +1,7 @@
 import FlatpickrConfig from "./flatpickrConfig";
 import ModalPlayer from "./modalPlayer";
 import Modal from "./Modal";
+import phoneMask from "./phoneMask";
 import Header from "%modules%/header/header";
 import "%modules%/footer/footer";
 import SliderDirections from "%modules%/directions/index";
@@ -53,4 +54,5 @@ window.app = {
   videoModal: new Modal('video'),
   map: new Map(),
   mapModal: new Modal('map', false),
+  phoneMask: phoneMask('[type="tel"]'),
 }
