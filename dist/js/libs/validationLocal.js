@@ -21,9 +21,9 @@ const dictLocale = [
   {
     key: keys.name,
     dict: {
-      ru: 'Имя недействительна',
-      kk: 'Есім жарамсыз',
-      en: 'Name has invalid format',
+      ru: 'Некорректное значение',
+      kk: 'Дұрыс емес мән',
+      en: 'Incorrect value',
     },
   },
   {
