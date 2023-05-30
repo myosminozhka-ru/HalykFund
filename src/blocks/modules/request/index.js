@@ -23,6 +23,11 @@ export default function() {
         rule: 'required',
         errorMessage: keys.required,
       },
+      {
+        rule: 'customRegexp',
+        value: /^[a-zA-Zа-яА-Я'][a-zA-Zа-яА-Я-' ]+[a-zA-Zа-яА-Я']?$/gi,
+        errorMessage: keys.name,
+      },
     ])
     .addField('[name="city"]', [
       {
@@ -47,7 +52,7 @@ export default function() {
       },
       {
         rule: 'customRegexp',
-        value: /^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/gi,
+        value: /^\+7 (\d|-){13}/gi,
         errorMessage: keys.tel,
       },
     ])

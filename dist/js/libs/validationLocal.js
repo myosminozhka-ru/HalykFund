@@ -6,6 +6,7 @@ const keys = {
   email: 'Email is invalid',
   integer: 'Value should be a number',
   tel: 'Phone number is invalid',
+  name: 'Name is invalid',
 }
 
 const dictLocale = [
@@ -15,6 +16,14 @@ const dictLocale = [
       ru: 'Поле обязательно для заполнения',
       kk: 'Міндетті өріс',
       en: 'The field is required',
+    },
+  },
+  {
+    key: keys.name,
+    dict: {
+      ru: 'Имя недействительна',
+      kk: 'Есім жарамсыз',
+      en: 'Name has invalid format',
     },
   },
   {
