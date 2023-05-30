@@ -23,8 +23,6 @@ export default class Header {
     this.searchInputHandler()
     this.dropHandler()
     this.scrollHendler()
-
-    document.body.style.paddingTop = this.header.clientHeight + 'px'
   }
   open() {
     this.burger.classList.add('active')
@@ -46,7 +44,8 @@ export default class Header {
     }) : null
   }
   setTopPadding() {
-    if (window.matchMedia("(max-width: 768px)").matches) {
+    document.body.style.paddingTop = this.header.clientHeight + 'px'
+    if (window.matchMedia("(max-width: 1023px)").matches) {
       this.nav.style.paddingTop = this.header.clientHeight + 20 + 'px'
     } else {
       this.nav.style.paddingTop = 0
