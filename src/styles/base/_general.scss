@@ -262,6 +262,11 @@ a {
       border-color: $accent;
     }
   }
+  &--tag {
+    font-size: 14px;
+    line-height: 1;
+    padding: gutter(2) gutter(6);
+  }
   @include tab {
     &--tab-full {
       width: 100%;

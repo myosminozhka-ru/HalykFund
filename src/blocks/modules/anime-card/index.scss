@@ -94,6 +94,10 @@
       font-size: 14px;
     }
   }
+
+  @include mob {
+    padding: gutter(4) gutter(4);
+  }
 }
 
 @keyframes anime-card--target1 {
