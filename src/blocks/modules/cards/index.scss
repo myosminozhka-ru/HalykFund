@@ -186,7 +186,8 @@
   @include tab {
     &__pic,
     &__video {
-      height: 424px;
+      // height: 424px;
+      height: 344px;
     }
   }
 
@@ -287,7 +288,7 @@
       display: none;
     }
     &__title {
-      font-size: 14px;
+      font-size: 16px;
     }
   }
 }

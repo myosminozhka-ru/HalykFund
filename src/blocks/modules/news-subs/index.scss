@@ -23,13 +23,16 @@
     padding: gutter(8);
     display: grid;
     grid-template-columns: 4fr 6fr 2fr;
-    grid-gap: gutter(6);
+    grid-gap: gutter(6) 0;
     position: relative;
     z-index: 2;
   }
 
   &__form {
     grid-column: 2/3;
+    .form__conf {
+      margin-bottom: 0;
+    }
   }
 
   @include tab {

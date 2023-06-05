@@ -22,6 +22,9 @@
       grid-template-columns: 1fr;
       grid-gap: gutter(5);
     }
+    .card2__pic {
+      height: 424px;
+    }
   }
   @include mob {
     &__content {
@@ -33,6 +36,9 @@
     &__footer {
       margin-top: gutter(6);
       display: block;
+    }
+    .card2__pic {
+      height: 320px;
     }
   }
 }

@@ -96,7 +96,11 @@
 
   @include tab {
     &__inner {
-      grid-template-columns: 4fr 8fr;
+      grid-template-columns: 4fr 12fr;
+    }
+    &__menu {
+      justify-content: space-between;
+      gap: 24px;
     }
     &__bot-links {
       flex-direction: column;
