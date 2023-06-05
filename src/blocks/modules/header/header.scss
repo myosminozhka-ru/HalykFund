@@ -27,20 +27,26 @@
     width: 120px;
     height: 35px;
     flex-shrink: 0;
-    margin-right: 100px;
+    margin-right: 104px;
 
     svg {
       height: 100%;
       object-fit: contain;
+    }
+    @media (max-width: 1330px) {
+      margin-right: 70px;
     }
   }
 
   &__langs {
     display: flex;
     align-items: center;
-    margin-right: 100px;
+    margin-right: 114px;
     &--mobile {
       display: none;
+    }
+    @media (max-width: 1330px) {
+      margin-right: 70px;
     }
   }
 
@@ -83,10 +89,13 @@
     &.hide {
       opacity: 0;
     }
+    @media (max-width: 1330px) {
+      flex-wrap: wrap;
+    }
   }
 
   &__nav-item {
-    margin-right: gutter(6);
+    margin-right: gutter(4);
 
     &:last-child {
       margin-right: 0;
@@ -320,7 +329,7 @@
     }
   
     &__logo {
-      // margin-right: auto;
+      margin-right: 0;
       position: relative;
       z-index: 2;
     }

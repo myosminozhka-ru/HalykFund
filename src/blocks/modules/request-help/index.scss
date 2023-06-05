@@ -17,6 +17,9 @@
   }
 
   @include tab {
+    &__cap {
+      font-size: 64px;
+    }
     &__inner {
       grid-template-columns: repeat(2, 1fr);
       grid-gap: gutter(5) 0;
@@ -35,6 +38,7 @@
   }
   @include mob {
     &__cap {
+      font-size: 40px;
     }
     &__texts {
       grid-template-columns: repeat(1, 1fr);

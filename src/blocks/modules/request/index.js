@@ -11,12 +11,12 @@ export default function() {
     .addField('[name="name"]', [
       {
         rule: 'minLength',
-        value: 2,
+        value: 3,
         errorMessage: keys.minLength,
       },
       {
         rule: 'maxLength',
-        value: 30,
+        value: 50,
         errorMessage: keys.maxLength,
       },
       {

@@ -8,7 +8,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: gutter(3);
+    padding: gutter(2) gutter(3);
     background-color: $green-light;
   }
   &__current {

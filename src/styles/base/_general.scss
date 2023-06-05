@@ -266,7 +266,7 @@ a {
   &--tag {
     font-size: 14px;
     line-height: 1;
-    padding: gutter(2) gutter(6);
+    padding: gutter(2) gutter(5);
   }
   @include tab {
     &--tab-full {
