@@ -1,10 +1,11 @@
 .footer {
   &__inner {
     display: grid;
-    grid-template-columns: 4fr 5fr 3fr;
+    grid-template-columns: 4fr 6fr 2fr;
     padding-top: gutter(10);
     border-top: 1px solid $brd-grey;
     margin-bottom: 30px;
+    grid-gap: gutter(4);
   }
 
   &__logo {
@@ -21,6 +22,7 @@
   &__menu {
     display: flex;
     gap: 87px;
+    justify-content: space-between;
   }
 
   &__list {
@@ -43,6 +45,9 @@
   &__uls {
     display: flex;
     gap: gutter(5);
+  }
+  &__cont-list {
+    min-width: 30%;
   }
 
   &__social {
@@ -97,10 +102,14 @@
   @include tab {
     &__inner {
       grid-template-columns: 4fr 12fr;
+      grid-gap: gutter(4);
     }
     &__menu {
       justify-content: space-between;
       gap: 24px;
+    }
+    &__cont-list {
+      min-width: auto;
     }
     &__bot-links {
       flex-direction: column;

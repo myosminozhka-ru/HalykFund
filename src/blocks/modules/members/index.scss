@@ -1,5 +1,6 @@
 .members {
   overflow: hidden;
+  margin-bottom: 56px;
   &__top {
     margin-bottom: gutter(6);
   }
@@ -28,6 +29,7 @@
     justify-content: flex-end;
   }
   @include tab {
+    margin-bottom: 64px;
     &__slide {
       width: 430px;
       max-width: 100%;

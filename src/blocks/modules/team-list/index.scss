@@ -38,6 +38,9 @@
     &__pic {
       margin-bottom: gutter(4);
     }
+    &__title {
+      font-size: 18px;
+    }
     &.row {
       .team-list {
         &__list {
@@ -69,6 +72,9 @@
     }
     &__pic {
       margin-bottom: gutter(2);
+    }
+    &__title {
+      font-size: 20px;
     }
     &.row {
       .team-list {

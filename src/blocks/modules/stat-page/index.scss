@@ -24,6 +24,10 @@
       margin-bottom: gutter(8);
     }
   }
+  &__404 {
+    max-width: 424px;
+    margin-bottom: 80px;
+  }
 
   &--404 {
     .stat-page__content {
@@ -39,9 +43,6 @@
         margin-right: gutter(4);
       }
     }
-    .link-2 {
-      margin-top: 80px;
-    }
   }
 
   @include tab {
@@ -49,12 +50,12 @@
     &__inner {
       display: block;
     }
+    &__404 {
+      margin-bottom: 40px;
+    }
     &--404 {
       .stat-page__content {
         padding: 50px 0;
-      }
-      .link-2 {
-        margin-top: 40px;
       }
     }
   }
@@ -64,6 +65,14 @@
         width: 27px;
         height: 47px;
         margin-right: gutter(2);
+      }
+    }
+    &--404 {
+      .h1 {
+        font-size: 40px;
+      }
+      .link-2 {
+        margin-top: 18px;
       }
     }
   }
