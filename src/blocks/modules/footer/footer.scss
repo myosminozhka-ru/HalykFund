@@ -161,11 +161,12 @@
     &__list {
       li {
         font-size: 14px;
+        margin-bottom: 7px;
       }
     }
 
     &__cont-list {
-      margin-top: gutter(6);
+      margin-top: gutter(3);
     }
   
     &__social {

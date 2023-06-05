@@ -60,6 +60,9 @@
     &__row {
       grid-column: 1/2;
     }
+    &__info-left {
+      width: 50%;
+    }
     &__img {
       height: 450px;
     }
@@ -73,6 +76,9 @@
       align-items: stretch;
       gap: gutter(6);
       margin-bottom: 12px;
+    }
+    &__info-left {
+      width: 100%;
     }
     &__cap {
       font-size: 20px;

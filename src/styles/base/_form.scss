@@ -36,6 +36,12 @@
     &::placeholder {
       color: $grey;
     }
+    &.flatpickr-input {
+      background-image: url(../img/calendar.svg);
+      background-repeat: no-repeat;
+      background-size: 24px;
+      background-position: center right 20px;
+    }
   }
   &__textarea {
     width: 100%;
@@ -49,7 +55,7 @@
       color: $grey;
     }
     &--big {
-      height: 137px;
+      height: 173px;
     }
   }
   &__input, &__textarea {
@@ -205,6 +211,7 @@
       }
     }
     &__conf {
+      margin-bottom: gutter(4);
       &-text {
         width: calc(100% - 30px);
       }
@@ -229,7 +236,7 @@
     }
     &__conf {
       &-text {
-        font-size: 12px;
+        font-size: 14px;
       }
     }
   }

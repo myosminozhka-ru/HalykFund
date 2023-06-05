@@ -28,6 +28,7 @@
       background-color: $grey;
     }
     &:last-child {
+      padding-bottom: 0;
       &::before {
         display: none;
       }
