@@ -18,17 +18,20 @@
         </div>
         <div class="news__checkboxes">
           @@include("../UI/link-checkbox.html", {
-            'text': 'Сначала новые',
+            'text': 'Все',
             'class': 'active'
           })
           @@include("../UI/link-checkbox.html", {
-            'text': 'Сначала старые',
+            'text': 'Фото',
+          })
+          @@include("../UI/link-checkbox.html", {
+            'text': 'Видео',
           })
         </div>
         <div class="news__select">
           @@include('../select/select-link.html', {
-            current: 'Сначала новые',
-            values: ['Сначала старые']
+            current: 'Все',
+            values: ['Фото', 'Видео']
           })
         </div>
       </div>

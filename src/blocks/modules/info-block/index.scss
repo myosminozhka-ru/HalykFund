@@ -8,7 +8,7 @@
     padding-bottom: 56px;
   }
   &--programma {
-    margin-top: -40px;
+    margin-top: -16px;
   }
   &__inner {
     position: relative;
@@ -19,7 +19,7 @@
   &__grid {
     display: grid;
     grid-template-columns: 4fr 8fr;
-    grid-gap: gutter(8);
+    grid-gap: gutter(8) gutter(4);
     margin-bottom: gutter(14);
     &:last-child {
       margin-bottom: 0;
@@ -85,6 +85,9 @@
     margin-top: gutter(10);
   }
   @include tab {
+    &--programma {
+      margin-top: -8px;
+    }
     &__img {
       height: 450px;
     }
