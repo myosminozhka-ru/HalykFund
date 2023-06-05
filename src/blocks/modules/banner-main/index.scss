@@ -17,6 +17,7 @@
       width: 100%;
       height: 100%;
       object-fit: cover;
+      object-position: center 30%;
     }
     &::before {
       content: '';
@@ -87,7 +88,7 @@
   
     &__content {
       padding: gutter(6);
-      height: 424px;
+      height: 460px;
     }
   
     &__cap {
@@ -105,6 +106,10 @@
   
     &__ctrl {
       margin-top: gutter(2);
+    }
+    .slider-prev,
+    .slider-next {
+      display: none;
     }
   }
 }

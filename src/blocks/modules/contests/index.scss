@@ -34,9 +34,25 @@
   }
   @include tab {
     &__slide {
-      width: 700px;
+      width: 618px;
       max-width: 100%;
       margin-right: gutter(5);
+    }
+    .card4__text {
+      max-height: 150px;
+      overflow: hidden;
+      position: relative;
+      &::after {
+        content: '';
+        display: block;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        height: 35px;
+        width: 100%;
+        background: rgb(234,241,239);
+        background: linear-gradient(180deg, rgba(234,241,239,0) 0%, rgba(234,241,239,1) 73%, rgba(234,241,239,1) 100%);
+      }
     }
   
     &__pag {
@@ -50,6 +66,9 @@
     &__slide {
       width: 285px;
       margin-right: gutter(4);
+    }
+    .card4__text {
+      max-height: 120px;
     }
   
     &__footer {
