@@ -10,6 +10,7 @@
     justify-content: space-between;
     padding: gutter(2) gutter(3);
     background-color: $green-light;
+    border-radius: 4px;
   }
   &__current {
     font-size: 14px;
@@ -60,6 +61,9 @@
     .select-link__arrow {
       transform: rotate(-180deg);
     }
+    .select-link__title {
+      border-radius: 4px 4px 0 0;
+    }
     .select-link__drop {
       display: block;
       top: 100%;
@@ -71,7 +75,7 @@
   }
   @include mob {
     &__title {
-      padding: gutter(3) 10px;
+      padding: gutter(2) 10px;
     }
     &__current {
       font-size: 12px;

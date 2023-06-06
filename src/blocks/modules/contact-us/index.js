@@ -1,6 +1,6 @@
 import validationLocal from '../../../js/libs/validationLocal'
 import local from '../../../js/import/local'
-const {keys, dictLocale} = validationLocal
+const {keys, dictLocale, regex} = validationLocal
 export default function() {
   if (!document.querySelector('#contact_us')) return
   const validation = new JustValidate('#contact_us', {
@@ -25,7 +25,7 @@ export default function() {
       },
       {
         rule: 'customRegexp',
-        value: /^[a-zA-Zа-яА-Я'][a-zA-Zа-яА-Я-' ]+[a-zA-Zа-яА-Я']?$/gi,
+        value: regex.name,
         errorMessage: keys.name,
       },
     ])
@@ -36,7 +36,7 @@ export default function() {
       },
       {
         rule: 'customRegexp',
-        value: /^\+7 (\d|-){13}/gi,
+        value: regex.tel,
         errorMessage: keys.tel,
       },
     ])
@@ -46,7 +46,8 @@ export default function() {
         errorMessage: keys.emailRequired,
       },
       {
-        rule: 'email',
+        rule: 'customRegexp',
+        value: regex.email,
         errorMessage: keys.email,
       },
     ])
