@@ -24,6 +24,8 @@ export default class SvgAnime {
   constructor() {
     this.principles()
     this.target()
+    this.data()
+    this.dots()
   }
   principles() {
     let principlesSVG = document.querySelector('.anime-card--principles svg')
@@ -189,6 +191,104 @@ export default class SvgAnime {
     let data = document.querySelector('.anime-card--data')
     if (!data) return
     let circles = document.querySelectorAll('.anime-card--data path')
+    let top = document.querySelectorAll('.anime-card--data .t1, .anime-card--data .t2, .anime-card--data .t3')
+    let bot = document.querySelectorAll('.anime-card--data .b1, .anime-card--data .b2, .anime-card--data .b3')
     let dur = 0.8
+    var tl1 = gsap.timeline({ repeat: -1, yoyo: true, repeatDelay: dur * 1 });
+
+    for (let i = 0; i < 3; i++) {
+      gsap.set(top[i],
+        {
+          translateY: '24%',
+          transformOrigin: "center center",
+        })
+    }
+    for (let i = 0; i < 3; i++) {
+      gsap.set(bot[i],
+        {
+          translateY: '-24%',
+          transformOrigin: "center center",
+        })
+    }
+    for (let i = 0; i < 3; i++) {
+      console.log(top[i])
+      tl1.to(top[i],
+        {
+          translateY: 0,
+          duration: dur,
+          ease: "back.inOut",
+          delay: dur * 0,
+        }, 0)
+    }
+    for (let i = 0; i < 3; i++) {
+      tl1.to(bot[i],
+        {
+          translateY: 0,
+          duration: dur,
+          ease: "back.inOut",
+          delay: dur * 0,
+        }, 0)
+    }
+    for (let i = 1; i < 3; i++) {
+      console.log(top[i])
+      tl1.to(top[i],
+        {
+          translateY: '-48%',
+          duration: dur,
+          ease: "back.inOut",
+          delay: dur * 1,
+        }, 0)
+    }
+    for (let i = 1; i < 3; i++) {
+      tl1.to(bot[i],
+        {
+          translateY: '48%',
+          duration: dur,
+          ease: "back.inOut",
+          delay: dur * 1,
+        }, 0)
+    }
+    for (let i = 2; i < 3; i++) {
+      console.log(top[i])
+      tl1.to(top[i],
+        {
+          translateY: '-96%',
+          duration: dur,
+          ease: "back.inOut",
+          delay: dur * 2,
+        }, 0)
+    }
+    for (let i = 2; i < 3; i++) {
+      tl1.to(bot[i],
+        {
+          translateY: '96%',
+          duration: dur,
+          ease: "back.inOut",
+          delay: dur * 2,
+        }, 0)
+    }
+  }
+  dots() {
+    let data = document.querySelector('.anime-card--dots')
+    if (!data) return
+    let circles = document.querySelectorAll('.anime-card--dots rect')
+    let dur = 0.4
+    var tl1 = gsap.timeline({ repeat: -1, yoyo: true, repeatDelay: dur * 1 });
+
+    // for (let i = 0; i < circles.length; i++) {
+    //   gsap.set(circles[i],
+    //     {
+    //       attr: { x: 80, y: 80 }
+    //     })
+    // }
+    for (let i = 0; i < circles.length; i++) {
+      tl1.to(circles[i],
+        {
+          attr: { x: 80, y: 80 },
+          duration: dur,
+          ease: "back.inOut",
+          delay: dur * i,
+        }, 0)
+    }
   }
 }

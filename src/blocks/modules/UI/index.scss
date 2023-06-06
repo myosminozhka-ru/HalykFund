@@ -153,6 +153,13 @@
       font-size: 14px;
     }
   }
+  @include mob {
+    gap: gutter(2);
+    .btn--tag {
+      padding-left: 23px;
+      padding-right: 23px;
+    }
+  }
 }
 
 .link-checkbox {
