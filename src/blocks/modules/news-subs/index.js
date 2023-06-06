@@ -1,6 +1,6 @@
 import validationLocal from '../../../js/libs/validationLocal'
 import local from '../../../js/import/local'
-const {keys, dictLocale} = validationLocal
+const {keys, dictLocale, regex} = validationLocal
 export default function() {
   if (!document.querySelector('#subscribe')) return
   const validation = new JustValidate('#subscribe', {
@@ -17,7 +17,8 @@ export default function() {
         errorMessage: keys.emailRequired,
       },
       {
-        rule: 'email',
+        rule: 'customRegexp',
+        value: regex.email,
         errorMessage: keys.email,
       },
     ])

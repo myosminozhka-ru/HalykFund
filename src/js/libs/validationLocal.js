@@ -1,3 +1,9 @@
+const regex = {
+  email: /^[a-zA-Zа-яА-Я\d]+([\.-\d]?[a-zA-Zа-яА-Я\d]+)*@[a-zA-Zа-яА-Я\d]+([\.-\d]?[a-zA-Zа-яА-Я\d]+)*(\.[a-zA-Zа-яА-Я]{2,3})+$/gi,
+  name: /^[a-zA-Zа-яА-Я'][a-zA-Zа-яА-Я-' ]+[a-zA-Zа-яА-Я']?$/gi,
+  tel: /^\+7 (\d|-){13}/gi,
+}
+
 const keys = {
   required: 'Name is required',
   minLength: 'Name is too short',
@@ -102,4 +108,5 @@ const dictLocale = [
 export default {
   dictLocale,
   keys,
+  regex
 }
