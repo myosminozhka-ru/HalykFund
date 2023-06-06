@@ -148,6 +148,11 @@
   display: flex;
   flex-wrap: wrap;
   gap: gutter(4);
+  @include tab {
+    .btn--tag {
+      font-size: 14px;
+    }
+  }
 }
 
 .link-checkbox {
