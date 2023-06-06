@@ -1,4 +1,5 @@
 .about {
+  margin-bottom: 64px;
   &__inner {
     position: relative;
     @include o-grid;
@@ -30,6 +31,7 @@
     }
   }
   @include tab {
+    margin-bottom: 40px;
     &__inner {
       grid-template-columns: 1fr;
       grid-gap: gutter(5);
@@ -44,6 +46,7 @@
     }
   }
   @include mob {
+    margin-bottom: 64px;
     &__inner {
       grid-gap: gutter(4);
     }

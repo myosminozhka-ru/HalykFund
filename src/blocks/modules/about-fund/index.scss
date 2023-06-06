@@ -1,5 +1,4 @@
 .about-fund {
-  margin-bottom: 64px;
   &__top {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -16,7 +15,6 @@
     overflow: hidden;
   }
   @include tab {
-    margin-bottom: 40px;
     &__top {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
@@ -30,7 +28,6 @@
     }
   }
   @include mob {
-    margin-bottom: 64px;
     &__inner {
       .osmi-container  {
         padding: 0;

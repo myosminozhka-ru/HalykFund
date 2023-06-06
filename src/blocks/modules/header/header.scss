@@ -298,10 +298,10 @@
     &__inner {
       // align-items: flex-start;
       align-items: center;
-      padding: gutter(6) 0 gutter(4);
+      padding: gutter(3) 0 gutter(3);
       // justify-content: stretch;
       justify-content: space-between;
-      min-height: 100px;
+      min-height: 84px;
       position: relative;
       border-bottom: 0;
       &::before {
@@ -329,7 +329,7 @@
     }
   
     &__logo {
-      margin-right: 0;
+      margin-right: 55px;
       position: relative;
       z-index: 2;
     }
