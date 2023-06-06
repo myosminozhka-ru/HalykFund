@@ -185,4 +185,10 @@ export default class SvgAnime {
         }, dur * 0)
     }
   }
+  data() {
+    let data = document.querySelector('.anime-card--data')
+    if (!data) return
+    let circles = document.querySelectorAll('.anime-card--data path')
+    let dur = 0.8
+  }
 }
