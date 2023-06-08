@@ -1,0 +1,115 @@
+.banner-main {
+  padding-top: gutter(6);
+
+  &__slide {
+    position: relative;
+  }
+
+  &__bg {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: $brz;
+    overflow: hidden;
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center 30%;
+    }
+    &::before {
+      content: '';
+      display: block;
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(360deg, #398166 0%, rgba(57, 129, 102, 0) 59.33%), linear-gradient(0deg, rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0.15));
+    }
+  }
+
+  &__content {
+    color: $white;
+    padding: 64px 40px;
+    height: 600px;
+    position: relative;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  &__cap {
+    max-width: 424px;
+    line-height: 110%;
+  }
+
+  &__bot {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+  }
+
+  &__text {
+    max-width: 424px;
+  }
+
+  &__ctrl {
+    margin-top: gutter(4);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .slider-pag {
+      margin: 0 32px;
+    }
+  }
+  @include tab {
+    padding-top: gutter(10);
+  
+    &__content {
+      padding: gutter(8);
+      height: 400px;
+    }
+  
+    &__cap {
+      font-size: 48px;
+      max-width: 304px;
+    }
+  
+    &__text {
+      max-width: 304px;
+    }
+  }
+  @include mob {
+    padding-top: gutter(6);
+  
+    &__content {
+      padding: gutter(6);
+      height: 460px;
+    }
+  
+    &__cap {
+      max-width: none;
+    }
+  
+    &__bot {
+      display: block;
+    }
+  
+    &__text {
+      max-width: none;
+      margin-bottom: gutter(4);
+    }
+  
+    &__ctrl {
+      margin-top: gutter(2);
+    }
+    .slider-prev,
+    .slider-next {
+      display: none;
+    }
+  }
+}

@@ -1,0 +1,15 @@
+<section class="section docs">
+  <div class="osmi-container">
+    <div class="docs__inner">
+      <h1 class="h1 docs__cap wow slow fadeIn">Документы и отчеты</h1>
+      @@include("../UI/link-tabs.html", {
+        list: [{t: 'Годовые отчеты', class: 'active'}, {t: 'Документы', class: ''}]
+      })
+      <div class="docs__list">
+        @@include("../list-doc/index.html", {
+          text: ['Годовой отчет 2023', 'Годовой отчет 2023', 'Годовой отчет 2023', 'Годовой отчет 2022', 'Годовой отчет 2021', 'Годовой отчет 2020', 'Годовой отчет 2019', 'Годовой отчет 2018']
+        })
+      </div>
+    </div>
+  </div>
+</section>

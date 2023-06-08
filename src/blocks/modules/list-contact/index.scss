@@ -1,0 +1,25 @@
+.list-contact {
+  &__item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: gutter(6) 0;
+    border-bottom: 1px solid $brd-grey;
+    &:first-child {
+      border-top: 1px solid $brd-grey;
+    }
+  }
+  &__k, &__v {
+    width: 50%;
+  }
+  @include tab {
+    &__v {
+      text-align: right;
+    }
+  }
+  @include mob {
+    &__v {
+      text-align: left;
+    }
+  }
+}

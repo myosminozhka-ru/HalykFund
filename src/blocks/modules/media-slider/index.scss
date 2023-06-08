@@ -1,0 +1,45 @@
+.media-slider {
+  overflow: hidden;
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: gutter(6);
+  }
+  &__slider {
+    width: 100%;
+    order: 1;
+    overflow: visible;
+  }
+  &__slide {
+    width: 422px;
+    margin-right: gutter(6);
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+  &__ctrl {
+    width: 100%;
+    order: 2;
+  }
+  &__pag {
+    margin-bottom: 6px;
+  }
+  &__c-btns {
+    display: flex;
+    justify-content: flex-end;
+  }
+  @include tab {
+    &__ctrl {
+      display: none;
+    }
+  }
+  @include mob {
+    &__slide {
+      width: 285px;
+    }
+    &__all {
+      display: none;
+    }
+  }
+}

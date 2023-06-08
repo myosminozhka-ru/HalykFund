@@ -1,0 +1,17 @@
+<div class="team-list @@modf">
+  <div class="team-list__inner">
+    <div class="team-list__list">
+      @@for (var i = 0; i < list.length; i++) {
+        <div class="team-list__item wow slow fadeIn">
+          <picture class="team-list__pic">
+            <img src="`+list[i].img+`" alt="">
+          </picture>
+          <div class="team-list__content">
+            <div class="team-list__title">`+list[i].title+`</div>
+            <div class="team-list__text">`+list[i].text+`</div>
+          </div>
+        </div>
+      }
+    </div>
+  </div>
+</div>

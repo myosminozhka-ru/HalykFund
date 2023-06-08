@@ -1,0 +1,50 @@
+<div class="section media-slider">
+  <div class="osmi-container">
+    @@include("../UI/line.html")
+    <div class="media-slider__inner">
+      <p class="media-slider__cap wow slow fadeIn">Медиатека</p>
+      <div class="swiper media-slider__slider">
+        <div class="swiper-wrapper media-slider__wrapper">
+          <div class="swiper-slide media-slider__slide">
+            @@include("../cards/card6.html", {
+              type: "video",
+              video: '/video/video.mp4',
+              img: 'img/media-s1.jpg',
+              title: "Фонд 'Халык' начал работу над проектом 'Домашняя тетрадь'",
+            })
+          </div>
+          <div class="swiper-slide media-slider__slide">
+            @@include("../cards/card6.html", {
+              type: "img",
+              img: 'img/media-s2.jpg',
+              title: "Фонд 'Халык' начал работу над проектом 'Домашняя тетрадь'",
+            })
+          </div>
+          <div class="swiper-slide media-slider__slide">
+            @@include("../cards/card6.html", {
+              type: "img",
+              img: 'img/media-s3.jpg',
+              title: "Фонд 'Халык' начал работу над проектом 'Домашняя тетрадь'",
+            })
+          </div>
+          <div class="swiper-slide media-slider__slide">
+            @@include("../cards/card6.html", {
+              type: "img",
+              img: 'img/media-s4.jpg',
+              title: "Фонд 'Халык' начал работу над проектом 'Домашняя тетрадь'",
+            })
+          </div>
+        </div>
+      </div>
+      <div class="media-slider__ctrl wow slow fadeIn">
+        <div class="media-slider__pag">
+          <div class="slider-pag slider-pag--progressbar"></div>
+        </div>
+        <div class="media-slider__c-btns wow slow fadeIn">
+          @@include('../UI/slider-btns.html')
+        </div>
+      </div>
+      <a href="#" class="btn media-slider__all wow slow fadeIn">Смотреть всех</a>
+    </div>
+  </div>
+</div>

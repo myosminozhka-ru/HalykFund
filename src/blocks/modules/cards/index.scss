@@ -1,20 +1,29 @@
 .card1 {
-  display: inline-block;
+  display: block;
 
-  &:hover .card1__pic::after {
-    opacity: 1;
+  &:hover {
+    .card1__pic::after {
+      opacity: 1;
+    }
+    .card1__pic img {
+      filter: grayscale(100%)
+    }
   }
 
   &__pic {
+    display: block;
     height: 460px;
     border-radius: $brz;
     overflow: hidden;
-    margin-bottom: 16px;
+    margin-bottom: gutter(2);
     position: relative;
 
     img {
       height: 100%;
-      width: auto;
+      width: 100%;
+      object-fit: cover;
+      transition: grayscale 300ms;
+      transition-timing-function: ease-out;
     }
 
     &::after {
@@ -39,7 +48,7 @@
 
   &__title {
     font-size: 24px;
-    margin-bottom: 8px;
+    margin-bottom: 2px;
   }
   
   &__text {
@@ -50,11 +59,6 @@
     &__pic {
       height: 326px;
       width: 285px;
-      img {
-        height: 100%;
-        width: 100%;
-        object-fit: cover;
-      }
     }
 
     &__content {
@@ -67,6 +71,760 @@
     
     &__text {
       font-size: 14px;
+    }
+  }
+}
+
+.card2 {
+  display: block;
+
+  &:hover {
+    .card2__pic::after {
+      opacity: 1;
+    }
+    .card2__pic img {
+      filter: grayscale(100%)
+    }
+  }
+
+  &__pic {
+    height: 419px;
+    width: 100%;
+    border-radius: $brz;
+    overflow: hidden;
+    margin-bottom: gutter(4);
+    position: relative;
+
+    img {
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+      transition: grayscale 300ms;
+      transition-timing-function: ease-out;
+    }
+
+    &::after {
+      content: '';
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 1;
+      background-color: $trt-accent;
+      opacity: 0;
+      transition: opacity 300ms;
+      transition-timing-function: ease-out;
+    }
+  }
+  &__video {
+    display: block;
+    height: 419px;
+    width: 100%;
+    border-radius: $brz;
+    overflow: hidden;
+    margin-bottom: gutter(4);
+    position: relative;
+    cursor: pointer;
+
+    video {
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+      transition: grayscale 300ms;
+      transition-timing-function: ease-out;
+    }
+
+    &:hover {
+      .card6__play {
+        transform: translate(-50%, -50%) scale(1.2);
+      }
+    }
+  }
+  &__play {
+    width: 84px;
+    height: 84px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-image: url(../img/play.svg);
+    transition: transform 300ms;
+  }
+
+  &__title {
+    font-size: 18px;
+    margin-bottom: 8px;
+  }
+  
+  &__text {
+    color: $grey;
+    margin-bottom: gutter(4);
+    &:empty {
+      display: none;
+    }
+  }
+
+  &__footer {
+    display: flex;
+    font-size: 14px;
+    color: $grey;
+  }
+
+  &__date {
+    margin-right: gutter(4);
+  }
+
+  &__tags {
+    list-style: disc;
+    padding-left: gutter(4);
+  }
+
+  @include tab {
+    &__pic,
+    &__video {
+      // height: 424px;
+      height: 344px;
+    }
+
+    &__footer {
+      font-size: 14px;
+    }
+  }
+
+  @include mob {
+    &__pic,
+    &__video {
+      height: 320px;
+    }
+  
+    &__title {
+      font-size: 16px;
+    }
+    
+    &__text {
+      font-size: 14px;
+    }
+    &__play {
+      width: 64px;
+      height: 64px;
+    }
+    &__footer {
+      font-size: 12px;
+    }
+  }
+}
+
+.card3 {
+  display: flex;
+  align-items: center;
+
+  &:hover {
+    .card3__pic::after {
+      opacity: 1;
+    }
+    .card3__pic img {
+      filter: grayscale(100%)
+    }
+  }
+
+  &__pic {
+    height: 90px;
+    width: 117px;
+    border-radius: $brz;
+    overflow: hidden;
+    margin-right: gutter(6);
+    position: relative;
+
+    img {
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+      transition: grayscale 300ms;
+      transition-timing-function: ease-out;
+    }
+
+    &::after {
+      content: '';
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 1;
+      background-color: $trt-accent;
+      opacity: 0;
+      transition: opacity 300ms;
+      transition-timing-function: ease-out;
+    }
+  }
+
+  &__title {
+    font-size: 18px;
+    margin-bottom: gutter(2);
+  }
+
+  &__footer {
+    display: flex;
+    font-size: 12px;
+    color: $grey;
+  }
+
+  &__date {
+    margin-right: gutter(4);
+  }
+
+  &__tags {
+    list-style: disc;
+    padding-left: gutter(4);
+  }
+
+  @include tab {
+  
+    &__footer {
+      font-size: 12px;
+    }
+  }
+
+  @include mob {
+    &__pic {
+      display: none;
+    }
+    &__title {
+      font-size: 16px;
+    }
+  }
+}
+
+.card4 {
+  display: flex;
+  align-items: center;
+  background-color: $green-light;
+  border-radius: $brz;
+  overflow: hidden;
+
+  &:hover {
+    .card4__pic::after {
+      opacity: 1;
+    }
+    .card4__pic img {
+      filter: grayscale(100%)
+    }
+  }
+
+  &__pic {
+    height: 480px;
+    width: 420px;
+    border-radius: $brz;
+    overflow: hidden;
+    position: relative;
+    flex-shrink: 0;
+
+    img {
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+      transition: grayscale 300ms;
+      transition-timing-function: ease-out;
+    }
+
+    &::after {
+      content: '';
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 1;
+      background-color: $trt-accent;
+      opacity: 0;
+      transition: opacity 300ms;
+      transition-timing-function: ease-out;
+    }
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    gap: gutter(6);
+    padding: gutter(6);
+  }
+
+  &__title {
+    font-size: 24px;
+  }
+
+  &__text {
+    color: $grey;
+  }
+
+  &__date {
+    display: flex;
+    align-items: center;
+    svg {
+      width: 24px;
+      height: 24px;
+      margin-right: gutter(2);
+    }
+  }
+
+  @include tab {
+  
+    &:hover .card5__pic::after {
+      opacity: 1;
+    }
+  
+    &__pic {
+      height: 345px;
+      width: 309px;
+    }
+  
+    &__content {
+      gap: gutter(4);
+    }
+  
+    &__title {
+      font-size: 20px;
+    }
+  
+    &__text {
+      font-size: 14px;
+    }
+  
+    &__date {
+      font-size: 14px;
+    }
+  }
+
+  @include mob {
+    flex-direction: column;
+    &__pic {
+      height: 200px;
+      width: 285px;
+    }
+  
+    &__content {
+      padding: gutter(4) gutter(6);
+    }
+  }
+}
+
+.card5 {
+  display: block;
+  height: 450px;
+  width: 648px;
+  border-radius: $brz;
+  overflow: hidden;
+  position: relative;
+
+  &:hover {
+    .card5__pic::before {
+      opacity: 1;
+    }
+    .card5__pic::after {
+      opacity: 0;
+    }
+    .card5__pic img {
+      filter: grayscale(100%)
+    }
+  }
+
+  &__pic {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+
+    img {
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+      transition: grayscale 300ms;
+      transition-timing-function: ease-out;
+    }
+
+    &::before {
+      content: '';
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 1;
+      opacity: 0;
+      background: $trt-accent;
+      transition: opacity 300ms;
+      transition-timing-function: ease-out;
+    }
+
+    &::after {
+      content: '';
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 1;
+      background: linear-gradient(
+        360deg, 
+        rgba(57, 129, 102, 1) 0%, 
+        rgba(57, 129, 102, 0) 100%
+      );
+      opacity: 1;
+      transition: opacity 300ms;
+      transition-timing-function: ease-out;
+    }
+  }
+
+  &__content {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    left: 0;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: gutter(6);
+    z-index: 2;
+    color: $white;
+  }
+
+  &__title {
+    font-size: 24px;
+  }
+
+  @include tab {
+  }
+
+  @include mob {
+    height: 353px;
+    width: 285px;
+    &__title {
+      font-size: 20px;
+    }
+  }
+}
+
+.card6 {
+  display: block;
+
+  &:hover {
+    .card6__pic::after {
+      opacity: 1;
+    }
+    .card6__pic img {
+      filter: grayscale(100%)
+    }
+  }
+
+  &__pic {
+    display: block;
+    height: 342px;
+    border-radius: $brz;
+    overflow: hidden;
+    margin-bottom: gutter(2);
+    position: relative;
+
+    img {
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+      transition: grayscale 300ms;
+      transition-timing-function: ease-out;
+    }
+
+    &::after {
+      content: '';
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 1;
+      background-color: $trt-accent;
+      opacity: 0;
+      transition: opacity 300ms;
+      transition-timing-function: ease-out;
+    }
+  }
+
+  &__video {
+    display: block;
+    height: 342px;
+    border-radius: $brz;
+    overflow: hidden;
+    margin-bottom: gutter(2);
+    position: relative;
+    cursor: pointer;
+
+    video {
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+      transition: grayscale 300ms;
+      transition-timing-function: ease-out;
+    }
+
+    &:hover {
+      .card6__play {
+        transform: translate(-50%, -50%) scale(1.2);
+      }
+    }
+  }
+  &__play {
+    width: 84px;
+    height: 84px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-image: url(../img/play.svg);
+    transition: transform 300ms;
+  }
+
+  &__title {
+    font-size: 24px;
+  }
+
+  @include mob {
+    &__video,
+    &__pic {
+      height: 191px;
+    }
+
+    &__title {
+      font-size: 20px;
+    }
+    &__play {
+      width: 64px;
+      height: 64px;
+    }
+  }
+}
+
+.card7 {
+  display: flex;
+  align-items: center;
+  background-color: $green-light;
+  border-radius: $brz;
+  overflow: hidden;
+
+  &__pic {
+    height: 480px;
+    width: 420px;
+    border-radius: $brz;
+    overflow: hidden;
+    position: relative;
+    flex-shrink: 0;
+
+    img {
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+    }
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    gap: gutter(6);
+    padding: gutter(6);
+  }
+
+  &__title {
+    font-size: 24px;
+  }
+
+  &__text {
+    color: $grey;
+  }
+
+  &__date {
+    display: flex;
+    align-items: center;
+    svg {
+      width: 24px;
+      height: 24px;
+      margin-right: gutter(2);
+    }
+  }
+
+  @include tab {
+    flex-direction: column;
+    &__pic {
+      height: 277px;
+      width: 100%;
+      img {
+        object-position: center 20%;
+      }
+    }
+  
+    &__content {
+      gap: gutter(4);
+      padding: gutter(4) gutter(4);
+    }
+  }
+
+  @include mob {
+    &__pic {
+      height: 178px;
+    }
+    &__title {
+      font-size: 20px;
+    }
+  }
+}
+
+
+.card8 {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: gutter(10);
+  border: 1px solid $accent;
+  min-height: 424px;
+  border-radius: $brz;
+  background-color: $white;
+  transition: all 300ms;
+  &__content {
+    margin-bottom: gutter(4);
+  }
+  &__date {
+    margin-bottom: 4px;
+    color: $grey;
+  }
+  &__title {
+    color: $grey;
+    margin-bottom: gutter(4);
+  }
+  &__text {
+    font-size: 18px;
+  }
+  &__more {
+    font-size: 18px;
+    letter-spacing: -0.02em;
+    text-decoration-line: underline;
+  }
+  &:hover {
+    background-color: $accent;
+    color: $white;
+    .card8 {
+      &__date,
+      &__title {
+        color: #D9D9D9;
+      }
+    }
+  }
+  &:nth-child(4) {
+    background-color: $accent;
+    color: $white;
+    .card8 {
+      &__date,
+      &__title {
+        color: #D9D9D9;
+      }
+    }
+    &:hover {
+      background-color: $white;
+      color: $black;
+      .card8 {
+        &__date,
+        &__title {
+          color: $black;
+        }
+      }
+    }
+  }
+  @include tab {
+    min-height: 344px;
+    &:nth-child(4) {
+      background-color: $white;
+      color: $black;
+      .card8 {
+        &__date,
+        &__title {
+          color: $black;
+        }
+      }
+      &:hover {
+        background-color: $accent;
+        color: $white;
+        .card8 {
+          &__date,
+          &__title {
+            color: #D9D9D9;
+          }
+        }
+      }
+    }
+    &:nth-child(3) {
+      background-color: $accent;
+      color: $white;
+      .card8 {
+        &__date,
+        &__title {
+          color: #D9D9D9;
+        }
+      }
+      &:hover {
+        background-color: $white;
+        color: $black;
+        .card8 {
+          &__date,
+          &__title {
+            color: $black;
+          }
+        }
+      }
+    }
+  }
+  @include mob {
+    min-height: 320px;
+    padding: gutter(6);
+    &:nth-child(3) {
+      background-color: $white;
+      color: $black;
+      .card8 {
+        &__date,
+        &__title {
+          color: $black;
+        }
+      }
+      &:hover {
+        background-color: $accent;
+        color: $white;
+        .card8 {
+          &__date,
+          &__title {
+            color: #D9D9D9;
+          }
+        }
+      }
+    }
+    &__date {
+      font-size: 16px;
+    }
+    &__title {
+      font-size: 16px;
+      margin-bottom: 16px;
+    }
+    &__text {
+      font-size: 20px;
+    }
+    &__more {
+      font-size: 16px;
     }
   }
 }

@@ -1,0 +1,118 @@
+$stroke-thickness: 2px;
+$stroke-color: $accent;
+$size: 32px;
+.accordion {
+  &__item {
+    padding: gutter(6) 0;
+    border-top: 1px solid $brd-grey;
+    &:last-child {
+      border-bottom: 1px solid $brd-grey;
+    }
+  }
+  &__title {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  &__text {
+    display: block;
+    max-width: 424px;
+    max-height: 0;
+		opacity: 0;
+		overflow: hidden;
+		will-change: max-height;
+		transition: all 0.25s ease-out;
+    &.open {
+      display: block;
+      opacity: 1;
+    }
+  }
+  &__t-in {
+    padding-top: gutter(6);
+  }
+  &__btn {
+    flex-shrink: 0;
+    &>div {
+      width: $size;
+      height: $size;
+      border-radius: 50%;
+      cursor: pointer;
+      position: relative;
+      display: block;
+      
+      &:before,
+      &:after {
+        content: "";
+        display: block;
+        position: absolute;
+        width: $stroke-thickness;
+        background: $stroke-color;
+        border-radius: $stroke-thickness;
+        height: ($size - 12);
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        margin: auto;
+        transition: all .3s ease;
+      }
+      
+      &:after {
+        width: ($size - 12);
+        height: $stroke-thickness;
+      }
+    }
+    
+    &.open {
+      &>div {
+        &:before {
+          transform: rotate(-90deg);
+        }
+        
+        &:after {
+          transform: rotate(-180deg);
+          opacity: 0;
+        }
+      }
+    }
+  }
+  &.grid {
+    .accordion__item {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-gap: gutter(6);
+      align-items: start;
+      align-content: start;
+    }
+    .accordion__text {
+      max-height: none;
+      opacity: 1;
+    }
+    .accordion__btn {
+      display: none;
+    }
+  }
+  @include tab {
+    &.grid {
+      .accordion__item {
+        display: block;
+      }
+      .accordion__text {
+        max-height: 0;
+        opacity: 0;
+        &.open {
+          display: block;
+          opacity: 1;
+        }
+      }
+      .accordion__t-in {
+        padding-top: gutter(6);
+      }
+      .accordion__btn {
+        display: block;
+      }
+    }
+  }
+  @include mob {
+  }
+}

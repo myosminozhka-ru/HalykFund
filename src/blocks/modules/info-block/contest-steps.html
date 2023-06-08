@@ -1,0 +1,42 @@
+<section class="section info-block">
+  <div class="osmi-container">
+    @@include("../UI/line.html")
+    <div class="info-block__inner">
+      <div class="info-block__grid wow slow fadeIn">
+        <p class="info-block__cap">График</p>
+        <div class="info-block__content">
+          <h2 class="text-2 info-block__title">Этапы конкурса</h2>
+          <div class="info-block__steps">
+              @@include("../steps/index.html", {
+                steps: [
+                  { 
+                    title: 'Прием заявок',
+                    date: "До 10 апреля 2023 года",
+                    class: 'active',
+                  },
+                  { 
+                    title: 'Экспертиза заявок',
+                    date: "11 апреля - 22 апреля 2023",
+                    class: '',
+                  },
+                  { 
+                    title: 'Объявление результатов конкурса',
+                    date: "До 25 апреля 2023",
+                    class: '',
+                  },
+                  { 
+                    title: 'Заключение договоров гранта с победителями',
+                    date: "До 28 апреля 2023",
+                    class: '',
+                  },
+                ]
+              })
+          </div>
+            <div class="info-block__a-btn">
+              <a href="#contest" class="btn btn--tab-full">Подать заявку</a>
+            </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

@@ -20,6 +20,8 @@ const argv = yargs.argv,
     production = !!argv.production;
 
 gulp.task("styles", () => {
+
+    gulp.src(paths.styles.srcLibs).pipe(gulp.dest(paths.styles.distLibs))
     return gulp.src(paths.styles.src)
         .pipe(gulpif(!production, sourcemaps.init()))
         .pipe(plumber())
@@ -46,9 +48,9 @@ gulp.task("styles", () => {
                 }
             }
         })))
-        .pipe(gulpif(production, rename({
-            suffix: ".min"
-        })))
+        // .pipe(gulpif(production, rename({
+        //     suffix: ".min"
+        // })))
         .pipe(plumber.stop())
         .pipe(gulpif(!production, sourcemaps.write("./maps/")))
         .pipe(gulp.dest(paths.styles.dist))

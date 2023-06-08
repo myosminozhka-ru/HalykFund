@@ -1,0 +1,80 @@
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  overflow: auto;
+  z-index: -150;
+  background: rgba(0, 0, 0, 0.3);
+  opacity: 0;
+  transition: opacity 300ms;
+  padding: 30px 0;
+  &.active {
+    z-index: 150;
+    opacity: 1;
+  }
+  &__inner {
+    margin: auto;
+    position: relative;
+    padding: gutter(14);
+    min-width: 360px;
+    background-color: $white;
+    border-radius: $brz;
+    box-shadow: 0px 8px 16px rgba(57, 129, 102, 0.1);
+  }
+  &__close {
+    position: absolute;
+    right: 16px;
+    top: 16px;
+    width: 24px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 5;
+    cursor: pointer;
+    border: none;
+    background-color: transparent;
+    svg {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+  }
+  &__content {
+    position: relative;
+  }
+  .play-video {
+    display: none;
+  }
+  &[data-modal="video"] {
+    .card1__video,
+    .card2__video,
+    .card3__video,
+    .card4__video,
+    .card5__video,
+    .card6__video,
+    .card7__video {
+      height: auto;
+      max-width: 1042px;
+    }
+    *.wow {
+      visibility: visible !important;
+    }
+  }
+  @include tab {
+    &__inner {
+      max-width: calc(100% - 60px);
+      min-width: auto;
+      padding: 15px;
+      padding-top: 40px;
+      padding-bottom: 25px;
+    }
+    &__close {
+      right: 8px;
+      top: 8px;
+    }
+  }
+}

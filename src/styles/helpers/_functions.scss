@@ -1,0 +1,3 @@
+@function gutter($n) {
+  @return 4px * $n;
+}

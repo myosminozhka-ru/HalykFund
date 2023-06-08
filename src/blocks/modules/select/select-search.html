@@ -1,0 +1,35 @@
+<div class="select-search @@color" data-select-id="@@id">
+  <div class="select-search__inner">
+    <div class="select-search__title" data-select-trigger>
+      <span class="select-search__current" data-select-current>@@placeholder</span>
+      <span class="select-search__arrow">
+        <svg>
+          <use xlink:href="img/sprites/sprite.svg#select-link-arrow"></use>
+        </svg>
+      </span>
+    </div>
+    <div class="select-search__drop">
+      <div class="select-search__search-wrap">
+        <div class="select-search__search">
+          <span class="select-search__magnific">
+            <svg>
+              <use xlink:href="img/sprites/sprite.svg#search"></use>
+            </svg>
+          </span>
+          <input type="text" class="select-search__input" placeholder="Поиск" data-select-input>
+          <button class="select-search__clear-search" data-select-clear>
+            <svg>
+              <use xlink:href="img/sprites/sprite.svg#x"></use>
+            </svg>
+          </button>
+        </div>
+      </div>
+      <div class="select-search__list" data-select-list>
+        @@for (var i = 0; i < values.length; i++) {
+          <div class="select-search__item" data-select-value="id" data-select-item="`+values[i]+`">`+values[i]+`</div>
+        }
+      </div>
+      <div class="select-search__empty hide" data-select-empty>Не найдено</div>
+    </div>
+  </div>
+</div>

@@ -1,13 +1,14 @@
-<section class="directions">
+<section class="section directions" id="directions">
   <div class="osmi-container">
+    @@include("../UI/line.html")
     <div class="directions__inner">
-      <div class="directions__top">
+      <div class="directions__top wow slow fadeIn" data-wow-delay="0.2s">
         <div class="h2 directions__cap">Направления</div>
         <div class="directions__c-btns">
           @@include('../UI/slider-btns.html')
         </div>
       </div>
-      <div class="directions__slider-wrap">
+      <div class="directions__slider-wrap wow slow fadeIn" data-wow-delay="0.2s">
         <div class="swiper directions__slider">
           <div class="swiper-wrapper directions__swiper-wrap">
             <div class="swiper-slide directions__slide">

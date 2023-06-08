@@ -1,0 +1,1006 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>halyk</title>
+        <meta name="theme-color" content="#fff">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+        <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+        <link rel="shortcut icon" href="img/favicons/favicon.ico" type="image/x-icon">
+        <link rel="icon" sizes="16x16" href="img/favicons/favicon-16x16.png" type="image/png">
+        <link rel="icon" sizes="32x32" href="img/favicons/favicon-32x32.png" type="image/png">
+        <link rel="apple-touch-icon-precomposed" href="img/favicons/apple-touch-icon-precomposed.png">
+        <link rel="apple-touch-icon" href="img/favicons/apple-touch-icon.png">
+        <link rel="apple-touch-icon" sizes="57x57" href="img/favicons/apple-touch-icon-57x57.png">
+        <link rel="apple-touch-icon" sizes="60x60" href="img/favicons/apple-touch-icon-60x60.png">
+        <link rel="apple-touch-icon" sizes="72x72" href="img/favicons/apple-touch-icon-72x72.png">
+        <link rel="apple-touch-icon" sizes="76x76" href="img/favicons/apple-touch-icon-76x76.png">
+        <link rel="apple-touch-icon" sizes="114x114" href="img/favicons/apple-touch-icon-114x114.png">
+        <link rel="apple-touch-icon" sizes="120x120" href="img/favicons/apple-touch-icon-120x120.png">
+        <link rel="apple-touch-icon" sizes="144x144" href="img/favicons/apple-touch-icon-144x144.png">
+        <link rel="apple-touch-icon" sizes="152x152" href="img/favicons/apple-touch-icon-152x152.png">
+        <link rel="apple-touch-icon" sizes="167x167" href="img/favicons/apple-touch-icon-167x167.png">
+        <link rel="apple-touch-icon" sizes="180x180" href="img/favicons/apple-touch-icon-180x180.png">
+        <link rel="apple-touch-icon" sizes="1024x1024" href="img/favicons/apple-touch-icon-1024x1024.png">
+        <link rel="stylesheet" href="styles/libs/swiper-bundle.min.css">
+        <link rel="stylesheet" href="styles/libs/flatpickr.min.css">
+        <link rel="stylesheet" href="styles/main.css">
+    </head>
+    <body data-scroll-container>
+      <header class="header wow fadeIn">
+        <div class="osmi-container">
+          <div class="header__inner">
+            <a href="/" class="header__logo">
+              <svg>
+                <use xlink:href="img/sprites/sprite.svg#logo"></use>
+              </svg>
+            </a>
+            <div class="header__langs header__langs--pc">
+              <a href="/kz" class="header__lang">Kz</a>
+              <a href="/" class="header__lang active">Ru</a>
+              <a href="/en" class="header__lang">En</a>
+            </div>
+            <nav class="header__nav">
+              <div class="header__langs header__langs--mobile">
+                <a href="/kz" class="header__lang">Kz</a>
+                <a href="/" class="header__lang active">Ru</a>
+                <a href="/en" class="header__lang">En</a>
+              </div>
+              <div class="header__nav-list">
+                <div class="header__nav-item header__nav-item--drop">
+                  <div class="header__nav-title">
+                    <a href="#">О фонде</a>
+                    <div class="header__nav-arrow">
+                      <svg>
+                        <use xlink:href="img/sprites/sprite.svg#nav-arrow"></use>
+                      </svg>
+                    </div>
+                  </div>
+                  <div class="header__nav-drop">
+                    <ul>
+                      <li><a href="#">Лица фонда</a></li>
+                      <li><a href="#">Наши партнеры</a></li>
+                      <li><a href="#">Карта программ <br> и проектов</a></li>
+                    </ul>
+                    <ul>
+                      <li><a href="#">СМИ о нас</a></li>
+                      <li><a href="#">Документы фонда</a></li>
+                      <li><a href="#">Медиатека</a></li>
+                    </ul>
+                    <ul>
+                      <li><a href="#">FAQ</a></li>
+                      <li><a href="#">Контакты</a></li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="header__nav-item header__nav-item--drop">
+                  <div class="header__nav-title">
+                    <a href="#">Программы</a>
+                    <div class="header__nav-arrow">
+                      <svg>
+                        <use xlink:href="img/sprites/sprite.svg#nav-arrow"></use>
+                      </svg>
+                    </div>
+                  </div>
+                  <div class="header__nav-drop">
+                    <ul>
+                      <li><a href="#">Программы 1</a></li>
+                      <li><a href="#">Программы 2</a></li>
+                      <li><a href="#">Программы 3</a></li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="header__nav-item">
+                  <div class="header__nav-title"><a href="#">Конкурсы</a></div>
+                </div>
+                <div class="header__nav-item">
+                  <div class="header__nav-title"><a href="#">Отчетность</a></div>
+                </div>
+                <div class="header__nav-item">
+                  <div class="header__nav-title"><a href="#">Новости</a></div>
+                </div>
+                <div class="header__nav-item">
+                  <div class="header__nav-title"><a href="#">Истории в лицах</a></div>
+                </div>
+                <div class="header__nav-item">
+                  <div class="header__nav-title"><a href="#">Подать заявку</a></div>
+                </div>
+              </div>
+              <div class="header__search">
+                <div class="header__search-in">
+                  <button class="header__search-open">
+                    <svg>
+                      <use xlink:href="img/sprites/sprite.svg#search"></use>
+                    </svg>
+                  </button>
+                  <input type="text" class="header__search-input" placeholder="Поиск" data-page="/search?q=">
+                  <button class="header__search-start">Найти</button>
+                  <button class="header__search-close">
+                    <svg>
+                      <use xlink:href="img/sprites/sprite.svg#x"></use>
+                    </svg>
+                  </button>
+                </div>
+              </div>
+            </nav>
+            <div class="header__burger">
+              <div></div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+<section class="section banner-main wow slow fadeIn">
+  <div class="osmi-container">
+    <div class="banner-main__inner">
+      <div class="swiper banner-main__slider">
+        <div class="swiper-wrapper banner-main__sw-wrapper">
+          <div class="swiper-slide banner-main__slide">
+            <picture class="banner-main__bg">
+              <img src="img/banner-main1.jpg" alt="">
+            </picture>
+            <div class="banner-main__content">
+              <h2 class="h1 banner-main__cap">Доброта, которая меняет мир</h2>
+              <div class="banner-main__bot">
+                <div class="banner-main__text">Фонд Халык – это частная благотворительная организация. Мы стремимся обеспечить благоприятную среду для развития и улучшения качества жизни в Казахстане.</div>
+                <button class="btn btn--mob-full btn--white">Подать заявку в фонд</button>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide banner-main__slide">
+            <picture class="banner-main__bg">
+              <img src="img/banner-main1.jpg" alt="">
+            </picture>
+            <div class="banner-main__content">
+              <h2 class="h1 banner-main__cap">Доброта, которая меняет мир</h2>
+              <div class="banner-main__bot">
+                <div class="banner-main__text">Фонд Халык – это частная благотворительная организация. Мы стремимся обеспечить благоприятную среду для развития и улучшения качества жизни в Казахстане.</div>
+                <button class="btn btn--mob-full btn--white">Подать заявку в фонд</button>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide banner-main__slide">
+            <picture class="banner-main__bg">
+              <img src="img/banner-main1.jpg" alt="">
+            </picture>
+            <div class="banner-main__content">
+              <h2 class="h1 banner-main__cap">Доброта, которая меняет мир</h2>
+              <div class="banner-main__bot">
+                <div class="banner-main__text">Фонд Халык – это частная благотворительная организация. Мы стремимся обеспечить благоприятную среду для развития и улучшения качества жизни в Казахстане.</div>
+                <button class="btn btn--mob-full btn--white">Подать заявку в фонд</button>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide banner-main__slide">
+            <picture class="banner-main__bg">
+              <img src="img/banner-main1.jpg" alt="">
+            </picture>
+            <div class="banner-main__content">
+              <h2 class="h1 banner-main__cap">Доброта, которая меняет мир</h2>
+              <div class="banner-main__bot">
+                <div class="banner-main__text">Фонд Халык – это частная благотворительная организация. Мы стремимся обеспечить благоприятную среду для развития и улучшения качества жизни в Казахстане.</div>
+                <button class="btn btn--mob-full btn--white">Подать заявку в фонд</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="banner-main__ctrl">
+        <button class="slider-prev">
+  <svg width="32" height="32" fill="none" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+    <rect x="-0.5" y="0.5" width="31" height="31" rx="9.5" transform="matrix(-1 0 0 1 31 0)" stroke="#398166" />
+    <path d="M23 16H9" stroke="#398166" stroke-linecap="round" stroke-linejoin="round" />
+    <path d="M16 9L9 16L16 23" stroke="#398166" stroke-linecap="round" stroke-linejoin="round" />
+  </svg>
+</button>
+        <div class="slider-pag slider-pag--bullets"></div>
+        <button class="slider-next">
+  <svg width="32" height="32" fill="none" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+    <rect x="0.5" y="0.5" width="31" height="31" rx="9.5" stroke="#398166" />
+    <path d="M9 16H23" stroke="#398166" stroke-linecap="round" stroke-linejoin="round" />
+    <path d="M16 9L23 16L16 23" stroke="#398166" stroke-linecap="round" stroke-linejoin="round" />
+  </svg>
+</button>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="section news-last">
+  <div class="osmi-container">
+    <div class="line">
+  <div class="wow slideInLeft"></div>
+</div>
+    <div class="news-last__inner">
+      <div class="news-last__top wow slow fadeIn">
+        <p class="news-last__cap">Последние новости фонда</p>
+        <a href="#" class="btn news-last__all">Все новости</a>
+      </div>
+      <div class="news-last__content">
+        <div class="news-last__left">
+          
+
+  <a href="#" class="card2 wow slow fadeIn">
+    <picture class="card2__pic">
+      <img src="img/news1.jpg" alt="">
+    </picture>
+    <div class="card2__content">
+      <div class="card2__title">Счастливые дети: новая акция фонда</div>
+      <div class="card2__text">была организована благотворительная акция, направленная на помощь сиротам и детям, оставшимся без родительской опеки.</div>
+    </div>
+    <div class="card2__footer">
+      <time class="card2__date" datetime="">1 Апреля 2023</time>
+      <ul class="card2__tags">
+        <li>Сообщества</li>
+      </ul>
+    </div>
+  </a>
+
+        </div>
+        <div class="news-last__right">
+          <div class="news-last__item">
+            <a href="#" class="card3 wow slow fadeIn">
+  <picture class="card3__pic">
+    <img src="img/news2.jpg" alt="">
+  </picture>
+  <div class="card3__content">
+    <div class="card3__title">Счастливые дети: новая акция фонда</div>
+    <div class="card3__footer">
+      <time class="card3__date" datetime="">1 Апреля 2023</time>
+      <ul class="card3__tags">
+        <li>Сообщества</li>
+      </ul>
+    </div>
+  </div>
+</a>
+          </div>
+          <div class="news-last__item">
+            <a href="#" class="card3 wow slow fadeIn">
+  <picture class="card3__pic">
+    <img src="img/news3.jpg" alt="">
+  </picture>
+  <div class="card3__content">
+    <div class="card3__title">Счастливые дети: новая акция фонда</div>
+    <div class="card3__footer">
+      <time class="card3__date" datetime="">1 Апреля 2023</time>
+      <ul class="card3__tags">
+        <li>Сообщества</li>
+      </ul>
+    </div>
+  </div>
+</a>
+          </div>
+          <div class="news-last__item">
+            <a href="#" class="card3 wow slow fadeIn">
+  <picture class="card3__pic">
+    <img src="img/news4.jpg" alt="">
+  </picture>
+  <div class="card3__content">
+    <div class="card3__title">Счастливые дети: новая акция фонда</div>
+    <div class="card3__footer">
+      <time class="card3__date" datetime="">1 Апреля 2023</time>
+      <ul class="card3__tags">
+        <li>Сообщества</li>
+      </ul>
+    </div>
+  </div>
+</a>
+          </div>
+          <div class="news-last__item">
+            <a href="#" class="card3 wow slow fadeIn">
+  <picture class="card3__pic">
+    <img src="img/news5.jpg" alt="">
+  </picture>
+  <div class="card3__content">
+    <div class="card3__title">Счастливые дети: новая акция фонда</div>
+    <div class="card3__footer">
+      <time class="card3__date" datetime="">1 Апреля 2023</time>
+      <ul class="card3__tags">
+        <li>Сообщества</li>
+      </ul>
+    </div>
+  </div>
+</a>
+          </div>
+        </div>
+      </div>
+      <div class="news-last__footer wow slow fadeIn">
+        <a href="#" class="btn btn--mob-full">Все новости</a>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="section about about--found">
+  <div class="osmi-container">
+    <div class="line">
+  <div class="wow slideInLeft"></div>
+</div>
+    <div class="about__inner">
+      <p class="about__cap wow slow fadeIn">О фонде</p>
+      <div class="about__content">
+        <h2 class="text-2 about__title wow slow fadeIn">Фонд «Халык» качественно решает актуальные социальные проблемы и делает жизнь казахстанцев лучше.</h2>
+        <div class="about__texts wow slow fadeIn">
+          <div class="about__text">«Халык» - один из самых эффективных благотворительных фондов Казахстана. Определив приоритетные регионы работы, фонд досконально изучает корни проблем и вырабатывает меры, которые реально отвечают потребностям населения.</div>
+          <div class="about__text">Фонд «Халык» изучает реальные потребности казахстанцев и внедряет системные и эффективные проекты, которые улучают качество жизни и дают возможность экономического и личностного роста. </div>
+        </div>
+        <a href="#" class="btn btn--mob-full about__more wow slow fadeIn">Подробнее</a>
+        <picture class="about__pic wow slow fadeIn">
+          <img src="img/about-found.jpg" alt="">
+        </picture>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="section our-values">
+  <div class="osmi-container">
+    <div class="line">
+  <div class="wow slideInLeft"></div>
+</div>
+    <div class="our-values__inner">
+      <h3 class="our-values__cap wow slow fadeIn">Наши ценности</h3>
+      <div class="anime-card anime-card--target wow slow fadeIn">
+  <div class="anime-card__top">
+    <div class="anime-card__icon">
+      <svg width="180" height="180" viewBox="0 0 180 180" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="90" cy="90" r="8" stroke="#398166" stroke-width="4"/>
+        <circle cx="90" cy="90" r="8" stroke="#398166" stroke-width="4"/>
+        <circle cx="90" cy="90" r="8" stroke="#398166" stroke-width="4"/>
+        <circle cx="90" cy="90" r="8" stroke="#398166" stroke-width="4"/>
+      </svg>
+    </div>
+  </div>
+  <p class="anime-card__title">Системность</p>
+  <div class="anime-card__text">Эффективные долгосрочные проекты, развивающие социальную инфраструктуру, либо человеческий капитал</div>
+</div>
+      <div class="anime-card anime-card--principles wow slow fadeIn">
+  <div class="anime-card__top">
+    <div class="anime-card__icon">
+      <svg width="180" height="180" viewBox="0 0 180 180" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <line x1="73" y1="-2" x2="2" y2="-2" transform="matrix(-4.37114e-08 1 1 4.37114e-08 91 10)" stroke="#398166" stroke-width="4" stroke-linecap="round" stroke-dasharray="11 10"/>
+        <line x1="95" y1="84.2028" x2="145.205" y2="33.9982" stroke="#398166" stroke-width="4" stroke-linecap="round" stroke-dasharray="11 10"/>
+        <line x1="2" y1="-2" x2="73" y2="-2" transform="matrix(-0.707107 -0.707107 -0.707107 0.707107 84.0332 87.0312)" stroke="#398166" stroke-width="4" stroke-linecap="round" stroke-dasharray="11 10"/>
+        <line x1="93.8284" y1="93" x2="144.033" y2="143.205" stroke="#398166" stroke-width="4" stroke-linecap="round" stroke-dasharray="11 10"/>
+        <line x1="2" y1="-2" x2="73" y2="-2" transform="matrix(-0.707107 0.707107 0.707107 0.707107 87.0332 93)" stroke="#398166" stroke-width="4" stroke-linecap="round" stroke-dasharray="11 10"/>
+        <line x1="89" y1="96" x2="89" y2="167" stroke="#398166" stroke-width="4" stroke-linecap="round" stroke-dasharray="11 10"/>
+        <line x1="2" y1="-2" x2="73" y2="-2" transform="matrix(1 -8.74228e-08 -8.74228e-08 -1 95 87)" stroke="#398166" stroke-width="4" stroke-linecap="round" stroke-dasharray="11 10"/>
+        <line x1="83" y1="89" x2="12" y2="89" stroke="#398166" stroke-width="4" stroke-linecap="round" stroke-dasharray="11 10"/>
+      </svg>
+    </div>
+  </div>
+  <p class="anime-card__title">Институциональность</p>
+  <div class="anime-card__text">Партнёрство с государственными органами, передача результатов проектов в их пользование</div>
+</div>
+      <div class="anime-card anime-card--data wow slow fadeIn">
+  <div class="anime-card__top">
+    <div class="anime-card__icon">
+      <svg width="180" height="180" viewBox="0 0 180 180" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path class="b1" d="M168 100.849C168 103.5 166.331 106.37 162.502 109.285C158.704 112.177 153.082 114.867 145.955 117.162C131.725 121.744 111.942 124.611 90 124.611C68.0581 124.611 48.2746 121.744 34.0445 117.162C26.9182 114.867 21.2963 112.177 17.4983 109.285C13.6695 106.37 12 103.5 12 100.849C12 98.1971 13.6695 95.327 17.4983 92.4118C21.2963 89.5202 26.9182 86.8302 34.0445 84.5354C48.2746 79.9528 68.0581 77.0859 90 77.0859C111.942 77.0859 131.725 79.9528 145.955 84.5354C153.082 86.8302 158.704 89.5202 162.502 92.4118C166.331 95.327 168 98.1971 168 100.849Z" stroke="#398166" stroke-width="4"/>
+        <path class="b2" d="M168 100.849C168 103.5 166.331 106.37 162.502 109.285C158.704 112.177 153.082 114.867 145.955 117.162C131.725 121.744 111.942 124.611 90 124.611C68.0581 124.611 48.2746 121.744 34.0445 117.162C26.9182 114.867 21.2963 112.177 17.4983 109.285C13.6695 106.37 12 103.5 12 100.849C12 98.1971 13.6695 95.327 17.4983 92.4118C21.2963 89.5202 26.9182 86.8302 34.0445 84.5354C48.2746 79.9528 68.0581 77.0859 90 77.0859C111.942 77.0859 131.725 79.9528 145.955 84.5354C153.082 86.8302 158.704 89.5202 162.502 92.4118C166.331 95.327 168 98.1971 168 100.849Z" stroke="#398166" stroke-width="4"/>
+        <path class="b3" d="M168 100.849C168 103.5 166.331 106.37 162.502 109.285C158.704 112.177 153.082 114.867 145.955 117.162C131.725 121.744 111.942 124.611 90 124.611C68.0581 124.611 48.2746 121.744 34.0445 117.162C26.9182 114.867 21.2963 112.177 17.4983 109.285C13.6695 106.37 12 103.5 12 100.849C12 98.1971 13.6695 95.327 17.4983 92.4118C21.2963 89.5202 26.9182 86.8302 34.0445 84.5354C48.2746 79.9528 68.0581 77.0859 90 77.0859C111.942 77.0859 131.725 79.9528 145.955 84.5354C153.082 86.8302 158.704 89.5202 162.502 92.4118C166.331 95.327 168 98.1971 168 100.849Z" stroke="#398166" stroke-width="4"/>
+        <path class="t1" d="M168 79.1532C168 81.8046 166.331 84.6747 162.502 87.5899C158.704 90.4816 153.082 93.1715 145.955 95.4664C131.725 100.049 111.942 102.916 90 102.916C68.0581 102.916 48.2746 100.049 34.0445 95.4664C26.9182 93.1715 21.2963 90.4816 17.4983 87.5899C13.6695 84.6747 12 81.8046 12 79.1532C12 76.5018 13.6695 73.6317 17.4983 70.7165C21.2963 67.8249 26.9182 65.1349 34.0445 62.84C48.2746 58.2575 68.0581 55.3906 90 55.3906C111.942 55.3906 131.725 58.2575 145.955 62.84C153.082 65.1349 158.704 67.8249 162.502 70.7165C166.331 73.6317 168 76.5018 168 79.1532Z" stroke="#398166" stroke-width="4"/>
+        <path class="t2" d="M168 79.1532C168 81.8046 166.331 84.6747 162.502 87.5899C158.704 90.4816 153.082 93.1715 145.955 95.4664C131.725 100.049 111.942 102.916 90 102.916C68.0581 102.916 48.2746 100.049 34.0445 95.4664C26.9182 93.1715 21.2963 90.4816 17.4983 87.5899C13.6695 84.6747 12 81.8046 12 79.1532C12 76.5018 13.6695 73.6317 17.4983 70.7165C21.2963 67.8249 26.9182 65.1349 34.0445 62.84C48.2746 58.2575 68.0581 55.3906 90 55.3906C111.942 55.3906 131.725 58.2575 145.955 62.84C153.082 65.1349 158.704 67.8249 162.502 70.7165C166.331 73.6317 168 76.5018 168 79.1532Z" stroke="#398166" stroke-width="4"/>
+        <path class="t3" d="M168 79.1532C168 81.8046 166.331 84.6747 162.502 87.5899C158.704 90.4816 153.082 93.1715 145.955 95.4664C131.725 100.049 111.942 102.916 90 102.916C68.0581 102.916 48.2746 100.049 34.0445 95.4664C26.9182 93.1715 21.2963 90.4816 17.4983 87.5899C13.6695 84.6747 12 81.8046 12 79.1532C12 76.5018 13.6695 73.6317 17.4983 70.7165C21.2963 67.8249 26.9182 65.1349 34.0445 62.84C48.2746 58.2575 68.0581 55.3906 90 55.3906C111.942 55.3906 131.725 58.2575 145.955 62.84C153.082 65.1349 158.704 67.8249 162.502 70.7165C166.331 73.6317 168 76.5018 168 79.1532Z" stroke="#398166" stroke-width="4"/>
+      </svg>
+    </div>
+  </div>
+  <p class="anime-card__title">Прагматичность</p>
+  <div class="anime-card__text">Ориентир на максимальную эффективность затраченных на проекты средств</div>
+</div>
+      <div class="anime-card anime-card--dots wow slow fadeIn">
+  <div class="anime-card__top">
+    <div class="anime-card__icon">
+      <svg width="180" height="180" viewBox="0 0 180 180" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <rect x="80.1133" y="15.9922" width="19.7753" height="19.7753" rx="9.88764" fill="#398166"/>
+        <rect x="123" y="37" width="19.7753" height="19.7753" rx="9.88764" fill="#398166"/>
+        <rect x="142" y="80" width="19.7753" height="19.7753" rx="9.88764" fill="#398166"/>
+        <rect x="125" y="125" width="19.7753" height="19.7753" rx="9.88764" fill="#398166"/>
+        <rect x="80.1133" y="143.633" width="19.7753" height="19.7753" rx="9.88764" fill="#398166"/>
+        <rect x="33" y="128" width="19.7753" height="19.7753" rx="9.88764" fill="#398166"/>
+        <rect x="14" y="80" width="19.7753" height="19.7753" rx="9.88764" fill="#398166"/>
+        <rect x="35" y="35" width="19.7753" height="19.7753" rx="9.88764" fill="#398166"/>
+      </svg>
+    </div>
+  </div>
+  <p class="anime-card__title">Доступность</p>
+  <div class="anime-card__text">Приверженность инклюзии, обеспечение общественного доступа к результатам проектов</div>
+</div>
+    </div>
+  </div>
+</section>
+<section class="section directions directions--main">
+  <div class="osmi-container">
+    <div class="line">
+  <div class="wow slideInLeft"></div>
+</div>
+    <div class="directions__inner">
+      <div class="directions__top wow slow fadeIn">
+        <div class="directions__cap">Направления</div>
+        <div class="text-2 directions__title">Как благотворительный фонд, мы вносим свой вклад в жизнь многих людей, мы обеспечиваем движение к более справедливому сообществу.</div>
+      </div>
+      <div class="directions__slider-wrap wow slow fadeIn">
+        <div class="swiper directions__slider">
+          <div class="swiper-wrapper directions__swiper-wrap">
+            <div class="swiper-slide directions__slide">
+              <a href="#" class="card1">
+  <picture class="card1__pic">
+    <img src="img/card1-1.jpg" alt="">
+  </picture>
+  <div class="card1__content">
+    <div class="card1__title">Сообщества</div>
+    <div class="card1__text">Для продвижения принципов социальной ответственности</div>
+  </div>
+</a>
+            </div>
+            <div class="swiper-slide directions__slide">
+              <a href="#" class="card1">
+  <picture class="card1__pic">
+    <img src="img/card1-2.jpg" alt="">
+  </picture>
+  <div class="card1__content">
+    <div class="card1__title">Инфраструктура</div>
+    <div class="card1__text">Для создания благоприятной среды развития</div>
+  </div>
+</a>
+            </div>
+            <div class="swiper-slide directions__slide">
+              <a href="#" class="card1">
+  <picture class="card1__pic">
+    <img src="img/card1-3.jpg" alt="">
+  </picture>
+  <div class="card1__content">
+    <div class="card1__title">Люди</div>
+    <div class="card1__text">Для развития человеческого капитала</div>
+  </div>
+</a>
+            </div>
+          </div>
+        </div>
+        <div class="directions__pag">
+          <div class="slider-pag slider-pag--progressbar"></div>
+        </div>
+        <div class="directions__c-btns">
+          <div class="slider-btns">
+  <button class="slider-prev">
+  <svg width="32" height="32" fill="none" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+    <rect x="-0.5" y="0.5" width="31" height="31" rx="9.5" transform="matrix(-1 0 0 1 31 0)" stroke="#398166" />
+    <path d="M23 16H9" stroke="#398166" stroke-linecap="round" stroke-linejoin="round" />
+    <path d="M16 9L9 16L16 23" stroke="#398166" stroke-linecap="round" stroke-linejoin="round" />
+  </svg>
+</button>
+  <button class="slider-next">
+  <svg width="32" height="32" fill="none" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+    <rect x="0.5" y="0.5" width="31" height="31" rx="9.5" stroke="#398166" />
+    <path d="M9 16H23" stroke="#398166" stroke-linecap="round" stroke-linejoin="round" />
+    <path d="M16 9L23 16L16 23" stroke="#398166" stroke-linecap="round" stroke-linejoin="round" />
+  </svg>
+</button>
+</div>
+        </div>
+      </div>
+      <button class="btn btn--mob-full directions__more">Подробнее</button>
+    </div>
+  </div>
+</section>
+<section class="section contests">
+  <div class="osmi-container">
+    <div class="line">
+  <div class="wow slideInLeft"></div>
+</div>
+    <div class="contests__inner">
+      <div class="contests__top wow slow fadeIn">
+        <p>Конкурсы</p>
+        <a href="#" class="btn">Все конкурсы</a>
+      </div>
+      <div class="swiper contests__slider wow slow fadeIn">
+        <div class="swiper-wrapper contests__sw-wrapper">
+          <div class="swiper-slide contests__slide">
+            <a href="#" class="card4">
+  <picture class="card4__pic">
+    <img src="img/card4-1.jpg" alt="">
+  </picture>
+  <div class="card4__content">
+    <div class="card4__title">Конкурс “Голос ребенка”</div>
+    <div class="card4__text">Конкурсы проводятся среди социально активных граждан, волонтеров, всех тех, кто хочет помогать совершать добрые дела. <br><br> Участие в социальных конкурсах от Благотворительного Фонда «Халык» позволит Вам заявить о своей инициативе, найти ресурсы и партнеров.</div>
+    <time class="card4__date" datetime=""> 
+      <svg>
+        <use xlink:href="img/sprites/sprite.svg#calendar"></use>
+      </svg>
+      27 апреля - 30 мая
+    </time>
+    <span class="link-2 card4__more">Посмотреть больше</span>
+  </div>
+</a>
+          </div>
+          <div class="swiper-slide contests__slide">
+            <a href="#" class="card4">
+  <picture class="card4__pic">
+    <img src="img/card4-3.jpg" alt="">
+  </picture>
+  <div class="card4__content">
+    <div class="card4__title">Конкурс “Волшебство творчества”</div>
+    <div class="card4__text">Цель конкурса - развитие художественного вкуса и творческих способностей детей, а также поддержка родителей в создании костюмов для своих детей. <br><br> Участниками конкурса могут быть дети от 3 до 12 лет, одетые в костюмы, созданные вручную с использованием различных материалов (ткани, бумаги, картона, пластилина и т.д.).</div>
+    <time class="card4__date" datetime=""> 
+      <svg>
+        <use xlink:href="img/sprites/sprite.svg#calendar"></use>
+      </svg>
+      5 мая - 2 июня
+    </time>
+    <span class="link-2 card4__more">Посмотреть больше</span>
+  </div>
+</a>
+          </div>
+        </div>
+      </div>
+      <div class="contests__pag">
+        <div class="slider-pag slider-pag--progressbar"></div>
+      </div>
+      <div class="contests__c-btns">
+        <div class="slider-btns">
+  <button class="slider-prev">
+  <svg width="32" height="32" fill="none" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+    <rect x="-0.5" y="0.5" width="31" height="31" rx="9.5" transform="matrix(-1 0 0 1 31 0)" stroke="#398166" />
+    <path d="M23 16H9" stroke="#398166" stroke-linecap="round" stroke-linejoin="round" />
+    <path d="M16 9L9 16L16 23" stroke="#398166" stroke-linecap="round" stroke-linejoin="round" />
+  </svg>
+</button>
+  <button class="slider-next">
+  <svg width="32" height="32" fill="none" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+    <rect x="0.5" y="0.5" width="31" height="31" rx="9.5" stroke="#398166" />
+    <path d="M9 16H23" stroke="#398166" stroke-linecap="round" stroke-linejoin="round" />
+    <path d="M16 9L23 16L16 23" stroke="#398166" stroke-linecap="round" stroke-linejoin="round" />
+  </svg>
+</button>
+</div>
+      </div>
+      <div class="contests__footer wow slow fadeIn">
+        <a href="#" class="btn btn--mob-full">Все конкурсы</a>
+      </div>
+    </div>
+  </div>
+</section>
+<div class="section work-results">
+  <div class="osmi-container">
+    <div class="work-results__inner">
+        <h3 class="work-results__cap wow slow fadeIn">Результаты работы</h3>
+        <h4 class="text-2 work-results__title wow slow fadeIn">Результаты 2023</h4>
+        <div class="work-results__download wow slow fadeIn">
+          <a href="#" download="" class="btn btn--mob-full">Скачать отчет</a>
+        </div>
+        <div class="work-results__texts wow slow fadeIn">
+          <div>Поддержка и реализация ряда проектов в разных областях, например, строительство и ремонт спортивных площадок, благоустройство общественных мест и парков, закупка оборудования для школ и детских садов, озеленение территорий и т.п.</div>
+          <div>Содействие по укреплению социальной структуры местных сообществ и повышению качества жизни в этих регионах.
+            Укрепление взаимодействия между различными группами населения, общественных инициативами и властными структурами.</div>
+        </div>
+        <div class="work-results__list">
+          <div class="work-results__item wow slow fadeIn">
+            <div class="work-results__key">6</div>
+            <div class="work-results__value">Лет помощи</div>
+          </div>
+          <div class="work-results__item wow slow fadeIn">
+            <div class="work-results__key">50</div>
+            <div class="work-results__value">Сотрудников</div>
+          </div>
+          <div class="work-results__item wow slow fadeIn">
+            <div class="work-results__key">43</div>
+            <div class="work-results__value">Завершенных проекта</div>
+          </div>
+          <div class="work-results__item wow slow fadeIn">
+            <div class="work-results__key">900+</div>
+            <div class="work-results__value">Людей получили помощь</div>
+          </div>
+        </div>
+    </div>
+  </div>
+</div>
+<div class="section history-main">
+  <div class="osmi-container">
+    <div class="line">
+  <div class="wow slideInLeft"></div>
+</div>
+    <div class="history-main__inner">
+        <h3 class="history-main__cap wow slow fadeIn">Истории в лицах</h3>
+        <h4 class="text-2 history-main__title wow slow fadeIn">Мы собрали истории людей, которые оказались в различных сложных жизненных ситуациях. Такие люди должны понимать, что они не одиноки.</h4>
+        <div class="history-main__all wow slow fadeIn">
+          <a href="#" class="btn btn--mob-full">Все истории</a>
+        </div>
+        <div class="history-main__swiper wow slow fadeIn">
+          <div class="swiper history-main__slider">
+            <div class="swiper-wrapper history-main__sw-wrapper">
+              <div class="swiper-slide history-main__slide">
+                <a href="#" class="card5">
+  <picture class="card5__pic">
+    <img src="img/card5-1.jpg" alt="">
+  </picture>
+  <div class="card5__content">
+    <div class="card5__title">Адиль Муканов: как благотворительный фонд помог мальчику исполнить свою мечту и попробовать себя в фотографии</div>
+  </div>
+</a>
+              </div>
+              <div class="swiper-slide history-main__slide">
+                <a href="#" class="card5">
+  <picture class="card5__pic">
+    <img src="img/card5-2.jpg" alt="">
+  </picture>
+  <div class="card5__content">
+    <div class="card5__title">Семья Сакеновых: как благотворительный фонд поддержал семью в трудный период их жизни</div>
+  </div>
+</a>
+              </div>
+            </div>
+          </div>
+          <div class="history-main__pag">
+            <div class="slider-pag slider-pag--progressbar"></div>
+          </div>
+          <div class="history-main__c-btns wow slow fadeIn">
+            <div class="slider-btns">
+  <button class="slider-prev">
+  <svg width="32" height="32" fill="none" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+    <rect x="-0.5" y="0.5" width="31" height="31" rx="9.5" transform="matrix(-1 0 0 1 31 0)" stroke="#398166" />
+    <path d="M23 16H9" stroke="#398166" stroke-linecap="round" stroke-linejoin="round" />
+    <path d="M16 9L9 16L16 23" stroke="#398166" stroke-linecap="round" stroke-linejoin="round" />
+  </svg>
+</button>
+  <button class="slider-next">
+  <svg width="32" height="32" fill="none" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+    <rect x="0.5" y="0.5" width="31" height="31" rx="9.5" stroke="#398166" />
+    <path d="M9 16H23" stroke="#398166" stroke-linecap="round" stroke-linejoin="round" />
+    <path d="M16 9L23 16L16 23" stroke="#398166" stroke-linecap="round" stroke-linejoin="round" />
+  </svg>
+</button>
+</div>
+          </div>
+        </div>
+    </div>
+  </div>
+</div>
+<div class="section partners-main">
+  <div class="osmi-container">
+    <div class="line">
+  <div class="wow slideInLeft"></div>
+</div>
+    <div class="partners-main__inner">
+        <h3 class="partners-main__cap wow slow fadeIn">Партнеры</h3>
+        <h4 class="text-2 partners-main__title wow slow fadeIn">Мы считаем, что наш успех зависит от тесного сотрудничества с нашими партнерами и уверены, что только вместе мы можем добиться наилучших результатов. </h4>
+        <div class="partners-main__all wow slow fadeIn">
+          <a href="#" class="btn btn--mob-full">Смотреть всех</a>
+        </div>
+        <div class="partners-main__texts wow slow fadeIn">
+          <div>Мы сотрудничаем с множеством партнеров, таких как некоммерческие организации, школы и университеты, государственные и муниципальные учреждения, медицинские центры и другие</div>
+        </div>
+        <div class="partners-main__swiper wow slow fadeIn">
+          <div class="swiper partners-main__slider">
+            <div class="swiper-wrapper partners-main__sw-wrapper">
+              <div class="swiper-slide partners-main__slide">
+                <img src="img/partner1.jpg" alt="">
+              </div>
+              <div class="swiper-slide partners-main__slide">
+                <img src="img/partner2.jpg" alt="">
+              </div>
+              <div class="swiper-slide partners-main__slide">
+                <img src="img/partner3.jpg" alt="">
+              </div>
+              <div class="swiper-slide partners-main__slide">
+                <img src="img/partner4.jpg" alt="">
+              </div><div class="swiper-slide partners-main__slide">
+                <img src="img/partner1.jpg" alt="">
+              </div>
+              <div class="swiper-slide partners-main__slide">
+                <img src="img/partner2.jpg" alt="">
+              </div>
+              <div class="swiper-slide partners-main__slide">
+                <img src="img/partner3.jpg" alt="">
+              </div>
+              <div class="swiper-slide partners-main__slide">
+                <img src="img/partner4.jpg" alt="">
+              </div><div class="swiper-slide partners-main__slide">
+                <img src="img/partner1.jpg" alt="">
+              </div>
+              <div class="swiper-slide partners-main__slide">
+                <img src="img/partner2.jpg" alt="">
+              </div>
+              <div class="swiper-slide partners-main__slide">
+                <img src="img/partner3.jpg" alt="">
+              </div>
+              <div class="swiper-slide partners-main__slide">
+                <img src="img/partner4.jpg" alt="">
+              </div><div class="swiper-slide partners-main__slide">
+                <img src="img/partner1.jpg" alt="">
+              </div>
+              <div class="swiper-slide partners-main__slide">
+                <img src="img/partner2.jpg" alt="">
+              </div>
+              <div class="swiper-slide partners-main__slide">
+                <img src="img/partner3.jpg" alt="">
+              </div>
+              <div class="swiper-slide partners-main__slide">
+                <img src="img/partner4.jpg" alt="">
+              </div>
+            </div>
+          </div>
+          <div class="partners-main__pag">
+            <div class="slider-pag slider-pag--progressbar"></div>
+          </div>
+          <div class="partners-main__c-btns wow slow fadeIn">
+            <div class="slider-btns">
+  <button class="slider-prev">
+  <svg width="32" height="32" fill="none" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+    <rect x="-0.5" y="0.5" width="31" height="31" rx="9.5" transform="matrix(-1 0 0 1 31 0)" stroke="#398166" />
+    <path d="M23 16H9" stroke="#398166" stroke-linecap="round" stroke-linejoin="round" />
+    <path d="M16 9L9 16L16 23" stroke="#398166" stroke-linecap="round" stroke-linejoin="round" />
+  </svg>
+</button>
+  <button class="slider-next">
+  <svg width="32" height="32" fill="none" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+    <rect x="0.5" y="0.5" width="31" height="31" rx="9.5" stroke="#398166" />
+    <path d="M9 16H23" stroke="#398166" stroke-linecap="round" stroke-linejoin="round" />
+    <path d="M16 9L23 16L16 23" stroke="#398166" stroke-linecap="round" stroke-linejoin="round" />
+  </svg>
+</button>
+</div>
+          </div>
+        </div>
+    </div>
+  </div>
+</div>
+<div class="section help-main">
+  <div class="osmi-container">
+    <div class="help-main__inner">
+      <h3 class="help-main__cap wow slow fadeIn">Помощь каждому</h3>
+      <h4 class="text-2 help-main__title wow slow fadeIn">В фонде Халык находятся люди, которые готовы поддержать вас и помочь вам в решении ваших проблем.</h4>
+      <div class="help-main__all wow slow fadeIn">
+        <a href="#" class="btn btn--mob-full">Подать заявку</a>
+      </div>
+      <div class="help-main__texts wow slow fadeIn">
+        <div>Обратившись в благотворительный фонд Халык, вы сможете получить необходимую поддержку и помощь нашей заботливой команды, а также почувствуете себя частью большой дружной семьи.</div>
+      </div>
+      <div class="help-main__swiper wow slow fadeIn">
+        <div class="swiper slider-grid">
+  <div class="swiper-wrapper slider-grid__wrapper">
+    <div class="swiper-slide slider-grid__slide">
+      <img src="img/help1.jpg" alt="">
+      <img src="img/help2.jpg" alt="">
+    </div>
+    <div class="swiper-slide slider-grid__slide">
+      <img src="img/help3.jpg" alt="">
+    </div>
+    <div class="swiper-slide slider-grid__slide">
+      <img src="img/help4.jpg" alt="">
+      <img src="img/help5.jpg" alt="">
+    </div>
+    <div class="swiper-slide slider-grid__slide">
+      <img src="img/help6.jpg" alt="">
+    </div>
+    <div class="swiper-slide slider-grid__slide">
+      <img src="img/help1.jpg" alt="">
+      <img src="img/help2.jpg" alt="">
+    </div>
+    <div class="swiper-slide slider-grid__slide">
+      <img src="img/help3.jpg" alt="">
+    </div>
+    <div class="swiper-slide slider-grid__slide">
+      <img src="img/help4.jpg" alt="">
+      <img src="img/help5.jpg" alt="">
+    </div>
+    <div class="swiper-slide slider-grid__slide">
+      <img src="img/help6.jpg" alt="">
+    </div>
+  </div>
+</div>
+      </div>
+    </div>
+  </div>
+</div>
+<section class="section news-subs wow slow fadeIn">
+  <div class="osmi-container">
+    <div class="news-subs__inner">
+      <div class="news-subs__bg">
+        <img src="img/subs-bg.jpg" alt="">
+      </div>
+      <div class="news-subs__content">
+        <p>Подписка на новости</p>
+        <h4 class="text-2">Подпишитесь на нашу рассылку, чтобы следить за актуальными новостями и проектами.</h4>
+        <div class="news-subs__form">
+          <form class="form form--dark" id="subscribe" method="POST" action="https://dummyjson.com/products/1">
+  <div class="form__inner">
+    <div class="form__item form__item--subs">
+      <div class="form__subs">
+        <input type="email" name="email" class="form__input" placeholder="E-mail" required>
+        <button class="btn btn--tab-full form__send" type="submit">Отправить</button>
+      </div>
+    </div>
+  </div>
+  <div class="form__actions">
+    <div class="form__conf">
+      <label class="form__conf-label">
+        <input type="checkbox" name="privacy" class="visually-hidden" required>
+        <span></span>
+      </label>
+      <div class="form__conf-text">Согласие с <a href="#">политикой конфиденциальности</a> <br> и <a href="#">обработкой персональных данных.</a></div>
+    </div>
+  </div>
+</form>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+        <footer class="footer">
+          <div class="osmi-container">
+            <div class="footer__inner">
+              <a href="/" class="footer__logo">
+                <svg>
+                  <use xlink:href="img/sprites/sprite.svg#logo"></use>
+                </svg>
+              </a>
+              <div class="footer__menu">
+                <div class="footer__list">
+                  <p>Навигация</p>
+                  <div class="footer__uls">
+                    <ul>
+                      <li>
+                        <a href="#">О фонде</a>
+                      </li>
+                      <li>
+                        <a href="#">Программы</a>
+                      </li>
+                      <li>
+                        <a href="#">Конкурсы</a>
+                      </li>
+                      <li>
+                        <a href="#">Отчетность</a>
+                      </li>
+                      <li>
+                        <a href="#">Новости</a>
+                      </li>
+                    </ul>
+                    <ul>
+                      <li>
+                        <a href="#">Истории в лицах</a>
+                      </li>
+                      <li>
+                        <a href="#">Медиатека</a>
+                      </li>
+                      <li>
+                        <a href="#">FAQ</a>
+                      </li>
+                      <li>
+                        <a href="#">Контакты</a>
+                      </li>
+                      <li>
+                        <a href="#">Подать заявку</a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="footer__cont-list">
+                  <div class="footer__list">
+                    <p>Телефон</p>
+                    <ul>
+                      <li>
+                        <a href="#">+ 7 727 313 2039</a>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="footer__list">
+                    <p>Почта</p>
+                    <ul>
+                      <li>
+                        <a href="#">info@halykfund.com</a>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="footer__social footer__social--tab-visible">
+                    <ul class="social">
+  <li>
+    <a href="https://www.instagram.com/halykfundkz/" target="_blank">
+      <svg>
+        <use xlink:href="img/sprites/sprite.svg#instagram"></use>
+      </svg>
+    </a>
+  </li>
+  <li>
+    <a href="https://www.facebook.com/HalykBusiness" target="_blank">
+      <svg>
+        <use xlink:href="img/sprites/sprite.svg#facebook"></use>
+      </svg>
+    </a>
+  </li>
+  <li>
+    <a href="https://www.youtube.com/@halykfund1577" target="_blank">
+      <svg>
+        <use xlink:href="img/sprites/sprite.svg#youtube"></use>
+      </svg>
+    </a>
+  </li>
+</ul>
+                  </div>
+                </div>
+              </div>
+              <div class="footer__social footer__social--tab-hide">
+                <ul class="social">
+  <li>
+    <a href="https://www.instagram.com/halykfundkz/" target="_blank">
+      <svg>
+        <use xlink:href="img/sprites/sprite.svg#instagram"></use>
+      </svg>
+    </a>
+  </li>
+  <li>
+    <a href="https://www.facebook.com/HalykBusiness" target="_blank">
+      <svg>
+        <use xlink:href="img/sprites/sprite.svg#facebook"></use>
+      </svg>
+    </a>
+  </li>
+  <li>
+    <a href="https://www.youtube.com/@halykfund1577" target="_blank">
+      <svg>
+        <use xlink:href="img/sprites/sprite.svg#youtube"></use>
+      </svg>
+    </a>
+  </li>
+</ul>
+              </div>
+            </div>
+            <div class="footer__bot">
+              <p class="footer__bot-item">© 2023 Халык. Все права защищены.</p>
+              <div class="footer__bot-links">
+                <a href="#" class="footer__bot-item">Правила использования cookie</a>
+                <a href="#" class="footer__bot-item">Политика конфиденциальности</a>
+              </div>
+            </div>
+            <div class="footer__octo">
+              <svg>
+                <use xlink:href="img/sprites/sprite.svg#octo"></use>
+              </svg>
+            </div>
+          </div>
+        </footer>
+        <div class="modal close-x" data-modal="video">
+  <div class="modal__inner">
+    <button class="modal__close close-x" type="button">
+      <svg>
+        <use xlink:href="img/sprites/sprite.svg#close"></use>
+      </svg>
+    </button>
+    <div class="modal__content"></div>
+  </div>
+</div>
+        <div class="visually-hidden">
+          <textarea id="urlCopy" rows="1" cols="30"></textarea>
+        </div>
+        <script src="js/libs/gsap.min.js"></script>
+        <script src="js/libs/rellax.min.js"></script>
+        <script src="js/libs/just-validate.production.min.js"></script>
+        <script src="js/libs/imask.js"></script>
+        <script src="js/libs/flatpickr.min.js"></script>
+        <script src="js/libs/flatpickr.ru.js"></script>
+        <script src="js/libs/flatpickr.kk.js"></script>
+        <script src="js/vendor.js"></script>
+        <script src="js/main.js"></script>
+        <!-- <link rel="stylesheet" href="styles/libs/locomotive-scroll.min">
+        <script src="js/libs/locomotive-scroll.min.js"></script>
+        <script>
+          (function () {
+              var scroll = new LocomotiveScroll({
+                el: document.querySelector('[data-scroll-container]'),
+                smooth: true,
+                lerp: 0.03,
+                multiplier: 1.4,
+                reloadOnContextChange: true,
+                touchMultiplier: 2,
+                smoothMobile: 0,
+                getDirection: true,
+                inertia: .6 
+              });
+              window.scrollLoco = scroll
+          })();
+        </script> -->
+        <link rel="stylesheet" href="styles/libs/animate.min.css">
+        <script src="js/libs/wow.min.js"></script>
+        <script>
+          new WOW().init();
+        </script>
+    </body>
+</html>

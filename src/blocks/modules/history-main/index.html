@@ -1,0 +1,36 @@
+<div class="section history-main">
+  <div class="osmi-container">
+    @@include("../UI/line.html")
+    <div class="history-main__inner">
+        <h3 class="history-main__cap wow slow fadeIn">Истории в лицах</h3>
+        <h4 class="text-2 history-main__title wow slow fadeIn">Мы собрали истории людей, которые оказались в различных сложных жизненных ситуациях. Такие люди должны понимать, что они не одиноки.</h4>
+        <div class="history-main__all wow slow fadeIn">
+          <a href="#" class="btn btn--mob-full">Все истории</a>
+        </div>
+        <div class="history-main__swiper wow slow fadeIn">
+          <div class="swiper history-main__slider">
+            <div class="swiper-wrapper history-main__sw-wrapper">
+              <div class="swiper-slide history-main__slide">
+                @@include("../cards/card5.html", {
+                  "title": "Адиль Муканов: как благотворительный фонд помог мальчику исполнить свою мечту и попробовать себя в фотографии",
+                  "img": "img/card5-1.jpg",
+                })
+              </div>
+              <div class="swiper-slide history-main__slide">
+                @@include("../cards/card5.html", {
+                  "title": "Семья Сакеновых: как благотворительный фонд поддержал семью в трудный период их жизни",
+                  "img": "img/card5-2.jpg",
+                })
+              </div>
+            </div>
+          </div>
+          <div class="history-main__pag">
+            <div class="slider-pag slider-pag--progressbar"></div>
+          </div>
+          <div class="history-main__c-btns wow slow fadeIn">
+            @@include('../UI/slider-btns.html')
+          </div>
+        </div>
+    </div>
+  </div>
+</div>

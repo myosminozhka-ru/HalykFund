@@ -1,0 +1,18 @@
+<div class="select-link" data-select-id="">
+  <div class="select-link__inner">
+    <div class="select-link__title" data-select-trigger>
+      <span class="select-link__current">@@current</span>
+      <span class="select-link__arrow">
+        <svg>
+          <use xlink:href="img/sprites/sprite.svg#select-link-arrow"></use>
+        </svg>
+      </span>
+    </div>
+    <div class="select-link__drop">
+      <a href="#" class="select-link__item">@@current</a>
+      @@for (var i = 0; i < values.length; i++) {
+        <a href="#" class="select-link__item">`+values[i]+`</a>
+      }
+    </div>
+  </div>
+</div>

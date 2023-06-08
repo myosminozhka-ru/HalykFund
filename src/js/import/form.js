@@ -1,8 +1,14 @@
+import local from './local'
 
-const ApiForm = (url, data) => {
+export const ApiForm = (url, data, method = 'POST') => {
   return fetch(url, {
-    method: 'POST',
+    method: method,
     body: data,
+		headers: {
+			'Accept-Language': local.current,
+		},
+  }).then(response => {
+    return response.json()
   })
 }
 
@@ -11,25 +17,30 @@ export default function () {
 
   forms.forEach(form => {
     const button = form.querySelector('button[type="submit"]')
+    const name = form.getAttribute('id')
+    const validation = window.app[name]
+    button.setAttribute('disabled', true)
+    validation.onValidate(evt => {
+      if (evt.isValid) {
+        button.removeAttribute('disabled')
+      }
+    })
     form.addEventListener('submit', (e) => {
       e.preventDefault()
+      const isValid = validation.isValid
+      if (!isValid) return
       const formData = new FormData(form)
       const action = form.getAttribute('action')
 
       const btnText = button.textContent
       button.setAttribute('disabled', true)
-      button.textContent = 'Загрузка...'
+      button.textContent = local.loading[local.current]
       ApiForm(action, formData).then((res) => {
         console.log('contact success')
-        if (res.status === 400) {
-          // window.app.modalApplicatioAccepted.open()
-          button.textContent = 'Доставлено!'
-          alert('Доставлено!')
-        } else {
-          throw res
-        }
+        window.osmiAlert.render(res?.mes || local.success[local.current], true)
+        button.textContent = local.sent[local.current]
       }).catch(() => {
-        alert('contact error')
+        window.osmiAlert.render(res?.mes || local.error[local.current], false)
       }).finally(() => {
         button.textContent = btnText
         button.removeAttribute('disabled')

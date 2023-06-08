@@ -1,0 +1,49 @@
+.request {
+  &__inner {
+    @include o-grid;
+  }
+
+  &__top {
+    margin-bottom: gutter(10);
+  }
+
+  &__title {
+    font-size: 32px;
+    margin-bottom: gutter(6);
+  }
+
+  &__texts {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: gutter(6);
+    color: $grey;
+  }
+
+  @include tab {
+    &__inner {
+      grid-template-columns: repeat(1, 1fr);
+      grid-gap: gutter(6);
+    }
+  
+    &__top {
+      margin-bottom: gutter(8);
+    }
+  
+    &__title {
+      margin-bottom: gutter(6);
+    }
+  
+    &__texts {
+      grid-gap: gutter(5);
+    }
+  }
+  @include mob {
+    &__title {
+      font-size: 24px;
+    }
+    &__texts {
+      grid-template-columns: repeat(1, 1fr );
+      grid-gap: gutter(4);
+    }
+  }
+}

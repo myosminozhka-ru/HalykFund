@@ -1,0 +1,47 @@
+.news-last {
+  &__top {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: gutter(6);
+  }
+  &__content {
+    @include o-grid;
+  }
+  &__item {
+    border-bottom: 1px solid $brd-grey;
+    padding: gutter(6) 0;
+    &:first-child {
+      border-top: 1px solid $brd-grey;
+    }
+  }
+  &__footer {
+    display: none;
+  }
+  @include tab {
+    &__content {
+      grid-template-columns: 1fr;
+      grid-gap: gutter(5);
+    }
+    .card2__pic {
+      height: 424px;
+    }
+  }
+  @include mob {
+    &__content {
+      grid-gap: gutter(4);
+    }
+    &__all {
+      display: none;
+    }
+    &__footer {
+      margin-top: gutter(6);
+      display: block;
+    }
+    .card2__pic {
+      height: 320px;
+    }
+    .card2__footer {
+      font-size: 12px;
+    }
+  }
+}

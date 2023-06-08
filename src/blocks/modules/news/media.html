@@ -1,0 +1,127 @@
+<section class="section news">
+  <div class="osmi-container">
+    <div class="news__inner">
+      <h1 class="h1 news__cap wow slow fadeIn">Медиатека</h1>
+      @@include("../UI/line.html")
+      <div class="news__filter wow slow fadeIn">
+        <div class="news__tab">
+          @@include('../UI/tab.html', {
+            current: 'Все',
+            text: ['Сообщества', 'Инфраструктуры', 'Люди']
+          })
+        </div>
+        <div class="news__select">
+          @@include('../select/select-link.html', {
+            current: 'Все',
+            values: ['Сообщества', 'Инфраструктуры', 'Люди']
+          })
+        </div>
+        <div class="news__checkboxes">
+          @@include("../UI/link-checkbox.html", {
+            'text': 'Все',
+            'class': 'active'
+          })
+          @@include("../UI/link-checkbox.html", {
+            'text': 'Фото',
+          })
+          @@include("../UI/link-checkbox.html", {
+            'text': 'Видео',
+          })
+        </div>
+        <div class="news__select">
+          @@include('../select/select-link.html', {
+            current: 'Все',
+            values: ['Фото', 'Видео']
+          })
+        </div>
+      </div>
+      <div class="news__list news__list--index">
+        @@include("../cards/card2.html", {
+          "type": "video",
+          "video": 'video/video.mp4',
+          "title": "Счастливые дети: новая акция фонда",
+          "text": "Была организована благотворительная акция, направленная на помощь сиротам и детям, оставшимся без родительской опеки.",
+          "img": "img/news-l2.jpg",
+          "date": "1 Апреля 2023",
+          "tag": "Сообщества",
+        })
+        @@include("../cards/card2.html", {
+          "type": "",
+          "title": "Фонд 'Халык' проводит мероприятие 'Здоровый образ жизни'",
+          "text": "Мероприятие включает в себя лекции от врачей и специалистов по здоровому образу жизни.",
+          "img": "img/news-l6.jpg",
+          "date": "1 Апреля 2023",
+          "tag": "Сообщества",
+        })
+        @@include("../cards/card2.html", {
+          "type": "video",
+          "video": 'video/video.mp4',
+          "title": "В Алматы был запущен новый проект 'Танымалай'. ",
+          "text": "В проекте также принял участие фонд Халык",
+          "img": "img/news-l11.jpg",
+          "date": "1 Апреля 2023",
+          "tag": "Сообщества",
+        })
+        @@include("../cards/card2.html", {
+          "type": "",
+          "title": "Признание за борьбу с COVID-19.",
+          "text": "Фонд 'Халык' получил заслуженное признание за проведение благотворительных акций, направленных на борьбу с COVID-19.",
+          "img": "img/news-l12.jpg",
+          "date": "1 Апреля 2023",
+          "tag": "Сообщества",
+        })
+        @@include("../cards/card2.html", {
+          "type": "",
+          "title": "Фонд 'Халык' организовал выставку детского творчества 'Дети - наше будущее'.",
+          "text": "Выставка поможет продемонстрировать таланты юных дарований",
+          "img": "img/news-l13.jpg",
+          "date": "1 Апреля 2023",
+          "tag": "Сообщества",
+        })
+        @@include("../cards/card2.html", {
+          "type": "",
+          "title": "Фонд 'Халык' пожертвовал 15 млн тенге на строительство школы",
+          "text": "После природного катаклизма здание школы было разрушено. Фонд Халык решил прийти на помощь. Строительство начнется летом.",
+          "img": "img/news-l3.jpg",
+          "date": "1 Апреля 2023",
+          "tag": "Сообщества",
+        })
+        @@include("../cards/card2.html", {
+          "type": "",
+          "title": "Благотворительный фонд Казахстана вместе с локальными организациями и бизнес-сообществом стартовал большую программу 'Зеленый Казахстан'",
+          "text": "Реализация программы будет осуществляться совместно с государственными и общественными организациями.",
+          "img": "img/news-l14.jpg",
+          "date": "1 Апреля 2023",
+          "tag": "Сообщества",
+        })
+        @@include("../cards/card2.html", {
+          "type": "video",
+          "video": 'video/video.mp4',
+          "title": "На пути к образованию вместе с Халык",
+          "text": "Благотворительный фонд Казахстана запустил новую программу по поддержке и развитию талантливых молодых людей.",
+          "img": "img/news-l15.jpg",
+          "date": "1 Апреля 2023",
+          "tag": "Сообщества",
+        })
+        @@include("../cards/card2.html", {
+          "type": "",
+          "title": "Помощь каждому",
+          "text": "Сотрудники благотворительного фонда Халык посетили многодетную семью с помощью в покупке продуктов",
+          "img": "img/news-l8.jpg",
+          "date": "1 Апреля 2023",
+          "tag": "Сообщества",
+        })
+        @@include("../cards/card2.html", {
+          "type": "video",
+          "video": 'video/video.mp4',
+          "title": "Школы и детские сады в ваш город",
+          "text": "Халык совместно с международными партнерами запустил проект по строительству детских садов и школ в отдаленных регионах страны",
+          "img": "img/media-s4.jpg",
+          "date": "1 Апреля 2023",
+          "tag": "Сообщества",
+        })
+      </div>
+      @@include('../UI/list-footer.html')
+    </div>
+  </div>
+</section>

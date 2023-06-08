@@ -1,0 +1,26 @@
+.map-wrap {
+  &__top {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: gutter(6);
+    margin-bottom: gutter(12);
+  }
+  &__cap {
+    grid-column: 1/4;
+  }
+  &__texts {
+    grid-column: 1/3;
+  }
+  @include tab {
+    &__top {
+      grid-template-columns: repeat(2, 1fr);
+      grid-gap: gutter(8);
+    }
+    &__cap {
+      grid-column: 1/3;
+    }
+    &__texts {
+      grid-column: 1/3;
+    }
+  }
+}

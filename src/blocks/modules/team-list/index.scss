@@ -1,0 +1,98 @@
+.team-list {
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: gutter(6);
+  }
+
+  &__pic {
+    width: 100%;
+    border-radius: $brz;
+    overflow: hidden;
+    position: relative;
+    padding-bottom: 105.5%;
+    margin-bottom: gutter(4);
+    img {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+  &__title {
+    font-size: 20px;
+    margin-bottom: gutter(2);
+  }
+  &__text {
+    color: $grey;
+  }
+
+  @include tab {
+    &__list {
+      grid-template-columns: repeat(2, 1fr);
+      grid-gap: gutter(6) gutter(5);
+    }
+    &__pic {
+      padding-bottom: 100%;
+      margin-bottom: gutter(4);
+    }
+    &__title {
+      font-size: 18px;
+    }
+    &.row {
+      .team-list {
+        &__list {
+          width: 100%;
+          overflow: auto;
+          display: flex;
+          gap: gutter(6);
+          padding-right: 30px;
+        }
+        &__inner {
+          width: 100vw;
+          position: relative;
+          left: -30px;
+          padding-left: 30px;
+        }
+
+        &__item {
+          width: 424px;
+          flex-shrink: 0;
+        }
+      }
+    }
+  }
+
+  @include mob {
+    &__list {
+      grid-template-columns: repeat(1, 1fr);
+      grid-gap: gutter(6);
+    }
+    &__pic {
+      padding-bottom: 104.7%;
+      margin-bottom: gutter(2);
+    }
+    &__title {
+      font-size: 20px;
+    }
+    &.row {
+      .team-list {
+        &__list {
+          gap: gutter(4);
+          padding-right: 20px;
+        }
+        &__inner {
+          left: -20px;
+          padding-left: 20px;
+        }
+
+        &__item {
+          width: 285px;
+        }
+      }
+    }
+  }
+}

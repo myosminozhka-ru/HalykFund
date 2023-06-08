@@ -1,0 +1,130 @@
+.info-block {
+  overflow: hidden;
+  &--green {
+    background-color: $green-light;
+    padding: gutter(10) 0;
+  }
+  &--about-members {
+    padding-bottom: 56px;
+  }
+  &--programma {
+    margin-top: -16px;
+  }
+  &__inner {
+    position: relative;
+  }
+  &__main-title {
+    margin-bottom: gutter(6);
+  }
+  &__grid {
+    display: grid;
+    grid-template-columns: 4fr 8fr;
+    grid-gap: gutter(8) gutter(4);
+    margin-bottom: gutter(14);
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+  &__row {
+    margin-bottom: gutter(14);
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+  &__img {
+    display: block;
+    border-radius: $brz;
+    overflow: hidden;
+    height: 600px;
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+  &__mission-img {
+    margin-top: gutter(10);
+    display: block;
+    border-radius: $brz;
+    overflow: hidden;
+  }
+  &__title {
+    margin-bottom: gutter(6);
+    &--mb40 {
+      margin-bottom: gutter(10);
+    }
+    &--steps {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+  }
+  &__steps {
+    max-width: 408px;
+  }
+  &__a-btn {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  &__docs {
+    .list-doc {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  &__link-contest {
+    margin-top: gutter(4);
+    margin-bottom: gutter(10);
+  }
+  &__form {
+    &--faq {
+      margin-top: gutter(10);
+    }
+  }
+  &__contacts {
+    margin-top: gutter(10);
+  }
+  @include tab {
+    &--programma {
+      margin-top: -8px;
+    }
+    &__img {
+      height: 450px;
+    }
+    &__grid {
+      grid-template-columns: 1fr;
+      grid-gap: gutter(6);
+    }
+    &__steps {
+      max-width: 344px;
+      margin-bottom: gutter(6);
+    }
+    &__a-btn {
+      position: static;
+    }
+  }
+  @include mob {
+    &--green {
+      padding: gutter(8) 0;
+    }
+    &__img {
+      height: 350px;
+    }
+    &__grid {
+      margin-bottom: gutter(10);
+    }
+    &__title {
+      &--mb40 {
+        margin-bottom: gutter(6);
+      }
+      &.h2 {
+        font-size: 32px;
+      }
+    }
+    &__docs {
+      .list-doc {
+        grid-template-columns: repeat(1, 1fr);
+      }
+    }
+  }
+}

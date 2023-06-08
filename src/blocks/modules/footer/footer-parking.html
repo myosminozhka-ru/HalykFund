@@ -1,0 +1,96 @@
+        <footer class="footer footer--parking">
+          <div class="osmi-container">
+            <div class="footer__inner">
+              <a href="/" class="footer__logo">
+                <svg>
+                  <use xlink:href="img/sprites/sprite.svg#logo"></use>
+                </svg>
+              </a>
+              <div class="footer__menu">
+                <div class="footer__list">
+                  <p>Навигация</p>
+                  <ul>
+                    <li>
+                      <a href="#about-us">О нас</a>
+                    </li>
+                    <li>
+                      <a href="#directions">Направления</a>
+                    </li>
+                    <li>
+                      <a href="#mass-media">СМИ о нас</a>
+                    </li>
+                    <li>
+                      <a href="#contacts">Свяжитесь с нами</a>
+                    </li>
+                  </ul>
+                </div>
+                <div>
+                  <div class="footer__list">
+                    <p>Телефон</p>
+                    <ul>
+                      <li>
+                        <a href="tel:+77273132039">+ 7 727 313 2039</a>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="footer__list">
+                    <p>Почта</p>
+                    <ul>
+                      <li>
+                        <a href="mailto:info@halykfund.com">info@halykfund.com</a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="footer__social">
+                @@include("../social/index.html")
+              </div>
+            </div>
+            <div class="footer__bot">
+              <p class="footer__bot-item">© 2023 Халык. Все права защищены.</p>
+              <div class="footer__bot-links">
+                <a href="#" class="footer__bot-item">Правила использования cookie</a>
+                <a href="#" class="footer__bot-item">Политика конфиденциальности</a>
+              </div>
+            </div>
+            <div class="footer__octo">
+              <a href="#" target="_blank" class="https://myosminozhka.ru/">
+                <svg>
+                  <use xlink:href="img/sprites/sprite.svg#octo"></use>
+                </svg>
+              </a>
+            </div>
+          </div>
+        </footer>
+        @@include("../modal/video.html")
+        <div class="visually-hidden">
+          <textarea id="urlCopy" rows="1" cols="30"></textarea>
+        </div>
+        <script src="js/libs/gsap.min.js"></script>
+        <script src="js/libs/rellax.min.js"></script>
+        <script src="js/libs/just-validate.production.min.js"></script>
+        <script src="js/libs/imask.js"></script>
+        <script src="js/libs/flatpickr.min.js"></script>
+        <script src="js/libs/flatpickr.ru.js"></script>
+        <script src="js/libs/flatpickr.kk.js"></script>
+        <script src="js/vendor.js"></script>
+        <script src="js/main.js"></script>
+        <!-- <link rel="stylesheet" href="styles/libs/locomotive-scroll.min">
+        <script src="js/libs/locomotive-scroll.min.js"></script>
+        <script>
+          (function () {
+              var scroll = new LocomotiveScroll({
+                el: document.querySelector('[data-scroll-container]'),
+                smooth: true,
+              });
+              window.scrollLoco = scroll
+          })();
+        </script> -->
+        <link rel="stylesheet" href="styles/libs/animate.min.css">
+        <script src="js/libs/wow.min.js"></script>
+        <script>
+          new WOW().init();
+        </script>
+    </body>
+</html>

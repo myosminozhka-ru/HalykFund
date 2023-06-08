@@ -1,10 +1,11 @@
 .footer {
   &__inner {
     display: grid;
-    grid-template-columns: 4fr 5fr 3fr;
-    padding-top: 40px;
+    grid-template-columns: 4fr 6fr 2fr;
+    padding-top: gutter(10);
     border-top: 1px solid $brd-grey;
     margin-bottom: 30px;
+    grid-gap: gutter(4);
   }
 
   &__logo {
@@ -21,17 +22,18 @@
   &__menu {
     display: flex;
     gap: 87px;
+    justify-content: space-between;
   }
 
   &__list {
-    margin-bottom: 8px;
+    margin-bottom: gutter(2);
     p {
       font-size: 12px;
       color: $grey;
-      margin-bottom: 5px;
+      margin-bottom: gutter(1);
     }
     li {
-      margin-bottom: 4px;
+      margin-bottom: gutter(1);
     }
 
     a {
@@ -40,11 +42,22 @@
       }
     }
   }
+  &__uls {
+    display: flex;
+    gap: gutter(5);
+  }
+  &__cont-list {
+    min-width: 30%;
+  }
 
   &__social {
     display: flex;
     justify-content: flex-end;
     align-items: flex-start;
+  }
+  
+  &__social--tab-visible {
+    display: none;
   }
 
   &__bot {
@@ -52,7 +65,7 @@
     justify-content: space-between;
     font-size: 14px;
     color: $grey;
-    padding-bottom: 30px;
+    padding-bottom: gutter(6);
   }
 
   &__bot-links {
@@ -64,21 +77,62 @@
   }
 
   &__bot-item {
-    margin-right: 32px;
+    margin-right: gutter(8);
     &:last-child {
       margin-right: 0;
     }
   }
+  &__octo {
+    display: flex;
+    justify-content: flex-end;
+    padding-bottom: gutter(4);
+    svg {
+      width: 121px;
+      height: 31px;
+      overflow: contain;
+    }
+  }
+
+  &--parking {
+    .footer {
+      
+    }
+  }
 
   @include tab {
-  
+    &__inner {
+      grid-template-columns: 4fr 12fr;
+      grid-gap: gutter(4);
+    }
+    &__menu {
+      justify-content: space-between;
+      gap: 24px;
+    }
+    &__cont-list {
+      min-width: auto;
+    }
     &__bot-links {
       flex-direction: column;
     }
   
     &__bot-item {
       margin-right: 0;
-      margin-bottom: 8px;
+      margin-bottom: gutter(2);
+    }
+    &__social--tab-hide {
+      display: none;
+    }
+
+    &__social--tab-visible {
+      display: flex;
+      margin-top: gutter(6);
+    }
+    &--parking {
+      .footer {
+        &__inner {
+          grid-template-columns: 4fr 5fr 3fr;
+        }
+      }
     }
   }
 
@@ -86,8 +140,8 @@
     &__inner {
       display: grid;
       grid-template-columns: 1fr 1fr;
-      grid-gap: 24px;
-      padding-top: 23px;
+      grid-gap: gutter(6);
+      padding-top: gutter(5);
     }
   
     &__logo {
@@ -98,7 +152,7 @@
   
     &__menu {
       display: grid;
-      grid-template-columns: repeat(2, 1fr);
+      grid-template-columns: repeat(1, 1fr);
       gap: 0;
       grid-column: 1/3;
       grid-row: 2/3;
@@ -107,18 +161,31 @@
     &__list {
       li {
         font-size: 14px;
+        margin-bottom: 7px;
       }
+    }
+
+    &__cont-list {
+      margin-top: gutter(3);
     }
   
     &__social {
       grid-column: 2/3;
     }
+
+    &__social--tab-hide {
+      display: flex;
+    }
+
+    &__social--tab-visible {
+      display: none;
+    }
   
     &__bot {
-      flex-direction: column;
+      flex-direction: column-reverse;
       justify-content: flex-start;
       font-size: 12px;
-      padding-bottom: 24px;
+      padding-bottom: gutter(6);
     }
   
     &__bot-links {
@@ -128,6 +195,19 @@
   
     &__bot-item {
       margin-right: 0;
+    }
+    &__octo {
+      justify-content: flex-start;
+    }
+    &--parking {
+      .footer {
+        &__inner {
+          grid-template-columns: 1fr 1fr;
+        }
+        &__menu {
+          grid-template-columns: repeat(2, 1fr);
+        }
+      }
     }
   }
 }

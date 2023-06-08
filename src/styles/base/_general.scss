@@ -7,6 +7,7 @@ html {
   font-size: 16px;
   color: $black;
   line-height: 1.3;
+  scroll-behavior: smooth;
 }
 body {
   font-size: 16px;
@@ -18,6 +19,9 @@ body {
 
   @include tab {
     padding-top: 100px;
+  }  
+  @include mob {
+    font-size: 14px;
   }
 }
 h1, h2, h3, h4, h5, h6, ul, p {
@@ -107,6 +111,7 @@ a {
 .h1 {
   font-size: 64px;
   font-family: $title-font;
+  line-height: 1.1;
   @include mob {
     font-size: 48px;
   }
@@ -180,16 +185,20 @@ a {
   font-size: 14px;
 }
 
-.o-grid {
-  @include o-grid;
+.text-5 {
+  color: grey;
+}
 
+.texts {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: gutter(6);
   @include tab {
-    grid-template-columns: 1fr;
-    grid-gap: $gap-tab;
+    grid-gap: gutter(5);
   }
-
   @include mob {
-    grid-gap: $gap-mob;
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: gutter(4);
   }
 }
 
@@ -211,8 +220,9 @@ a {
   display: inline-flex;
   justify-content: center;
   align-items: center;
-  padding: 12px 24px;
+  padding: 10px 24px;
   color: $white;
+  font-size: 16px;
   background-color: $accent;
   border: 1px solid $accent;
   border-radius: 4px;
@@ -231,15 +241,91 @@ a {
   &:disabled {
     opacity: 0.5;
     cursor: default;
+    pointer-events: none;
+  }
+  &--white {
+    background-color: $white;
+    color: $accent;
+    border-color: $white;
+    &:hover {
+      background-color: rgba($color: #000000, $alpha: 0);
+      color: $white;
+      border-color: $white;
+    }
+  }
+  &--border {
+    background-color: $white;
+    color: $accent;
+    border-color: $accent;
+    &:hover {
+      background-color: $accent;
+      color: $white;
+      border-color: $accent;
+    }
+  }
+  &--tag {
+    font-size: 14px;
+    line-height: 1;
+    padding: gutter(2) gutter(5);
   }
   @include tab {
-    width: 100%;
-    max-width: 344px;
+    &--tab-full {
+      width: 100%;
+      max-width: 344px;
+    }
+  }
+  @include mob {
+    font-size: 16px;
+    &--tab-full {
+      max-width: none;
+    }
+    &--mob-full {
+      width: 100%;
+      max-width: none;
+    }
   }
 }
 
 .only-pc {
   @include tab {
     display: none;
+  }
+}
+
+.slider-pag {
+  &--bullets {
+    width: auto !important;
+    display: flex;
+    align-items: center;
+    span {
+      width: 10px;
+      height: 10px;
+      display: inline-block;
+      margin-right: gutter(3);
+      background-color: $grey;
+      &.active {
+        background-color: $accent;
+        opacity: 1;
+      }
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+  &--progressbar {
+    position: relative;
+    height: 1px !important;
+    .swiper-pagination-progressbar-fill {
+      background-color: $accent;
+    }
+  }
+}
+
+.section {
+  margin-bottom: 120px;
+  @include tab {
+    margin-bottom: 64px;
+  }
+  @include mob {
   }
 }

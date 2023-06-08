@@ -1,0 +1,69 @@
+<form class="form" id="contest" method="POST" action="https://dummyjson.com/products/1" autocomplete="off">
+  <div class="form__inner">
+    <div class="form__item form__item--50">
+      <input type="text" name="fio" class="form__input" placeholder="ФИО" required>
+    </div>
+    <div class="form__item form__item--50">
+      <input type="text" name="inn" class="form__input" placeholder="ИНН" required>
+    </div>
+    <div class="form__item form__item--50">
+      <input type="tel" name="tel" class="form__input" placeholder="Телефон" required>
+    </div>
+    <div class="form__item form__item--50">
+      <input type="email" name="email" class="form__input" placeholder="E-mail" required>
+    </div>
+    <div class="form__item form__item--50">
+      <input type="text" name="birthday" class="form__input" placeholder="Дата рождения">
+    </div>
+    <div class="form__item form__item--50">
+      <input type="text" name="city" class="form__input" placeholder="Город проживания">
+    </div>
+    <div class="form__item form__item--50">
+      <input type="text" name="place_of_work_or_sudy" class="form__input" placeholder="Место учебы/работы">
+    </div>
+    <div class="form__item form__item--50">
+      <input type="text" name="specialization" class="form__input" placeholder="Специализация">
+    </div>
+    <div class="form__item form__item--50">
+      <input type="text" name="name_of_project" class="form__input" placeholder="Название проекта">
+    </div>
+    <div class="form__item form__item--50">
+      <input type="text" name="implementation_period" class="form__input" placeholder="Срок реализации">
+    </div>
+    <div class="form__item form__item--100">
+      <textarea name="project_idea" class="form__textarea form__textarea--big" placeholder="Идея проекта" required maxlength="500"></textarea>
+    </div>
+  </div>
+  <div class="form__actions form__actions--contest">
+    <div class="form__actions-file">
+      <label class="form__file">
+        <input type="file" name="file" class="visually-hidden" placeholder="Прикрепить файлы">
+        <div>
+          <svg>
+            <use xlink:href="img/sprites/sprite.svg#upload"></use>
+          </svg>
+          <span>
+            Прикрепить файлы
+          </span>
+        </div>
+      </label>
+      <div>
+        <div class="form__conf">
+          <label class="form__conf-label">
+            <input type="checkbox" name="competition_regulations" class="visually-hidden" required>
+            <span></span>
+          </label>
+          <div class="form__conf-text">Я прочитал и понимаю <a href="#">положение о конкурсе</a></div>
+        </div>
+        <div class="form__conf">
+          <label class="form__conf-label">
+            <input type="checkbox" name="privacy" class="visually-hidden" required>
+            <span></span>
+          </label>
+          <div class="form__conf-text">Согласие с <a href="#">политикой конфиденциальности</a> <br class="only-pc"> и <a href="#">обработкой персональных данных.</a></div>
+        </div>
+      </div>
+    </div>
+    <button class="btn btn--tab-full form__send" type="submit">Отправить</button>
+  </div>
+</form>
