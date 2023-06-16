@@ -54,6 +54,7 @@
 
   @include mob {
     padding: gutter(4) gutter(4);
+    min-height: 358px;
   }
 }
 
