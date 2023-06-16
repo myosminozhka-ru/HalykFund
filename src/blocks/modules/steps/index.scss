@@ -1,9 +1,9 @@
 .steps {
   background-color: $green-light;
-  padding: gutter(8) gutter(6);
+  padding: 27px 24px;
   border-radius: $brz;
   &__item {
-    padding-bottom: gutter(10);
+    padding-bottom: 33px;
     padding-left: 33px;
     position: relative;
     &::before {
@@ -63,9 +63,16 @@
     }
   }
   @include tab {
-    padding: gutter(8) gutter(9);
+    padding: 32px 36px;
+    padding-right: 45px;
     &__item {
-      padding-bottom: gutter(8);
+      padding-bottom: 36.6px;
+    }
+    &__title {
+      font-size: 20px;
+    }
+    &__text {
+      font-size: 14px;
     }
   }
   @include mob {

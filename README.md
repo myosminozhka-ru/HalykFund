@@ -177,3 +177,29 @@ svg use {
 
 ## :envelope: Контакты
 По всем вопросам пишите в [Telegram](https://t.me/andreyalexeich)
+
+
+https://myosminozhka-ru.github.io/HalykFund/dist/404.html
+https://myosminozhka-ru.github.io/HalykFund/dist/about.html
+https://myosminozhka-ru.github.io/HalykFund/dist/contacts.html
+https://myosminozhka-ru.github.io/HalykFund/dist/contest.html
+https://myosminozhka-ru.github.io/HalykFund/dist/contests.html
+https://myosminozhka-ru.github.io/HalykFund/dist/cookies.html
+https://myosminozhka-ru.github.io/HalykFund/dist/docs.html
+https://myosminozhka-ru.github.io/HalykFund/dist/faq.html
+https://myosminozhka-ru.github.io/HalykFund/dist/histories.html
+https://myosminozhka-ru.github.io/HalykFund/dist/history.html
+https://myosminozhka-ru.github.io/HalykFund/dist/index.html
+https://myosminozhka-ru.github.io/HalykFund/dist/map.html
+https://myosminozhka-ru.github.io/HalykFund/dist/mass-media.html
+https://myosminozhka-ru.github.io/HalykFund/dist/media-library.html
+https://myosminozhka-ru.github.io/HalykFund/dist/members.html
+https://myosminozhka-ru.github.io/HalykFund/dist/news-detail.html
+https://myosminozhka-ru.github.io/HalykFund/dist/news.html
+https://myosminozhka-ru.github.io/HalykFund/dist/parking.html
+https://myosminozhka-ru.github.io/HalykFund/dist/partners.html
+https://myosminozhka-ru.github.io/HalykFund/dist/privacy.html
+https://myosminozhka-ru.github.io/HalykFund/dist/programms.html
+https://myosminozhka-ru.github.io/HalykFund/dist/reports.html
+https://myosminozhka-ru.github.io/HalykFund/dist/request.html
+https://myosminozhka-ru.github.io/HalykFund/dist/search.html
