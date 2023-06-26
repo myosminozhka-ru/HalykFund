@@ -182,7 +182,7 @@ export default class Map {
     
     this.fetchData()
   }
-  setup() {
+  setup(data) {
     this.data = data
 
     const region = document.querySelector('.select-search[data-select-id="region"]')
@@ -308,15 +308,14 @@ export default class Map {
   async fetchData() {
     const action = this.el.getAttribute('data-action')
     await ApiForm(action, null, 'GET')
-    .then(response => response.json())
     .then(json => {
-      this.data = json
-      this.setup()
+      console.log(json)
+      this.setup(json)
     })
     .catch(e => {
       console.log(e)
       this.data = data
-      this.setup()
+      this.setup(data)
     })
   }
 }
