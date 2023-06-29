@@ -25,6 +25,9 @@
     overflow: visible;
     height: 158px * 2 + 24 * 2;
   }
+  &__sw-wrapper {
+    height: 100%;
+  }
   &__slide {
     width: 312px;
     height: 158px;
