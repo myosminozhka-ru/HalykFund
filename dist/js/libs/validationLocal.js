@@ -13,6 +13,9 @@ const keys = {
   integer: 'Value should be a number',
   tel: 'Phone number is invalid',
   name: 'Name is invalid',
+  minFilesCount: 'File is too short',
+  maxFilesCount: 'File is too long',
+  file: 'File is invalid',
 }
 
 const dictLocale = [
@@ -78,6 +81,30 @@ const dictLocale = [
       ru: 'Номер телефона недействителен',
       kk: 'Телефон нөмірі жарамсыз',
       en: 'Phone number has invalid format',
+    },
+  },
+  {
+    key: keys.minFilesCount,
+    dict: {
+      ru: 'недействителен',
+      kk: 'жарамсыз',
+      en: 'invalid',
+    },
+  },
+  {
+    key: keys.maxFilesCount,
+    dict: {
+      ru: 'Не более :value файлов',
+      kk: ':value файлдан артық емес',
+      en: 'No more than :value files',
+    },
+  },
+  {
+    key: keys.file,
+    dict: {
+      ru: 'Неверный формат или размер файла больше 10МБ',
+      kk: 'Жарамсыз пішім немесе файл өлшемі 10 МБ-тан үлкен',
+      en: 'Invalid format or file size larger than 10MB',
     },
   },
 ];

@@ -20,6 +20,7 @@ export default class Alert {
     this.container.append(el)
     setTimeout(() => el.classList.add('active'), 50)
     setTimeout(() => this.removeAlert(el, 300), 5000)
+    return 'rendered'
   }
   removeAlert(el, ms) {
     el.classList.add('escape')

@@ -121,5 +121,5 @@ export default function() {
         errorMessage: keys.required,
       },
     ])
-  return validation
+  return {validation}
 }
