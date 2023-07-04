@@ -36,17 +36,25 @@
   </div>
   <div class="form__actions form__actions--contest">
     <div class="form__actions-file">
-      <label class="form__file">
-        <input type="file" name="file" class="visually-hidden" placeholder="Прикрепить файлы">
-        <div>
+      <div class="form__file">
+        <label>
+          <input type="file" name="file" multiple accept="image/png, image/jpeg, image/jpg, image/heic, application/pdf, application/msword, application/vnd.openxmlformats-officedocument.wordprocessingml.document" class="visually-hidden" placeholder="Прикрепить файлы">
+          <div class="form__file-area">
+            <svg>
+              <use xlink:href="img/sprites/sprite.svg#upload"></use>
+            </svg>
+            <span class="form__file-title">
+              Прикрепить файлы
+            </span>
+            <span class="form__file-name hide"></span>
+          </div>
+        </label>
+        <button class="form__file-reset hide" type="button">
           <svg>
-            <use xlink:href="img/sprites/sprite.svg#upload"></use>
+            <use xlink:href="img/sprites/sprite.svg#x"></use>
           </svg>
-          <span>
-            Прикрепить файлы
-          </span>
-        </div>
-      </label>
+        </button>
+      </div>
       <div>
         <div class="form__conf">
           <label class="form__conf-label">
