@@ -30,6 +30,8 @@ FlatpickrConfig.setLang()
 
 window.app = {
   header: new Header(),
+
+  // sliders
   sliderDirections: new SliderDirections(),
   sliderBannerMain: new SliderBannerMain(),
   sliderContests: new SliderContests(),
@@ -38,21 +40,27 @@ window.app = {
   sliderPartnersMain: new SliderPartnersMain(),
   sliderGrid: new SliderGrid(),
   sliderMedia: new SliderMedia(),
-  svgAnime: new SvgAnime(),
-  bannerParking: new BannerParking(),
-  search: new Search(),
-  select: select(),
   sliderGallery: new SliderGallery(),
   sliderNewsAnother: new SliderNewsAnother(),
+
+  // animation
+  svgAnime: new SvgAnime(),
+  bannerParking: new BannerParking(),
+
+  
+  search: new Search(),
+  select: select(),
   social: new Social(),
   accordion: Accordion(),
-  contact_us: contactUsForm(),
-  subscribe: subscribeForm(),
-  request: requestForm(),
-  contest: contestForm(),
   modalPlayer: new ModalPlayer(),
   videoModal: new Modal('video'),
   map: new Map(),
   mapModal: new Modal('map', false),
   phoneMask: phoneMask('[type="tel"]'),
+
+  // forms
+  contact_us: contactUsForm(),
+  subscribe: subscribeForm(),
+  request: requestForm(),
+  contest: contestForm(),
 }

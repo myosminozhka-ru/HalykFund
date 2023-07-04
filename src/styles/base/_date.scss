@@ -137,4 +137,11 @@
       -webkit-box-shadow: -10px 0 0 $green-light;
       box-shadow: -10px 0 0 $green-light;
   }
+  .flatpickr-weekday {
+    
+  }
+  .flatpickr-weekday:nth-child(6),
+  .flatpickr-weekday:nth-child(7) {
+    color: $error;
+  }
 }

@@ -50,6 +50,16 @@ export default function() {
         errorMessage: keys.required,
       },
       {
+        rule: 'minLength',
+        value: 12,
+        errorMessage: keys.minLength,
+      },
+      {
+        rule: 'maxLength',
+        value: 12,
+        errorMessage: keys.maxLength,
+      },
+      {
         rule: 'integer',
         errorMessage: keys.integer,
       },
@@ -185,5 +195,67 @@ export default function() {
         errorMessage: keys.required,
       },
     ])
-  return validation
+    .addField('[name="file"]', [
+      {
+        rule: 'maxFilesCount',
+        value: 3,
+        errorMessage: keys.maxFilesCount,
+      },
+      {
+        rule: 'files',
+        value: {
+          files: {
+            extensions: ['jpeg', 'jpg', 'png', 'HEIC', 'heic', 'pdf', 'doc', 'docx'],
+            maxSize: 10000000,
+            minSize: 100,
+            types: [
+              'image/jpeg',
+              'image/jpg',
+              'image/png',
+              'image/HEIC',
+              'image/heic',
+              'application/pdf',
+              'application/msword',
+              'application/vnd.openxmlformats-officedocument.wordprocessingml.document'
+            ],
+          },
+        },
+        errorMessage: keys.file,
+      },
+    ])
+
+  const fileInputNode = document.querySelector('#contest [name="file"]')
+  const fileNameNode = document.querySelector('#contest .form__file-name')
+  const fileTitleNode = document.querySelector('#contest .form__file-title')
+  const fileResetNode = document.querySelector('#contest .form__file-reset')
+  fileInputNode.addEventListener('change', (e) => {
+    const files = e.target.files
+    fileNameNode.innerHTML = ''
+    if (files.length && files.length !== 0) {
+      fileTitleNode.classList.add('hide')
+      fileNameNode.classList.remove('hide')
+      fileResetNode.classList.remove('hide')
+      for (let index = 0; index < files.length; index++) {
+        const element = files[index];
+        fileNameNode.insertAdjacentHTML('beforeend', `<span>${element.name}</span>`)
+      }
+    } else {
+      fileTitleNode.classList.remove('hide')
+      fileNameNode.classList.add('hide')
+      fileNameNode.innerHTML = ''
+    }
+  })
+  fileResetNode.addEventListener('click', resetFile)
+
+  function resetFile() {
+    fileInputNode.value = ''
+    fileTitleNode.classList.remove('hide')
+    fileNameNode.classList.add('hide')
+    fileResetNode.classList.add('hide')
+    fileNameNode.innerHTML = ''
+  }
+
+
+
+  return {validation, calendar: [birthday, implementation_period], cb: resetFile}
 }
