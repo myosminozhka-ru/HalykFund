@@ -18,18 +18,18 @@ export const ApiForm = (url, data, method = 'POST') => {
 export default function () {
   const forms = document.querySelectorAll('form.form')
 
+  let captchaId = null
+  let captchaResponse = ''
   var verifyCallback = function(response) {
     console.log(response);
+    captchaResponse = response
   };
 
-  let captchaResponse = null
   window.onloadCallback = function() {
-    grecaptcha.render('html_element', {
+    captchaId = grecaptcha.render('html_element', {
       'sitekey' : '6LfRT_kmAAAAAPSidXj4VXMj-4T9C4Qv0gDg7to4',
       'callback' : verifyCallback,
     });
-    window.grecaptchaTest = grecaptcha
-    captchaResponse = grecaptcha.getResponse();
   };
 
 
@@ -54,7 +54,6 @@ export default function () {
 
       const captchaWrapper = form.querySelector('.captcha')
       if (captchaWrapper && captchaResponse?.length === 0) {
-        debugger
         window.osmiAlert.render(local.captcha[local.current], false)
         return
       } else if (captchaWrapper) {
