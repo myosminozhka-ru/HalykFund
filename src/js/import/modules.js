@@ -1,5 +1,6 @@
 import FlatpickrConfig from "./flatpickrConfig";
 import ModalPlayer from "./modalPlayer";
+import ModalPhoto from "./modalPhoto";
 import Modal from "./Modal";
 import phoneMask from "./phoneMask";
 import Header from "%modules%/header/header";
@@ -53,7 +54,9 @@ window.app = {
   social: new Social(),
   accordion: Accordion(),
   modalPlayer: new ModalPlayer(),
+  photoPlayer: new ModalPhoto(),
   videoModal: new Modal('video'),
+  photoModal: new Modal('photo'),
   map: new Map(),
   mapModal: new Modal('map', false),
   phoneMask: phoneMask('[type="tel"]'),

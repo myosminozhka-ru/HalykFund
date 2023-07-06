@@ -2,6 +2,7 @@
   background-color: $green-light;
   border-radius: $brz;
   padding: gutter(10) gutter(6);
+  min-height: 431px;
 
   &--data {
 
@@ -36,6 +37,7 @@
 
   @include tab {
     padding: gutter(6) gutter(3);
+    min-height: 384px;
 
     &__icon {
       width: 160px;
