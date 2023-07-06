@@ -99,6 +99,18 @@
       grid-gap: gutter(6);
       margin-bottom: 50px;
     }
+    &__mission-img {
+      position: relative;
+      padding-bottom: 63.6%;
+      img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
     &__steps {
       max-width: 344px;
       margin-bottom: gutter(6);
@@ -116,6 +128,9 @@
     }
     &__grid {
       margin-bottom: gutter(10);
+    }
+    &__mission-img {
+      padding-bottom: 75%;
     }
     &__title {
       &--mb40 {
