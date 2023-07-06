@@ -106,6 +106,9 @@
         transform: rotate(-180deg);
       }
     }
+    &--drop .header__nav-title {
+      cursor: pointer;
+    }
   }
 
   &__nav-title {
