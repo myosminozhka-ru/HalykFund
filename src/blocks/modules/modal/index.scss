@@ -60,10 +60,15 @@
     .card6__video,
     .card7__video {
       height: auto;
+      width: 100%;
       max-width: 1042px;
     }
     *.wow {
       visibility: visible !important;
+    }
+    video {
+      width: 100%;
+      height: auto;
     }
   }
   &[data-modal="photo"] {

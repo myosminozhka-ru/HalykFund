@@ -16,6 +16,9 @@
   &__main-title {
     margin-bottom: gutter(6);
   }
+  &__cap:empty {
+    display: none;
+  }
   &__grid {
     display: grid;
     grid-template-columns: 4fr 8fr;
