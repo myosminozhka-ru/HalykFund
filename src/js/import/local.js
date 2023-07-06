@@ -26,4 +26,8 @@ export default {
     en: "Loading...",
     kk: "Жүктелуде...",
   },
-}
+  captcha: {
+    ru: "Ошибка поля капча",
+    en: "Captcha field error",
+    kk: "Captcha өрісінің қатесі",
+  },}
