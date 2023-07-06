@@ -292,6 +292,10 @@
       </label>
       <div class="form__conf-text">Согласие с <a href="#">политикой конфиденциальности</a> <br class="only-pc"> и <a href="#">обработкой персональных данных.</a></div>
     </div>
+    <div class="captcha">
+      <div id="html_element"></div>
+      <div id="recaptchaError"></div>
+    </div>
     <button class="btn btn--tab-full form__send" type="submit">Отправить</button>
   </div>
 </form>
@@ -512,6 +516,9 @@
         <script src="js/libs/wow.min.js"></script>
         <script>
           new WOW().init();
+        </script>
+        <script src="https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit"
+            async defer>
         </script>
     </body>
 </html>

@@ -311,3 +311,10 @@
     }
   }
 }
+
+.captcha {
+  margin-bottom: 24px;
+  @include tab {
+    margin-bottom: 16px;
+  }
+}

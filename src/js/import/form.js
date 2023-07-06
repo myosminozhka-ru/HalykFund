@@ -18,6 +18,21 @@ export const ApiForm = (url, data, method = 'POST') => {
 export default function () {
   const forms = document.querySelectorAll('form.form')
 
+  var verifyCallback = function(response) {
+    console.log(response);
+  };
+
+  let captchaResponse = null
+  window.onloadCallback = function() {
+    grecaptcha.render('html_element', {
+      'sitekey' : '6LfRT_kmAAAAAPSidXj4VXMj-4T9C4Qv0gDg7to4',
+      'callback' : verifyCallback,
+    });
+    window.grecaptchaTest = grecaptcha
+    captchaResponse = grecaptcha.getResponse();
+  };
+
+
   forms.forEach(form => {
     const button = form.querySelector('button[type="submit"]')
     const name = form.getAttribute('id')
@@ -32,9 +47,19 @@ export default function () {
     form.addEventListener('submit', (e) => {
       e.preventDefault()
       const isValid = validation.isValid
+
       if (!isValid) return
       const formData = new FormData(form)
       const action = form.getAttribute('action')
+
+      const captchaWrapper = form.querySelector('.captcha')
+      if (captchaWrapper && captchaResponse?.length === 0) {
+        debugger
+        window.osmiAlert.render(local.captcha[local.current], false)
+        return
+      } else if (captchaWrapper) {
+        formData.append('g-recaptcha-response', captchaResponse);
+      }
 
       const btnText = button.textContent
       button.setAttribute('disabled', true)
@@ -66,6 +91,9 @@ export default function () {
 
         // justValidate reset
         validation.refresh()
+
+        //captcha reset
+        grecaptcha.reset();
 
       })
     })
