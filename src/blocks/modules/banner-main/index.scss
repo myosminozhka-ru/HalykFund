@@ -1,5 +1,6 @@
 .banner-main {
   padding-top: gutter(6);
+  margin-bottom: gutter(30);
 
   &__slide {
     position: relative;
@@ -68,6 +69,7 @@
   }
   @include tab {
     padding-top: gutter(10);
+    margin-bottom: gutter(16);
   
     &__content {
       padding: gutter(8);
@@ -85,6 +87,7 @@
   }
   @include mob {
     padding-top: gutter(6);
+    margin-bottom: gutter(6);
   
     &__content {
       padding: gutter(6);
