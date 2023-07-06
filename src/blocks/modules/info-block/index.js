@@ -5,6 +5,7 @@ import FlatpickrConfig from '../../../js/import/flatpickrConfig'
 export default function() {
   if (!document.querySelector('#contest')) return
   const birthday = flatpickr(document.querySelector('[name="birthday"]'), {
+      disableMobile: "true",
       mode: "single",
       maxDate: "today",
       dateFormat: "d.m.Y",
@@ -12,6 +13,7 @@ export default function() {
       prevArrow: FlatpickrConfig.getPrevArrow(),
   });
   const implementation_period = flatpickr(document.querySelector('[name="implementation_period"]'), {
+      disableMobile: "true",
       mode: "range",
       minDate: "today",
       dateFormat: "d.m.Y",
