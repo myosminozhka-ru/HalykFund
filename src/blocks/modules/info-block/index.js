@@ -5,6 +5,7 @@ import FlatpickrConfig from '../../../js/import/flatpickrConfig'
 export default function() {
   if (!document.querySelector('#contest')) return
   const birthday = flatpickr(document.querySelector('[name="birthday"]'), {
+      disableMobile: "true",
       mode: "single",
       maxDate: "today",
       dateFormat: "d.m.Y",
@@ -12,6 +13,7 @@ export default function() {
       prevArrow: FlatpickrConfig.getPrevArrow(),
   });
   const implementation_period = flatpickr(document.querySelector('[name="implementation_period"]'), {
+      disableMobile: "true",
       mode: "range",
       minDate: "today",
       dateFormat: "d.m.Y",
@@ -198,7 +200,7 @@ export default function() {
     .addField('[name="file"]', [
       {
         rule: 'maxFilesCount',
-        value: 3,
+        value: 10,
         errorMessage: keys.maxFilesCount,
       },
       {
@@ -206,7 +208,7 @@ export default function() {
         value: {
           files: {
             extensions: ['jpeg', 'jpg', 'png', 'HEIC', 'heic', 'pdf', 'doc', 'docx'],
-            maxSize: 10000000,
+            maxSize: 10485760,
             minSize: 100,
             types: [
               'image/jpeg',
@@ -237,7 +239,7 @@ export default function() {
       fileResetNode.classList.remove('hide')
       for (let index = 0; index < files.length; index++) {
         const element = files[index];
-        fileNameNode.insertAdjacentHTML('beforeend', `<span>${element.name}</span>`)
+        fileNameNode.insertAdjacentHTML('beforeend', `<span>${getShortName(element.name)}</span>`)
       }
     } else {
       fileTitleNode.classList.remove('hide')
@@ -253,9 +255,20 @@ export default function() {
     fileNameNode.classList.add('hide')
     fileResetNode.classList.add('hide')
     fileNameNode.innerHTML = ''
+    const fileerrorNode = document.querySelector('#contest .form__file .just-validate-error-label')
+    fileerrorNode ? fileerrorNode.innerHTML = '' : null;
   }
-
-
+  
+  function getShortName(fileName) {
+    if (fileName.length < 15) {
+      return fileName
+    }
+    const array = fileName.split('.')
+    const ext = array.pop()
+    const name = array.join()
+    const length = name.length
+    return `${name.slice(0, 4)}...${name.slice(length - 4, length)}.${ext}`
+  }
 
   return {validation, calendar: [birthday, implementation_period], cb: resetFile}
 }

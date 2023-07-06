@@ -65,7 +65,7 @@ export default class Header {
       })
 
       if (!window.matchMedia("(max-width: 768px)").matches) {
-        title.addEventListener('mouseover', () => {
+        title.addEventListener('mouseenter', () => {
           this.openDrop(i, index)
         })
       }
