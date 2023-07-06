@@ -198,7 +198,7 @@ export default function() {
     .addField('[name="file"]', [
       {
         rule: 'maxFilesCount',
-        value: 3,
+        value: 10,
         errorMessage: keys.maxFilesCount,
       },
       {
@@ -206,7 +206,7 @@ export default function() {
         value: {
           files: {
             extensions: ['jpeg', 'jpg', 'png', 'HEIC', 'heic', 'pdf', 'doc', 'docx'],
-            maxSize: 10000000,
+            maxSize: 10485760,
             minSize: 100,
             types: [
               'image/jpeg',
@@ -253,6 +253,8 @@ export default function() {
     fileNameNode.classList.add('hide')
     fileResetNode.classList.add('hide')
     fileNameNode.innerHTML = ''
+    const fileerrorNode = document.querySelector('#contest .form__file .just-validate-error-label')
+    fileerrorNode ? fileerrorNode.innerHTML = '' : null;
   }
   
   function getShortName(fileName) {
@@ -265,8 +267,6 @@ export default function() {
     const length = name.length
     return `${name.slice(0, 4)}...${name.slice(length - 4, length)}.${ext}`
   }
-
-
 
   return {validation, calendar: [birthday, implementation_period], cb: resetFile}
 }

@@ -87,6 +87,9 @@
     cursor: pointer;
     font-size: 16px;
     position: relative;
+    label {
+      display: block;
+    }
     svg {
       width: 24px;
       height: 24px;
@@ -114,6 +117,8 @@
     border: 1px solid $accent;
     border-radius: 4px;
     white-space: nowrap;
+    min-width: 245px;
+    width: 100%;
   }
 
   &__file-name {
@@ -121,7 +126,6 @@
    flex-direction: column;
    padding-right: 5px;
    white-space: pre-line;
-   max-width: 245px;
   }
 
   &__file-name.hide,
@@ -254,6 +258,7 @@
     &__file-area {
       width: 100%;
       justify-content: center;
+      min-width: auto;
     }
     &__conf {
       &-text {
