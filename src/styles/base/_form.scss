@@ -33,9 +33,6 @@
     background-color: $green-light;
     border: none;
     border-radius: $brz;
-    &::placeholder {
-      color: $grey;
-    }
     &.flatpickr-input {
       background-image: url(../img/calendar.svg);
       background-repeat: no-repeat;
@@ -51,18 +48,19 @@
     background-color: $green-light;
     border: none;
     border-radius: $brz;
-    &::placeholder {
-      color: $grey;
-    }
     &--big {
       height: 173px;
     }
   }
   &__input, &__textarea {
-    font-size: 16px;
+    font-size: 14px;
     &.error, 
     &.just-validate-error-field {
       border: 1px solid $error;
+    }
+    &::placeholder {
+      font-weight: 400;
+      color: $grey;
     }
   }
   &__input-error {
