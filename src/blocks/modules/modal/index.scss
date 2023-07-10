@@ -77,11 +77,21 @@
     *.wow {
       visibility: visible !important;
     }
+    .card2:hover {
+      .card2__pic::after {
+        display: none;
+      }
+      img {
+        filter: unset;
+      }
+    }
     .card2__pic {
-      height: auto;
+      height: 70vh;
     }
     .card2__pic img {
-      height: auto;
+      height: 100%;
+      object-fit: contain;
+      object-position: center;
     }
   }
   @include tab {
@@ -103,6 +113,14 @@
     &[data-modal="photo"] {
       padding-right: 0px;
       padding-left: 0px;
+      .card2__pic {
+        height: auto;
+      }
+      .card2__pic img {
+        height: auto;
+        object-fit: unset;
+        object-position: unset;
+      }
     }
   }
 }

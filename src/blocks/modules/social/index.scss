@@ -50,6 +50,7 @@
     position: relative;
     cursor: pointer;
     margin-right: gutter(2);
+    overflow: hidden;
 
     &:last-child {
       margin-right: 0;
@@ -87,6 +88,21 @@
     height: 100%;
     z-index: 2;
     opacity: 0;
+    transform: scale(2);
+  }
+  .fb_iframe_widget {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    *, iframe a {
+      position: absolute !important;
+      left: 0 !important;
+      top: 0 !important;
+      width: 100% !important;
+      height: 100% !important;
+    }
   }
 
   a, svg {

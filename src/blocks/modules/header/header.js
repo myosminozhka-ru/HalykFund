@@ -68,6 +68,9 @@ export default class Header {
         title.addEventListener('mouseenter', () => {
           this.openDrop(i, index)
         })
+        i.addEventListener('mouseleave', () => {
+          this.closeDrops()
+        })
       }
       document.addEventListener('click', (e) => {
         if (!e.target.closest('.header__nav-item')) {
@@ -93,6 +96,14 @@ export default class Header {
     }
     i.classList.add('active')
     this.drops[index].classList.add('active')
+  }
+  closeDrops() {
+    this.drops.forEach(drop => {
+      drop.classList.remove('active')
+    })
+    this.dropItems.forEach(item => {
+      item.classList.remove('active')
+    })
   }
   openSearch() {
     this.navListNode.classList.add('hide')
