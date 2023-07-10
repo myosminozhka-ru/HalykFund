@@ -11,7 +11,12 @@ export const ApiForm = (url, data, method = 'POST') => {
     if (response.status >= 500) {
       throw new Error(response)
     }
-    return response.json()
+    return response.json();
+  }).catch(e => {
+    if (e?.response?.status === 200) {
+      return {}
+    }
+    throw new Error(e?.response)
   })
 }
 

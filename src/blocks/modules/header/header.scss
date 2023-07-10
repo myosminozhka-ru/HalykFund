@@ -115,8 +115,13 @@
     display: flex;
     align-items: center;
     white-space: nowrap;
+    transform: translateY(1px);
     &:hover > a {
       text-decoration: underline;
+    }
+    a {
+      display: inline-block;
+      padding: 35px 0;
     }
   }
 
@@ -136,7 +141,7 @@
   &__nav-drop {
     position: absolute;
     left: 0;
-    top: 100%;
+    top: calc(100% - 1px);
     width: 100%;
     background-color: $white;
     padding: gutter(6) 0;
@@ -380,6 +385,12 @@
   
       &:last-child {
         margin-bottom: 0;
+      }
+    }
+
+    &__nav-title {
+      a {
+        padding: 0;
       }
     }
 
