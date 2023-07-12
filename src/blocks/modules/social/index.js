@@ -1,3 +1,5 @@
+import local from '../../../js/import/local'
+
 export default class Social {
   constructor() {
     this.nodes = document.querySelectorAll('[data-copy-trigger]')
@@ -23,6 +25,6 @@ export default class Social {
     })
   }
   alert() {
-    alert('Ссылка скопирована!')
+    alert(local.copied[local.current])
   }
 }
