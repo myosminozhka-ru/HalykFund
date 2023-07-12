@@ -1,4 +1,5 @@
 import Swiper from 'swiper/bundle';
+import helper from '../../../js/import/helper';
 
 export default class SliderContests {
   constructor() {
@@ -7,6 +8,8 @@ export default class SliderContests {
   }
   init() {
     this.sectionNodes.forEach(element => {
+      helper.elementTextSlice(element.querySelectorAll('.card4__title'), 40)
+      helper.elementTextSlice(element.querySelectorAll('.card4__text'), 150)
       const sliderNode = element.querySelector('.contests__slider')
       const prevNode = element.querySelector('.slider-prev')
       const nextNode = element.querySelector('.slider-next')

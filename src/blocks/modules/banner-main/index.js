@@ -1,18 +1,15 @@
 import Swiper from 'swiper/bundle';
+import helper from '../../../js/import/helper';
 
 export default class SliderBannerMain {
   constructor() {
     this.sectionNodes = document.querySelectorAll('.banner-main')
     this.init()
   }
-  textSlice (text, length){
-    const number = Number(length)
-    const txt = text.trim()
-    if (typeof number !== 'number' || typeof txt !== 'string' || txt.length <= length) return text
-    return txt.slice(0, number) + '...';
-  }
   init() {
     this.sectionNodes.forEach(element => {
+      helper.elementTextSlice(element.querySelectorAll('.banner-main__cap'), 30)
+      helper.elementTextSlice(element.querySelectorAll('.banner-main__text'), 200)
       const sliderNode = element.querySelector('.banner-main__slider')
       const prevNode = element.querySelector('.slider-prev')
       const nextNode = element.querySelector('.slider-next')
@@ -31,15 +28,6 @@ export default class SliderBannerMain {
           bulletActiveClass: 'active',
         },
       });
-
-      const titleNodes = element.querySelectorAll('.banner-main__cap')
-      const textNodes = element.querySelectorAll('.banner-main__text')
-      titleNodes.forEach(i => {
-        i.innerHTML = this.textSlice(i.textContent, 30)
-      })
-      textNodes.forEach(i => {
-        i.innerHTML = this.textSlice(i.textContent, 200)
-      })
     })
   }
 }

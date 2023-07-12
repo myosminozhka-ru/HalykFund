@@ -30,4 +30,10 @@ export default {
     ru: "Ошибка поля капча",
     en: "Captcha field error",
     kk: "Captcha өрісінің қатесі",
-  },}
+  },
+  copied: {
+    ru: "Ссылка скопирована!",
+    en: "Link copied!",
+    kk: "Сілтеме көшірілді!",
+  },
+}

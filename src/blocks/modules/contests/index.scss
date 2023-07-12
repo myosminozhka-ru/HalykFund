@@ -21,22 +21,22 @@
     }
   }
 
-  .card4__text {
-    max-height: 160px;
-    overflow: hidden;
-    position: relative;
-    &::after {
-      content: '';
-      display: block;
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      height: 35px;
-      width: 100%;
-      background: rgb(234,241,239);
-      background: linear-gradient(180deg, rgba(234,241,239,0) 0%, rgba(234,241,239,1) 73%, rgba(234,241,239,1) 100%);
-    }
-  }
+  // .card4__text {
+  //   max-height: 160px;
+  //   overflow: hidden;
+  //   position: relative;
+  //   &::after {
+  //     content: '';
+  //     display: block;
+  //     position: absolute;
+  //     bottom: 0;
+  //     left: 0;
+  //     height: 35px;
+  //     width: 100%;
+  //     background: rgb(234,241,239);
+  //     background: linear-gradient(180deg, rgba(234,241,239,0) 0%, rgba(234,241,239,1) 73%, rgba(234,241,239,1) 100%);
+  //   }
+  // }
 
   &__pag {
     margin-top: gutter(6);
@@ -56,9 +56,9 @@
       margin-right: gutter(5);
     }
 
-    .card4__text {
-      max-height: 150px;
-    }
+    // .card4__text {
+    //   max-height: 150px;
+    // }
 
     .link-2 {
       font-size: 16px;
@@ -81,9 +81,9 @@
       width: 285px;
       margin-right: gutter(4);
     }
-    .card4__text {
-      max-height: 120px;
-    }
+    // .card4__text {
+    //   max-height: 120px;
+    // }
   
     &__footer {
       margin-top: gutter(6);
